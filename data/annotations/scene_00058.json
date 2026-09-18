@@ -1,0 +1,1 @@
+{"scene_id": "scene_00058", "audio_path": "synthesized_audio/scene_00058.wav", "duration_sec": 25.0, "scenario": "office", "events": [{"label": "dish", "start": 0.96, "end": 3.07}, {"label": "water", "start": 5.38, "end": 7.59}, {"label": "dog_bark", "start": 8.8, "end": 11.85}], "background": "room_tone"}

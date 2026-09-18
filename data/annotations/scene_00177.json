@@ -1,0 +1,1 @@
+{"scene_id": "scene_00177", "audio_path": "synthesized_audio/scene_00177.wav", "duration_sec": 25.0, "scenario": "park", "events": [{"label": "car_horn", "start": 2.33, "end": 4.22}, {"label": "dish", "start": 5.98, "end": 8.86}], "background": "room_tone"}

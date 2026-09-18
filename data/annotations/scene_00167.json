@@ -1,0 +1,1 @@
+{"scene_id": "scene_00167", "audio_path": "synthesized_audio/scene_00167.wav", "duration_sec": 25.0, "scenario": "park", "events": [{"label": "water", "start": 2.8, "end": 5.55}, {"label": "footstep", "start": 6.77, "end": 9.4}, {"label": "engine", "start": 10.85, "end": 13.86}, {"label": "water", "start": 16.74, "end": 17.94}], "background": "room_tone"}

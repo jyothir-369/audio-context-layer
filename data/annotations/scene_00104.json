@@ -1,0 +1,1 @@
+{"scene_id": "scene_00104", "audio_path": "synthesized_audio/scene_00104.wav", "duration_sec": 25.0, "scenario": "construction_site", "events": [{"label": "siren", "start": 3.72, "end": 6.71}, {"label": "footstep", "start": 8.61, "end": 11.99}], "background": "room_tone"}

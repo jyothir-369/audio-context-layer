@@ -1,0 +1,1 @@
+{"scene_id": "scene_00217", "audio_path": "synthesized_audio/scene_00217.wav", "duration_sec": 25.0, "scenario": "park", "events": [{"label": "dog_bark", "start": 3.23, "end": 5.56}, {"label": "dish", "start": 7.67, "end": 9.55}, {"label": "water", "start": 11.93, "end": 13.89}], "background": "room_tone"}

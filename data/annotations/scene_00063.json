@@ -1,0 +1,1 @@
+{"scene_id": "scene_00063", "audio_path": "synthesized_audio/scene_00063.wav", "duration_sec": 25.0, "scenario": "office", "events": [{"label": "engine", "start": 0.78, "end": 2.8}, {"label": "siren", "start": 4.78, "end": 5.67}], "background": "room_tone"}

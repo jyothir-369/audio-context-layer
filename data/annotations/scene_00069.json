@@ -1,0 +1,1 @@
+{"scene_id": "scene_00069", "audio_path": "synthesized_audio/scene_00069.wav", "duration_sec": 25.0, "scenario": "construction_site", "events": [{"label": "engine", "start": 4.85, "end": 7.99}, {"label": "dog_bark", "start": 10.55, "end": 13.12}], "background": "room_tone"}

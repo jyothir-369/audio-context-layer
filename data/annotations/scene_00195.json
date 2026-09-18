@@ -1,0 +1,1 @@
+{"scene_id": "scene_00195", "audio_path": "synthesized_audio/scene_00195.wav", "duration_sec": 25.0, "scenario": "street", "events": [{"label": "engine", "start": 1.85, "end": 2.78}, {"label": "dish", "start": 5.44, "end": 6.63}, {"label": "footstep", "start": 7.78, "end": 10.15}], "background": "traffic_ambience_low"}

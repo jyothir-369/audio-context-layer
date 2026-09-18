@@ -1,0 +1,39 @@
+{
+  "train": {
+    "count": 1048,
+    "types": {
+      "perceptual": 210,
+      "counting": 210,
+      "temporal": 210,
+      "negation": 210,
+      "comparative": 203,
+      "causal": 5
+    },
+    "scenes": 210
+  },
+  "val": {
+    "count": 225,
+    "types": {
+      "perceptual": 45,
+      "counting": 45,
+      "temporal": 45,
+      "negation": 45,
+      "comparative": 44,
+      "causal": 1
+    },
+    "scenes": 45
+  },
+  "test": {
+    "count": 222,
+    "types": {
+      "perceptual": 45,
+      "counting": 45,
+      "temporal": 45,
+      "negation": 45,
+      "comparative": 42
+    },
+    "scenes": 45
+  },
+  "leakage_check": "no scene overlap between splits (verified by disjoint scene_ids)",
+  "source_dataset": "ESC-50 / UrbanSound8K / FSD50K (internet per plan Section 2.2; downloaded when available)"
+}

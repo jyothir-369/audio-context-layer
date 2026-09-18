@@ -1,0 +1,1 @@
+{"scene_id": "scene_00278", "audio_path": "synthesized_audio/scene_00278.wav", "duration_sec": 25.0, "scenario": "office", "events": [{"label": "dog_bark", "start": 1.28, "end": 4.03}, {"label": "engine", "start": 4.65, "end": 7.43}, {"label": "engine", "start": 10.35, "end": 12.48}, {"label": "footstep", "start": 13.93, "end": 15.74}], "background": "room_tone"}

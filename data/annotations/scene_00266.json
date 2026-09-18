@@ -1,0 +1,1 @@
+{"scene_id": "scene_00266", "audio_path": "synthesized_audio/scene_00266.wav", "duration_sec": 25.0, "scenario": "kitchen", "events": [{"label": "engine", "start": 0.61, "end": 1.55}, {"label": "engine", "start": 4.36, "end": 7.38}, {"label": "dog_bark", "start": 8.87, "end": 10.7}, {"label": "siren", "start": 12.27, "end": 13.65}], "background": "room_tone"}

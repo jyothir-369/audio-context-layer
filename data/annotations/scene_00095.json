@@ -1,0 +1,1 @@
+{"scene_id": "scene_00095", "audio_path": "synthesized_audio/scene_00095.wav", "duration_sec": 25.0, "scenario": "street", "events": [{"label": "siren", "start": 0.3, "end": 1.62}, {"label": "water", "start": 2.42, "end": 5.45}, {"label": "car_horn", "start": 6.18, "end": 8.71}, {"label": "dog_bark", "start": 10.7, "end": 11.64}], "background": "traffic_ambience_low"}

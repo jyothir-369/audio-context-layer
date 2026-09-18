@@ -1,0 +1,1 @@
+{"scene_id": "scene_00298", "audio_path": "synthesized_audio/scene_00298.wav", "duration_sec": 25.0, "scenario": "office", "events": [{"label": "footstep", "start": 1.12, "end": 4.09}, {"label": "dish", "start": 5.36, "end": 7.89}], "background": "room_tone"}

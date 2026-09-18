@@ -1,0 +1,1 @@
+{"scene_id": "scene_00081", "audio_path": "synthesized_audio/scene_00081.wav", "duration_sec": 25.0, "scenario": "kitchen", "events": [{"label": "car_horn", "start": 2.15, "end": 4.39}, {"label": "water", "start": 6.3, "end": 7.59}, {"label": "footstep", "start": 8.53, "end": 11.68}, {"label": "car_horn", "start": 13.73, "end": 15.87}], "background": "room_tone"}
