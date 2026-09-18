@@ -1,0 +1,60 @@
+# Phase 1 dataset synthesis config — source data + scene synthesis only
+# No QA, no Track A/B, no evaluation (later phases)
+
+seed: 42
+
+scenarios:
+  # Each scenario defines a plausible event pool and background ambience.
+  # From plan Section 2.3: street, kitchen, park, office, construction_site.
+  street:
+    events: ["car_horn", "dog_bark", "siren", "engine", "footstep"]
+    background: "traffic_ambience_low"
+  kitchen:
+    events: ["dish", "water", "microwave_beep", "footstep", "door_slam"]
+    background: "room_tone"
+  park:
+    events: ["bird_chirp", "dog_bark", "footstep", "bicycle_bell", "wind_rustle"]
+    background: "wind_ambience"
+  office:
+    events: ["keyboard", "printer", "phone_ring", "door_open", "footstep"]
+    background: "hvac_hum"
+  construction_site:
+    events: ["drilling", "hammer", "engine", "siren", "shouting"]
+    background: "construction_ambience"
+
+# Source materials from plan Section 2.2 (internet-sourced only, not invented)
+sources:
+  esc50:
+    name: "ESC-50"
+    url_ref: "https://github.com/karolpiczak/ESC-50 (Zenodo)"
+    classes: 50
+    clips: 2000
+    duration_sec: 5
+  urban:
+    name: "UrbanSound8K"
+    url_ref: "https://urbansounddataset.weebly.com/ (official)"
+    classes: 10
+    clips: 8732
+    duration_sec: 4  # variable; approximate
+  fsd50k:
+    name: "FSD50K"
+    url_ref: "https://zenodo.org/record/4060432 (optional)"
+    optional: true
+    classes: ~200
+    clips: ~50000
+
+# Scene synthesis parameters (Section 2.3)
+synthesis:
+  target_scenes: 400          # within 300-500 PoC range; exact count verified after run
+  duration_sec: 25            # 20-30s range
+  events_per_scene: [2, 5]    # inclusive min/max foreground events
+  overlap_probability: 0.35   # 35% scenes have at least one overlap
+  repetition_allowed: true
+  sample_rate: 16000
+  channels: 1                 # mono
+  ambience_snr_db: -18         # low-level ambience mix
+
+paths:
+  raw_sources: "data/raw_sources"
+  synthesized_audio: "data/synthesized_audio"
+  annotations: "data/annotations"

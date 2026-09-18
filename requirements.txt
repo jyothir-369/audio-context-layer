@@ -1,0 +1,8 @@
+# Phase 1 dependencies ONLY (plan Section 9; dataset synthesis requires minimal set)
+# Full set (LLM/eval/metrics) added only when those phases are executed.
+numpy>=1.24
+pyyaml>=6.0
+soundfile>=0.12  # for real WAV I/O; pipeline degrades gracefully if missing
+# librosa, pydub added in later phases (audio mixing, ambience)
+# panns-inference / laion-clap added in Track A (Phase 3+)
+# scikit-learn, bert-score, matplotlib added in Phase 5 (evaluation)
