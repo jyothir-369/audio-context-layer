@@ -1,0 +1,3629 @@
+{
+  "track_a_evaluation": {
+    "test_samples_total": 222,
+    "failed_or_skipped": 0,
+    "note": "Metrics computed from actual predictions; no fabricated accuracy numbers. LLM-grounded uses structural derivation; real Qwen2.5-1.5B / Phi-3.5-mini / API model call requires downloaded weights/API key.",
+    "per_type_breakdown": {
+      "rule_based": {
+        "perceptual": {
+          "count": 45,
+          "predictions": [
+            {
+              "id": "scene_00003_p1",
+              "scene_id": "scene_00003",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00012_p1",
+              "scene_id": "scene_00012",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00013_p1",
+              "scene_id": "scene_00013",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00015_p1",
+              "scene_id": "scene_00015",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00016_p1",
+              "scene_id": "scene_00016",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00022_p1",
+              "scene_id": "scene_00022",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00040_p1",
+              "scene_id": "scene_00040",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00044_p1",
+              "scene_id": "scene_00044",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00047_p1",
+              "scene_id": "scene_00047",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00049_p1",
+              "scene_id": "scene_00049",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00052_p1",
+              "scene_id": "scene_00052",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00057_p1",
+              "scene_id": "scene_00057",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00063_p1",
+              "scene_id": "scene_00063",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00071_p1",
+              "scene_id": "scene_00071",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00079_p1",
+              "scene_id": "scene_00079",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00081_p1",
+              "scene_id": "scene_00081",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00101_p1",
+              "scene_id": "scene_00101",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00110_p1",
+              "scene_id": "scene_00110",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00111_p1",
+              "scene_id": "scene_00111",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00112_p1",
+              "scene_id": "scene_00112",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00114_p1",
+              "scene_id": "scene_00114",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00119_p1",
+              "scene_id": "scene_00119",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00125_p1",
+              "scene_id": "scene_00125",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00135_p1",
+              "scene_id": "scene_00135",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00140_p1",
+              "scene_id": "scene_00140",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00142_p1",
+              "scene_id": "scene_00142",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00150_p1",
+              "scene_id": "scene_00150",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00172_p1",
+              "scene_id": "scene_00172",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00174_p1",
+              "scene_id": "scene_00174",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00176_p1",
+              "scene_id": "scene_00176",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00183_p1",
+              "scene_id": "scene_00183",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00185_p1",
+              "scene_id": "scene_00185",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00193_p1",
+              "scene_id": "scene_00193",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00194_p1",
+              "scene_id": "scene_00194",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00214_p1",
+              "scene_id": "scene_00214",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00216_p1",
+              "scene_id": "scene_00216",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00229_p1",
+              "scene_id": "scene_00229",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00235_p1",
+              "scene_id": "scene_00235",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00258_p1",
+              "scene_id": "scene_00258",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00277_p1",
+              "scene_id": "scene_00277",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00279_p1",
+              "scene_id": "scene_00279",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00287_p1",
+              "scene_id": "scene_00287",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00290_p1",
+              "scene_id": "scene_00290",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00292_p1",
+              "scene_id": "scene_00292",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00293_p1",
+              "scene_id": "scene_00293",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "perceptual",
+              "ground_truth": "siren"
+            }
+          ]
+        },
+        "counting": {
+          "count": 45,
+          "predictions": [
+            {
+              "id": "scene_00003_c1",
+              "scene_id": "scene_00003",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00012_c1",
+              "scene_id": "scene_00012",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00013_c1",
+              "scene_id": "scene_00013",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00015_c1",
+              "scene_id": "scene_00015",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00016_c1",
+              "scene_id": "scene_00016",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00022_c1",
+              "scene_id": "scene_00022",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00040_c1",
+              "scene_id": "scene_00040",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00044_c1",
+              "scene_id": "scene_00044",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00047_c1",
+              "scene_id": "scene_00047",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00049_c1",
+              "scene_id": "scene_00049",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00052_c1",
+              "scene_id": "scene_00052",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00057_c1",
+              "scene_id": "scene_00057",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00063_c1",
+              "scene_id": "scene_00063",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00071_c1",
+              "scene_id": "scene_00071",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00079_c1",
+              "scene_id": "scene_00079",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00081_c1",
+              "scene_id": "scene_00081",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00101_c1",
+              "scene_id": "scene_00101",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00110_c1",
+              "scene_id": "scene_00110",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00111_c1",
+              "scene_id": "scene_00111",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00112_c1",
+              "scene_id": "scene_00112",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00114_c1",
+              "scene_id": "scene_00114",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00119_c1",
+              "scene_id": "scene_00119",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00125_c1",
+              "scene_id": "scene_00125",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00135_c1",
+              "scene_id": "scene_00135",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00140_c1",
+              "scene_id": "scene_00140",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00142_c1",
+              "scene_id": "scene_00142",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00150_c1",
+              "scene_id": "scene_00150",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00172_c1",
+              "scene_id": "scene_00172",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00174_c1",
+              "scene_id": "scene_00174",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "3"
+            },
+            {
+              "id": "scene_00176_c1",
+              "scene_id": "scene_00176",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00183_c1",
+              "scene_id": "scene_00183",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00185_c1",
+              "scene_id": "scene_00185",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00193_c1",
+              "scene_id": "scene_00193",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00194_c1",
+              "scene_id": "scene_00194",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00214_c1",
+              "scene_id": "scene_00214",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00216_c1",
+              "scene_id": "scene_00216",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00229_c1",
+              "scene_id": "scene_00229",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00235_c1",
+              "scene_id": "scene_00235",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00258_c1",
+              "scene_id": "scene_00258",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00277_c1",
+              "scene_id": "scene_00277",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00279_c1",
+              "scene_id": "scene_00279",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "3"
+            },
+            {
+              "id": "scene_00287_c1",
+              "scene_id": "scene_00287",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00290_c1",
+              "scene_id": "scene_00290",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00292_c1",
+              "scene_id": "scene_00292",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00293_c1",
+              "scene_id": "scene_00293",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "counting",
+              "ground_truth": "1"
+            }
+          ]
+        },
+        "temporal": {
+          "count": 45,
+          "predictions": [
+            {
+              "id": "scene_00003_t1",
+              "scene_id": "scene_00003",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00012_t1",
+              "scene_id": "scene_00012",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00013_t1",
+              "scene_id": "scene_00013",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00015_t1",
+              "scene_id": "scene_00015",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00016_t1",
+              "scene_id": "scene_00016",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00022_t1",
+              "scene_id": "scene_00022",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00040_t1",
+              "scene_id": "scene_00040",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00044_t1",
+              "scene_id": "scene_00044",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00047_t1",
+              "scene_id": "scene_00047",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00049_t1",
+              "scene_id": "scene_00049",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00052_t1",
+              "scene_id": "scene_00052",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00057_t1",
+              "scene_id": "scene_00057",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00063_t1",
+              "scene_id": "scene_00063",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00071_t1",
+              "scene_id": "scene_00071",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00079_t1",
+              "scene_id": "scene_00079",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00081_t1",
+              "scene_id": "scene_00081",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00101_t1",
+              "scene_id": "scene_00101",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00110_t1",
+              "scene_id": "scene_00110",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00111_t1",
+              "scene_id": "scene_00111",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00112_t1",
+              "scene_id": "scene_00112",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00114_t1",
+              "scene_id": "scene_00114",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00119_t1",
+              "scene_id": "scene_00119",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00125_t1",
+              "scene_id": "scene_00125",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00135_t1",
+              "scene_id": "scene_00135",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00140_t1",
+              "scene_id": "scene_00140",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00142_t1",
+              "scene_id": "scene_00142",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00150_t1",
+              "scene_id": "scene_00150",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00172_t1",
+              "scene_id": "scene_00172",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00174_t1",
+              "scene_id": "scene_00174",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00176_t1",
+              "scene_id": "scene_00176",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00183_t1",
+              "scene_id": "scene_00183",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00185_t1",
+              "scene_id": "scene_00185",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00193_t1",
+              "scene_id": "scene_00193",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00194_t1",
+              "scene_id": "scene_00194",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00214_t1",
+              "scene_id": "scene_00214",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00216_t1",
+              "scene_id": "scene_00216",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00229_t1",
+              "scene_id": "scene_00229",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00235_t1",
+              "scene_id": "scene_00235",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00258_t1",
+              "scene_id": "scene_00258",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00277_t1",
+              "scene_id": "scene_00277",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00279_t1",
+              "scene_id": "scene_00279",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00287_t1",
+              "scene_id": "scene_00287",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00290_t1",
+              "scene_id": "scene_00290",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00292_t1",
+              "scene_id": "scene_00292",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00293_t1",
+              "scene_id": "scene_00293",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "temporal",
+              "ground_truth": "dish"
+            }
+          ]
+        },
+        "negation": {
+          "count": 45,
+          "predictions": [
+            {
+              "id": "scene_00003_n1",
+              "scene_id": "scene_00003",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00012_n1",
+              "scene_id": "scene_00012",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00013_n1",
+              "scene_id": "scene_00013",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00015_n1",
+              "scene_id": "scene_00015",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00016_n1",
+              "scene_id": "scene_00016",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00022_n1",
+              "scene_id": "scene_00022",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00040_n1",
+              "scene_id": "scene_00040",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00044_n1",
+              "scene_id": "scene_00044",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00047_n1",
+              "scene_id": "scene_00047",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00049_n1",
+              "scene_id": "scene_00049",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00052_n1",
+              "scene_id": "scene_00052",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00057_n1",
+              "scene_id": "scene_00057",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00063_n1",
+              "scene_id": "scene_00063",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00071_n1",
+              "scene_id": "scene_00071",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00079_n1",
+              "scene_id": "scene_00079",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00081_n1",
+              "scene_id": "scene_00081",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00101_n1",
+              "scene_id": "scene_00101",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00110_n1",
+              "scene_id": "scene_00110",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00111_n1",
+              "scene_id": "scene_00111",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00112_n1",
+              "scene_id": "scene_00112",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00114_n1",
+              "scene_id": "scene_00114",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00119_n1",
+              "scene_id": "scene_00119",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00125_n1",
+              "scene_id": "scene_00125",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00135_n1",
+              "scene_id": "scene_00135",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00140_n1",
+              "scene_id": "scene_00140",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00142_n1",
+              "scene_id": "scene_00142",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00150_n1",
+              "scene_id": "scene_00150",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00172_n1",
+              "scene_id": "scene_00172",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00174_n1",
+              "scene_id": "scene_00174",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00176_n1",
+              "scene_id": "scene_00176",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00183_n1",
+              "scene_id": "scene_00183",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00185_n1",
+              "scene_id": "scene_00185",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00193_n1",
+              "scene_id": "scene_00193",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00194_n1",
+              "scene_id": "scene_00194",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00214_n1",
+              "scene_id": "scene_00214",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00216_n1",
+              "scene_id": "scene_00216",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00229_n1",
+              "scene_id": "scene_00229",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00235_n1",
+              "scene_id": "scene_00235",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00258_n1",
+              "scene_id": "scene_00258",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00277_n1",
+              "scene_id": "scene_00277",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00279_n1",
+              "scene_id": "scene_00279",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00287_n1",
+              "scene_id": "scene_00287",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00290_n1",
+              "scene_id": "scene_00290",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00292_n1",
+              "scene_id": "scene_00292",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00293_n1",
+              "scene_id": "scene_00293",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "negation",
+              "ground_truth": "no"
+            }
+          ]
+        },
+        "comparative": {
+          "count": 42,
+          "predictions": [
+            {
+              "id": "scene_00003_comp1",
+              "scene_id": "scene_00003",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00012_comp1",
+              "scene_id": "scene_00012",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00013_comp1",
+              "scene_id": "scene_00013",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00015_comp1",
+              "scene_id": "scene_00015",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00016_comp1",
+              "scene_id": "scene_00016",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00022_comp1",
+              "scene_id": "scene_00022",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00040_comp1",
+              "scene_id": "scene_00040",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00044_comp1",
+              "scene_id": "scene_00044",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00047_comp1",
+              "scene_id": "scene_00047",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00052_comp1",
+              "scene_id": "scene_00052",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00057_comp1",
+              "scene_id": "scene_00057",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00063_comp1",
+              "scene_id": "scene_00063",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00071_comp1",
+              "scene_id": "scene_00071",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00081_comp1",
+              "scene_id": "scene_00081",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00101_comp1",
+              "scene_id": "scene_00101",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00110_comp1",
+              "scene_id": "scene_00110",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00111_comp1",
+              "scene_id": "scene_00111",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00112_comp1",
+              "scene_id": "scene_00112",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00114_comp1",
+              "scene_id": "scene_00114",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00119_comp1",
+              "scene_id": "scene_00119",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00125_comp1",
+              "scene_id": "scene_00125",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00135_comp1",
+              "scene_id": "scene_00135",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00140_comp1",
+              "scene_id": "scene_00140",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00142_comp1",
+              "scene_id": "scene_00142",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00150_comp1",
+              "scene_id": "scene_00150",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00172_comp1",
+              "scene_id": "scene_00172",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00174_comp1",
+              "scene_id": "scene_00174",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00176_comp1",
+              "scene_id": "scene_00176",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00183_comp1",
+              "scene_id": "scene_00183",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00185_comp1",
+              "scene_id": "scene_00185",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00193_comp1",
+              "scene_id": "scene_00193",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00194_comp1",
+              "scene_id": "scene_00194",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00214_comp1",
+              "scene_id": "scene_00214",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00216_comp1",
+              "scene_id": "scene_00216",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00229_comp1",
+              "scene_id": "scene_00229",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00235_comp1",
+              "scene_id": "scene_00235",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00258_comp1",
+              "scene_id": "scene_00258",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00277_comp1",
+              "scene_id": "scene_00277",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00287_comp1",
+              "scene_id": "scene_00287",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00290_comp1",
+              "scene_id": "scene_00290",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00292_comp1",
+              "scene_id": "scene_00292",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00293_comp1",
+              "scene_id": "scene_00293",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "comparative",
+              "ground_truth": "siren"
+            }
+          ]
+        }
+      },
+      "llm_grounded": {
+        "perceptual": {
+          "count": 45,
+          "predictions": [
+            {
+              "id": "scene_00003_p1",
+              "scene_id": "scene_00003",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00012_p1",
+              "scene_id": "scene_00012",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00013_p1",
+              "scene_id": "scene_00013",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00015_p1",
+              "scene_id": "scene_00015",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00016_p1",
+              "scene_id": "scene_00016",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00022_p1",
+              "scene_id": "scene_00022",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00040_p1",
+              "scene_id": "scene_00040",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00044_p1",
+              "scene_id": "scene_00044",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00047_p1",
+              "scene_id": "scene_00047",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00049_p1",
+              "scene_id": "scene_00049",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00052_p1",
+              "scene_id": "scene_00052",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00057_p1",
+              "scene_id": "scene_00057",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00063_p1",
+              "scene_id": "scene_00063",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00071_p1",
+              "scene_id": "scene_00071",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00079_p1",
+              "scene_id": "scene_00079",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00081_p1",
+              "scene_id": "scene_00081",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00101_p1",
+              "scene_id": "scene_00101",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00110_p1",
+              "scene_id": "scene_00110",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00111_p1",
+              "scene_id": "scene_00111",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00112_p1",
+              "scene_id": "scene_00112",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00114_p1",
+              "scene_id": "scene_00114",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00119_p1",
+              "scene_id": "scene_00119",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00125_p1",
+              "scene_id": "scene_00125",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00135_p1",
+              "scene_id": "scene_00135",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00140_p1",
+              "scene_id": "scene_00140",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00142_p1",
+              "scene_id": "scene_00142",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00150_p1",
+              "scene_id": "scene_00150",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00172_p1",
+              "scene_id": "scene_00172",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00174_p1",
+              "scene_id": "scene_00174",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00176_p1",
+              "scene_id": "scene_00176",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00183_p1",
+              "scene_id": "scene_00183",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00185_p1",
+              "scene_id": "scene_00185",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00193_p1",
+              "scene_id": "scene_00193",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00194_p1",
+              "scene_id": "scene_00194",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00214_p1",
+              "scene_id": "scene_00214",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00216_p1",
+              "scene_id": "scene_00216",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00229_p1",
+              "scene_id": "scene_00229",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00235_p1",
+              "scene_id": "scene_00235",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00258_p1",
+              "scene_id": "scene_00258",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00277_p1",
+              "scene_id": "scene_00277",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00279_p1",
+              "scene_id": "scene_00279",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00287_p1",
+              "scene_id": "scene_00287",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00290_p1",
+              "scene_id": "scene_00290",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00292_p1",
+              "scene_id": "scene_00292",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00293_p1",
+              "scene_id": "scene_00293",
+              "type": "perceptual",
+              "answer_pred": "derived from detected events",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            }
+          ]
+        },
+        "counting": {
+          "count": 45,
+          "predictions": [
+            {
+              "id": "scene_00003_c1",
+              "scene_id": "scene_00003",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00012_c1",
+              "scene_id": "scene_00012",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00013_c1",
+              "scene_id": "scene_00013",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00015_c1",
+              "scene_id": "scene_00015",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00016_c1",
+              "scene_id": "scene_00016",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00022_c1",
+              "scene_id": "scene_00022",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00040_c1",
+              "scene_id": "scene_00040",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00044_c1",
+              "scene_id": "scene_00044",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00047_c1",
+              "scene_id": "scene_00047",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00049_c1",
+              "scene_id": "scene_00049",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00052_c1",
+              "scene_id": "scene_00052",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00057_c1",
+              "scene_id": "scene_00057",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00063_c1",
+              "scene_id": "scene_00063",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00071_c1",
+              "scene_id": "scene_00071",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00079_c1",
+              "scene_id": "scene_00079",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00081_c1",
+              "scene_id": "scene_00081",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00101_c1",
+              "scene_id": "scene_00101",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00110_c1",
+              "scene_id": "scene_00110",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00111_c1",
+              "scene_id": "scene_00111",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00112_c1",
+              "scene_id": "scene_00112",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00114_c1",
+              "scene_id": "scene_00114",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00119_c1",
+              "scene_id": "scene_00119",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00125_c1",
+              "scene_id": "scene_00125",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00135_c1",
+              "scene_id": "scene_00135",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00140_c1",
+              "scene_id": "scene_00140",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00142_c1",
+              "scene_id": "scene_00142",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00150_c1",
+              "scene_id": "scene_00150",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00172_c1",
+              "scene_id": "scene_00172",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00174_c1",
+              "scene_id": "scene_00174",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "3"
+            },
+            {
+              "id": "scene_00176_c1",
+              "scene_id": "scene_00176",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00183_c1",
+              "scene_id": "scene_00183",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00185_c1",
+              "scene_id": "scene_00185",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00193_c1",
+              "scene_id": "scene_00193",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00194_c1",
+              "scene_id": "scene_00194",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00214_c1",
+              "scene_id": "scene_00214",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00216_c1",
+              "scene_id": "scene_00216",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00229_c1",
+              "scene_id": "scene_00229",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00235_c1",
+              "scene_id": "scene_00235",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00258_c1",
+              "scene_id": "scene_00258",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00277_c1",
+              "scene_id": "scene_00277",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00279_c1",
+              "scene_id": "scene_00279",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "3"
+            },
+            {
+              "id": "scene_00287_c1",
+              "scene_id": "scene_00287",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00290_c1",
+              "scene_id": "scene_00290",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00292_c1",
+              "scene_id": "scene_00292",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00293_c1",
+              "scene_id": "scene_00293",
+              "type": "counting",
+              "answer_pred": "derived from timeline count",
+              "kind": "llm_grounded",
+              "ground_truth": "1"
+            }
+          ]
+        },
+        "temporal": {
+          "count": 45,
+          "predictions": [
+            {
+              "id": "scene_00003_t1",
+              "scene_id": "scene_00003",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00012_t1",
+              "scene_id": "scene_00012",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00013_t1",
+              "scene_id": "scene_00013",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00015_t1",
+              "scene_id": "scene_00015",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00016_t1",
+              "scene_id": "scene_00016",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00022_t1",
+              "scene_id": "scene_00022",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00040_t1",
+              "scene_id": "scene_00040",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00044_t1",
+              "scene_id": "scene_00044",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00047_t1",
+              "scene_id": "scene_00047",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00049_t1",
+              "scene_id": "scene_00049",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00052_t1",
+              "scene_id": "scene_00052",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00057_t1",
+              "scene_id": "scene_00057",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00063_t1",
+              "scene_id": "scene_00063",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00071_t1",
+              "scene_id": "scene_00071",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00079_t1",
+              "scene_id": "scene_00079",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00081_t1",
+              "scene_id": "scene_00081",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00101_t1",
+              "scene_id": "scene_00101",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00110_t1",
+              "scene_id": "scene_00110",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00111_t1",
+              "scene_id": "scene_00111",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00112_t1",
+              "scene_id": "scene_00112",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00114_t1",
+              "scene_id": "scene_00114",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00119_t1",
+              "scene_id": "scene_00119",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00125_t1",
+              "scene_id": "scene_00125",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00135_t1",
+              "scene_id": "scene_00135",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00140_t1",
+              "scene_id": "scene_00140",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00142_t1",
+              "scene_id": "scene_00142",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00150_t1",
+              "scene_id": "scene_00150",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00172_t1",
+              "scene_id": "scene_00172",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00174_t1",
+              "scene_id": "scene_00174",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00176_t1",
+              "scene_id": "scene_00176",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00183_t1",
+              "scene_id": "scene_00183",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00185_t1",
+              "scene_id": "scene_00185",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00193_t1",
+              "scene_id": "scene_00193",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00194_t1",
+              "scene_id": "scene_00194",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00214_t1",
+              "scene_id": "scene_00214",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00216_t1",
+              "scene_id": "scene_00216",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00229_t1",
+              "scene_id": "scene_00229",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00235_t1",
+              "scene_id": "scene_00235",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00258_t1",
+              "scene_id": "scene_00258",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00277_t1",
+              "scene_id": "scene_00277",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00279_t1",
+              "scene_id": "scene_00279",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00287_t1",
+              "scene_id": "scene_00287",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00290_t1",
+              "scene_id": "scene_00290",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00292_t1",
+              "scene_id": "scene_00292",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00293_t1",
+              "scene_id": "scene_00293",
+              "type": "temporal",
+              "answer_pred": "derived from temporal ordering",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            }
+          ]
+        },
+        "negation": {
+          "count": 45,
+          "predictions": [
+            {
+              "id": "scene_00003_n1",
+              "scene_id": "scene_00003",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00012_n1",
+              "scene_id": "scene_00012",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00013_n1",
+              "scene_id": "scene_00013",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00015_n1",
+              "scene_id": "scene_00015",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00016_n1",
+              "scene_id": "scene_00016",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00022_n1",
+              "scene_id": "scene_00022",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00040_n1",
+              "scene_id": "scene_00040",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00044_n1",
+              "scene_id": "scene_00044",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00047_n1",
+              "scene_id": "scene_00047",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00049_n1",
+              "scene_id": "scene_00049",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00052_n1",
+              "scene_id": "scene_00052",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00057_n1",
+              "scene_id": "scene_00057",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00063_n1",
+              "scene_id": "scene_00063",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00071_n1",
+              "scene_id": "scene_00071",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00079_n1",
+              "scene_id": "scene_00079",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00081_n1",
+              "scene_id": "scene_00081",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00101_n1",
+              "scene_id": "scene_00101",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00110_n1",
+              "scene_id": "scene_00110",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00111_n1",
+              "scene_id": "scene_00111",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00112_n1",
+              "scene_id": "scene_00112",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00114_n1",
+              "scene_id": "scene_00114",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00119_n1",
+              "scene_id": "scene_00119",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00125_n1",
+              "scene_id": "scene_00125",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00135_n1",
+              "scene_id": "scene_00135",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00140_n1",
+              "scene_id": "scene_00140",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00142_n1",
+              "scene_id": "scene_00142",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00150_n1",
+              "scene_id": "scene_00150",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00172_n1",
+              "scene_id": "scene_00172",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00174_n1",
+              "scene_id": "scene_00174",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00176_n1",
+              "scene_id": "scene_00176",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00183_n1",
+              "scene_id": "scene_00183",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00185_n1",
+              "scene_id": "scene_00185",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00193_n1",
+              "scene_id": "scene_00193",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00194_n1",
+              "scene_id": "scene_00194",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00214_n1",
+              "scene_id": "scene_00214",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00216_n1",
+              "scene_id": "scene_00216",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00229_n1",
+              "scene_id": "scene_00229",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00235_n1",
+              "scene_id": "scene_00235",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00258_n1",
+              "scene_id": "scene_00258",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00277_n1",
+              "scene_id": "scene_00277",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00279_n1",
+              "scene_id": "scene_00279",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00287_n1",
+              "scene_id": "scene_00287",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00290_n1",
+              "scene_id": "scene_00290",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00292_n1",
+              "scene_id": "scene_00292",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00293_n1",
+              "scene_id": "scene_00293",
+              "type": "negation",
+              "answer_pred": "no \u2014 event not present in timeline",
+              "kind": "llm_grounded",
+              "ground_truth": "no"
+            }
+          ]
+        },
+        "comparative": {
+          "count": 42,
+          "predictions": [
+            {
+              "id": "scene_00003_comp1",
+              "scene_id": "scene_00003",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00012_comp1",
+              "scene_id": "scene_00012",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00013_comp1",
+              "scene_id": "scene_00013",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00015_comp1",
+              "scene_id": "scene_00015",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00016_comp1",
+              "scene_id": "scene_00016",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00022_comp1",
+              "scene_id": "scene_00022",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00040_comp1",
+              "scene_id": "scene_00040",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00044_comp1",
+              "scene_id": "scene_00044",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00047_comp1",
+              "scene_id": "scene_00047",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00052_comp1",
+              "scene_id": "scene_00052",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00057_comp1",
+              "scene_id": "scene_00057",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00063_comp1",
+              "scene_id": "scene_00063",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00071_comp1",
+              "scene_id": "scene_00071",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00081_comp1",
+              "scene_id": "scene_00081",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00101_comp1",
+              "scene_id": "scene_00101",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00110_comp1",
+              "scene_id": "scene_00110",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00111_comp1",
+              "scene_id": "scene_00111",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00112_comp1",
+              "scene_id": "scene_00112",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00114_comp1",
+              "scene_id": "scene_00114",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00119_comp1",
+              "scene_id": "scene_00119",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00125_comp1",
+              "scene_id": "scene_00125",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00135_comp1",
+              "scene_id": "scene_00135",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00140_comp1",
+              "scene_id": "scene_00140",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00142_comp1",
+              "scene_id": "scene_00142",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00150_comp1",
+              "scene_id": "scene_00150",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00172_comp1",
+              "scene_id": "scene_00172",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00174_comp1",
+              "scene_id": "scene_00174",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00176_comp1",
+              "scene_id": "scene_00176",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00183_comp1",
+              "scene_id": "scene_00183",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00185_comp1",
+              "scene_id": "scene_00185",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00193_comp1",
+              "scene_id": "scene_00193",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00194_comp1",
+              "scene_id": "scene_00194",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00214_comp1",
+              "scene_id": "scene_00214",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00216_comp1",
+              "scene_id": "scene_00216",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00229_comp1",
+              "scene_id": "scene_00229",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00235_comp1",
+              "scene_id": "scene_00235",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00258_comp1",
+              "scene_id": "scene_00258",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00277_comp1",
+              "scene_id": "scene_00277",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00287_comp1",
+              "scene_id": "scene_00287",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00290_comp1",
+              "scene_id": "scene_00290",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00292_comp1",
+              "scene_id": "scene_00292",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00293_comp1",
+              "scene_id": "scene_00293",
+              "type": "comparative",
+              "answer_pred": "derived by comparing event counts",
+              "kind": "llm_grounded",
+              "ground_truth": "siren"
+            }
+          ]
+        }
+      }
+    },
+    "event_detection_metrics": {
+      "note": "Event detection metrics require downloaded audio + real tagger (CLAP/PANNs). Values below are structural placeholders (Plan 3.1, 5.1).",
+      "precision": "unavailable (requires real predictions)",
+      "recall": "unavailable (requires real predictions)",
+      "f1": "unavailable (requires real predictions)",
+      "ioU_threshold": 0.3
+    },
+    "source_config": {
+      "tagger": "CLAP zero-shot (restricted vocabulary); placeholder when weights/audio unavailable",
+      "threshold_tuning": "validation-based (Plan 3.1), no gradient training",
+      "context_format": "deterministic chronological event list (Plan 3.2)",
+      "rule_answerer": "keyword/intent classification (Plan 3.3 sub-approach 1)",
+      "llm_answerer": "structured context + small LLM (Plan 3.3 sub-approach 2); real model call not executed due to missing downloaded weights"
+    }
+  }
+}
