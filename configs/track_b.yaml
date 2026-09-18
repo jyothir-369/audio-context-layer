@@ -1,0 +1,17 @@
+# Track B config (Plan Section 4.2)
+# Bonus / optional — NOT fully executed due to compute/time limits.
+model: qwen2.5-1.5b-instruct  # candidate; not actually loaded
+audio_encoder: clap  # candidate; weights not downloaded
+projector: linear
+llm_tuning: lora
+lora_rank: 8
+max_audio_duration_sec: 30
+batch_size: 2
+learning_rate: 1e-4
+epochs: 1  # reduced; full sweep skipped per Section 4.3
+warmup_steps: 100
+loss_mask: answer_only
+checkpoint_dir: checkpoints/track_b
+results_dir: results/
+# Status: structural skeleton only; no actual gradient training performed.
+# See results/phase6_status.md for full limitation statement.
