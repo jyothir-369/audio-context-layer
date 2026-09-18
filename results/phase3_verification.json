@@ -1,0 +1,17 @@
+{
+  "phase": "3",
+  "scope": "Track A core only (no LLM-grounded, no Track B, no full eval, no error analysis, no final report)",
+  "components": [
+    "event_tagger (zero-shot placeholder)",
+    "scene_graph_builder (deterministic context)",
+    "qa_answerer (rule-based keyword/intention)"
+  ],
+  "tagger_type": "CLAP-style zero-shot (restricted vocabulary); placeholder used because source audio/downloaded model weights not present; NO training from scratch",
+  "threshold_tuning": "may use validation set (Plan 3.1) but NO gradient-based training",
+  "structured_context": "deterministic text from timeline",
+  "rule_based_qa": "keyword/intent classification + direct timeline computation (counting, temporal, causal from CAUSAL_TABLE, negation, comparative, perceptual)",
+  "unsupported_questions": "return explicit insufficient-info (no hallucination)",
+  "tests": "structural pipeline verified; accuracy claims NOT made (no real tagger running on real clips)",
+  "run_runnable": "audio_path -> timeline -> context -> answer runs end-to-end",
+  "limitations": "requires downloaded ESC-50/UrbanSound8K source clips and CLAP/PANNs model weights for real tagging; synthetic placeholder scenes only for structural verification; threshold tuning on validation uses synthetic predictions"
+}
