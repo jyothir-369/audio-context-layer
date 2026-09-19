@@ -3,7 +3,8 @@
 ## Method Note
 - Tagger: spectral matched-filter (deliberate synthetic-PoC deviation from plan-required CLAP/PANNs)
 - Runtime confidence threshold: 0.15 (not the val-sweep 0.10 label-count snapshot)
-- LLM-grounded: NOT IMPLEMENTED / DESCOPED
+- Rule-based: keyword/intent classification + timeline reasoning
+- LLM-grounded: not_implemented (Qwen2.5-0.5B-Instruct when available)
 - Test samples processed: 306; failed/skipped: 0
 - Event detection unit: unique scene (45 scenes); tag_audio cached per scene
 
@@ -35,13 +36,12 @@
 | F1 | 0.4094 |
 | IoU threshold | 0.3 |
 
-## Per-Type Counts (Rule-Based Predictions)
+## Per-Type Counts
 
+### Rule-Based
 - perceptual: 90 predictions
 - counting: 45 predictions
 - temporal: 45 predictions
 - negation: 45 predictions
 - comparative: 45 predictions
 - causal: 36 predictions
-
-**Note:** No fabricated metrics. LLM-grounded column explicitly marked not_implemented.

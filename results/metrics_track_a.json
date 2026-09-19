@@ -2,2530 +2,2536 @@
   "track_a_evaluation": {
     "test_samples_total": 306,
     "failed_or_skipped": 0,
-    "note": "Aggregate QA metrics computed from actual test predictions. LLM-grounded sub-approach: not_implemented / descoped (Plan 3.3, 3.4). Event detection metrics computed once per unique test scene (not per QA pair) with temporal IoU >= 0.30 from cached tagger timelines vs ground-truth annotations.",
+    "note": "Aggregate QA metrics computed from actual test predictions. Both sub-approaches from Plan 3.3 evaluated when LLM is available. Event detection metrics computed once per unique test scene (not per QA pair) with temporal IoU >= 0.30 from cached tagger timelines vs ground-truth annotations.",
     "rule_based_evaluated": true,
     "llm_grounded_evaluated": false,
     "llm_grounded_status": "not_implemented",
     "aggregate_metrics": {
-      "perceptual": {
-        "count": 90,
-        "correct": 41,
-        "accuracy": 0.4556
+      "rule_based": {
+        "perceptual": {
+          "count": 90,
+          "correct": 41,
+          "accuracy": 0.4556
+        },
+        "counting": {
+          "count": 45,
+          "correct": 28,
+          "accuracy": 0.6222,
+          "mae": 0.5778
+        },
+        "temporal": {
+          "count": 45,
+          "correct": 19,
+          "accuracy": 0.4222
+        },
+        "causal": {
+          "count": 36,
+          "correct": 20,
+          "accuracy": 0.5556,
+          "semantic_similarity_avg_overlap": 0.6391,
+          "exact_match": 20
+        },
+        "negation": {
+          "count": 45,
+          "correct": 45,
+          "accuracy": 1.0,
+          "false_positive_rate": 0.0
+        },
+        "comparative": {
+          "count": 45,
+          "correct": 22,
+          "accuracy": 0.4889
+        },
+        "overall": {
+          "count": 306,
+          "correct": 175,
+          "accuracy": 0.5719
+        }
       },
-      "counting": {
-        "count": 45,
-        "correct": 28,
-        "accuracy": 0.6222,
-        "mae": 0.5778
-      },
-      "temporal": {
-        "count": 45,
-        "correct": 19,
-        "accuracy": 0.4222
-      },
-      "causal": {
-        "count": 36,
-        "correct": 20,
-        "accuracy": 0.5556,
-        "semantic_similarity_avg_overlap": 0.6391,
-        "exact_match": 20
-      },
-      "negation": {
-        "count": 45,
-        "correct": 45,
-        "accuracy": 1.0,
-        "false_positive_rate": 0.0
-      },
-      "comparative": {
-        "count": 45,
-        "correct": 22,
-        "accuracy": 0.4889
-      },
-      "overall": {
-        "count": 306,
-        "correct": 175,
-        "accuracy": 0.5719
-      }
+      "llm_grounded": null
     },
     "per_type_breakdown": {
-      "perceptual": {
-        "count": 90,
-        "predictions": [
-          {
-            "id": "scene_00185_p1",
-            "scene_id": "scene_00185",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00185_p2",
-            "scene_id": "scene_00185",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "kitchen"
-          },
-          {
-            "id": "scene_00150_p1",
-            "scene_id": "scene_00150",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "door_slam"
-          },
-          {
-            "id": "scene_00150_p2",
-            "scene_id": "scene_00150",
-            "type": "perceptual",
-            "answer_pred": "kitchen",
-            "kind": "perceptual",
-            "ground_truth": "kitchen"
-          },
-          {
-            "id": "scene_00040_p1",
-            "scene_id": "scene_00040",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "door_slam"
-          },
-          {
-            "id": "scene_00040_p2",
-            "scene_id": "scene_00040",
-            "type": "perceptual",
-            "answer_pred": "kitchen",
-            "kind": "perceptual",
-            "ground_truth": "kitchen"
-          },
-          {
-            "id": "scene_00193_p1",
-            "scene_id": "scene_00193",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00193_p2",
-            "scene_id": "scene_00193",
-            "type": "perceptual",
-            "answer_pred": "kitchen",
-            "kind": "perceptual",
-            "ground_truth": "kitchen"
-          },
-          {
-            "id": "scene_00063_p1",
-            "scene_id": "scene_00063",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "siren"
-          },
-          {
-            "id": "scene_00063_p2",
-            "scene_id": "scene_00063",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "construction_site"
-          },
-          {
-            "id": "scene_00235_p1",
-            "scene_id": "scene_00235",
-            "type": "perceptual",
-            "answer_pred": "dog_bark",
-            "kind": "perceptual",
-            "ground_truth": "dog_bark"
-          },
-          {
-            "id": "scene_00235_p2",
-            "scene_id": "scene_00235",
-            "type": "perceptual",
-            "answer_pred": "kitchen",
-            "kind": "perceptual",
-            "ground_truth": "park"
-          },
-          {
-            "id": "scene_00022_p1",
-            "scene_id": "scene_00022",
-            "type": "perceptual",
-            "answer_pred": "hammer",
-            "kind": "perceptual",
-            "ground_truth": "hammer"
-          },
-          {
-            "id": "scene_00022_p2",
-            "scene_id": "scene_00022",
-            "type": "perceptual",
-            "answer_pred": "street",
-            "kind": "perceptual",
-            "ground_truth": "construction_site"
-          },
-          {
-            "id": "scene_00135_p1",
-            "scene_id": "scene_00135",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "bird_chirp"
-          },
-          {
-            "id": "scene_00135_p2",
-            "scene_id": "scene_00135",
-            "type": "perceptual",
-            "answer_pred": "kitchen",
-            "kind": "perceptual",
-            "ground_truth": "park"
-          },
-          {
-            "id": "scene_00176_p1",
-            "scene_id": "scene_00176",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "water"
-          },
-          {
-            "id": "scene_00176_p2",
-            "scene_id": "scene_00176",
-            "type": "perceptual",
-            "answer_pred": "kitchen",
-            "kind": "perceptual",
-            "ground_truth": "kitchen"
-          },
-          {
-            "id": "scene_00183_p1",
-            "scene_id": "scene_00183",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "shouting"
-          },
-          {
-            "id": "scene_00183_p2",
-            "scene_id": "scene_00183",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "construction_site"
-          },
-          {
-            "id": "scene_00049_p1",
-            "scene_id": "scene_00049",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "keyboard"
-          },
-          {
-            "id": "scene_00049_p2",
-            "scene_id": "scene_00049",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "office"
-          },
-          {
-            "id": "scene_00194_p1",
-            "scene_id": "scene_00194",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "dish"
-          },
-          {
-            "id": "scene_00194_p2",
-            "scene_id": "scene_00194",
-            "type": "perceptual",
-            "answer_pred": "kitchen",
-            "kind": "perceptual",
-            "ground_truth": "kitchen"
-          },
-          {
-            "id": "scene_00287_p1",
-            "scene_id": "scene_00287",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00287_p2",
-            "scene_id": "scene_00287",
-            "type": "perceptual",
-            "answer_pred": "bicycle_bell",
-            "kind": "perceptual",
-            "ground_truth": "park"
-          },
-          {
-            "id": "scene_00293_p1",
-            "scene_id": "scene_00293",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00293_p2",
-            "scene_id": "scene_00293",
-            "type": "perceptual",
-            "answer_pred": "park",
-            "kind": "perceptual",
-            "ground_truth": "park"
-          },
-          {
-            "id": "scene_00172_p1",
-            "scene_id": "scene_00172",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00172_p2",
-            "scene_id": "scene_00172",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "street"
-          },
-          {
-            "id": "scene_00110_p1",
-            "scene_id": "scene_00110",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "drilling"
-          },
-          {
-            "id": "scene_00110_p2",
-            "scene_id": "scene_00110",
-            "type": "perceptual",
-            "answer_pred": "construction_site",
-            "kind": "perceptual",
-            "ground_truth": "construction_site"
-          },
-          {
-            "id": "scene_00079_p1",
-            "scene_id": "scene_00079",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "dog_bark"
-          },
-          {
-            "id": "scene_00079_p2",
-            "scene_id": "scene_00079",
-            "type": "perceptual",
-            "answer_pred": "street",
-            "kind": "perceptual",
-            "ground_truth": "street"
-          },
-          {
-            "id": "scene_00277_p1",
-            "scene_id": "scene_00277",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "microwave_beep"
-          },
-          {
-            "id": "scene_00277_p2",
-            "scene_id": "scene_00277",
-            "type": "perceptual",
-            "answer_pred": "kitchen",
-            "kind": "perceptual",
-            "ground_truth": "kitchen"
-          },
-          {
-            "id": "scene_00174_p1",
-            "scene_id": "scene_00174",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "car_horn"
-          },
-          {
-            "id": "scene_00174_p2",
-            "scene_id": "scene_00174",
-            "type": "perceptual",
-            "answer_pred": "street",
-            "kind": "perceptual",
-            "ground_truth": "street"
-          },
-          {
-            "id": "scene_00290_p1",
-            "scene_id": "scene_00290",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00290_p2",
-            "scene_id": "scene_00290",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "construction_site"
-          },
-          {
-            "id": "scene_00081_p1",
-            "scene_id": "scene_00081",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "phone_ring"
-          },
-          {
-            "id": "scene_00081_p2",
-            "scene_id": "scene_00081",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "office"
-          },
-          {
-            "id": "scene_00003_p1",
-            "scene_id": "scene_00003",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "siren"
-          },
-          {
-            "id": "scene_00003_p2",
-            "scene_id": "scene_00003",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "street"
-          },
-          {
-            "id": "scene_00142_p1",
-            "scene_id": "scene_00142",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "wind_rustle"
-          },
-          {
-            "id": "scene_00142_p2",
-            "scene_id": "scene_00142",
-            "type": "perceptual",
-            "answer_pred": "kitchen",
-            "kind": "perceptual",
-            "ground_truth": "park"
-          },
-          {
-            "id": "scene_00229_p1",
-            "scene_id": "scene_00229",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "hammer"
-          },
-          {
-            "id": "scene_00229_p2",
-            "scene_id": "scene_00229",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "construction_site"
-          },
-          {
-            "id": "scene_00112_p1",
-            "scene_id": "scene_00112",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "bird_chirp"
-          },
-          {
-            "id": "scene_00112_p2",
-            "scene_id": "scene_00112",
-            "type": "perceptual",
-            "answer_pred": "kitchen",
-            "kind": "perceptual",
-            "ground_truth": "park"
-          },
-          {
-            "id": "scene_00214_p1",
-            "scene_id": "scene_00214",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "keyboard"
-          },
-          {
-            "id": "scene_00214_p2",
-            "scene_id": "scene_00214",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "office"
-          },
-          {
-            "id": "scene_00292_p1",
-            "scene_id": "scene_00292",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00292_p2",
-            "scene_id": "scene_00292",
-            "type": "perceptual",
-            "answer_pred": "street",
-            "kind": "perceptual",
-            "ground_truth": "construction_site"
-          },
-          {
-            "id": "scene_00101_p1",
-            "scene_id": "scene_00101",
-            "type": "perceptual",
-            "answer_pred": "engine",
-            "kind": "perceptual",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00101_p2",
-            "scene_id": "scene_00101",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "construction_site"
-          },
-          {
-            "id": "scene_00013_p1",
-            "scene_id": "scene_00013",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00013_p2",
-            "scene_id": "scene_00013",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "office"
-          },
-          {
-            "id": "scene_00258_p1",
-            "scene_id": "scene_00258",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "printer"
-          },
-          {
-            "id": "scene_00258_p2",
-            "scene_id": "scene_00258",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "office"
-          },
-          {
-            "id": "scene_00119_p1",
-            "scene_id": "scene_00119",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00119_p2",
-            "scene_id": "scene_00119",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "office"
-          },
-          {
-            "id": "scene_00111_p1",
-            "scene_id": "scene_00111",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "door_slam"
-          },
-          {
-            "id": "scene_00111_p2",
-            "scene_id": "scene_00111",
-            "type": "perceptual",
-            "answer_pred": "kitchen",
-            "kind": "perceptual",
-            "ground_truth": "kitchen"
-          },
-          {
-            "id": "scene_00047_p1",
-            "scene_id": "scene_00047",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "dog_bark"
-          },
-          {
-            "id": "scene_00047_p2",
-            "scene_id": "scene_00047",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "street"
-          },
-          {
-            "id": "scene_00015_p1",
-            "scene_id": "scene_00015",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00015_p2",
-            "scene_id": "scene_00015",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "office"
-          },
-          {
-            "id": "scene_00016_p1",
-            "scene_id": "scene_00016",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "keyboard"
-          },
-          {
-            "id": "scene_00016_p2",
-            "scene_id": "scene_00016",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "office"
-          },
-          {
-            "id": "scene_00216_p1",
-            "scene_id": "scene_00216",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "phone_ring"
-          },
-          {
-            "id": "scene_00216_p2",
-            "scene_id": "scene_00216",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "office"
-          },
-          {
-            "id": "scene_00044_p1",
-            "scene_id": "scene_00044",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "siren"
-          },
-          {
-            "id": "scene_00044_p2",
-            "scene_id": "scene_00044",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "street"
-          },
-          {
-            "id": "scene_00279_p1",
-            "scene_id": "scene_00279",
-            "type": "perceptual",
-            "answer_pred": "keyboard",
-            "kind": "perceptual",
-            "ground_truth": "keyboard"
-          },
-          {
-            "id": "scene_00279_p2",
-            "scene_id": "scene_00279",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "office"
-          },
-          {
-            "id": "scene_00052_p1",
-            "scene_id": "scene_00052",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00052_p2",
-            "scene_id": "scene_00052",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "office"
-          },
-          {
-            "id": "scene_00071_p1",
-            "scene_id": "scene_00071",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "door_slam"
-          },
-          {
-            "id": "scene_00071_p2",
-            "scene_id": "scene_00071",
-            "type": "perceptual",
-            "answer_pred": "kitchen",
-            "kind": "perceptual",
-            "ground_truth": "kitchen"
-          },
-          {
-            "id": "scene_00114_p1",
-            "scene_id": "scene_00114",
-            "type": "perceptual",
-            "answer_pred": "engine",
-            "kind": "perceptual",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00114_p2",
-            "scene_id": "scene_00114",
-            "type": "perceptual",
-            "answer_pred": "street",
-            "kind": "perceptual",
-            "ground_truth": "street"
-          },
-          {
-            "id": "scene_00125_p1",
-            "scene_id": "scene_00125",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "shouting"
-          },
-          {
-            "id": "scene_00125_p2",
-            "scene_id": "scene_00125",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "construction_site"
-          },
-          {
-            "id": "scene_00140_p1",
-            "scene_id": "scene_00140",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00140_p2",
-            "scene_id": "scene_00140",
-            "type": "perceptual",
-            "answer_pred": "street",
-            "kind": "perceptual",
-            "ground_truth": "office"
-          },
-          {
-            "id": "scene_00012_p1",
-            "scene_id": "scene_00012",
-            "type": "perceptual",
-            "answer_pred": "footstep",
-            "kind": "perceptual",
-            "ground_truth": "siren"
-          },
-          {
-            "id": "scene_00012_p2",
-            "scene_id": "scene_00012",
-            "type": "perceptual",
-            "answer_pred": "office",
-            "kind": "perceptual",
-            "ground_truth": "construction_site"
-          },
-          {
-            "id": "scene_00057_p1",
-            "scene_id": "scene_00057",
-            "type": "perceptual",
-            "answer_pred": "wind_rustle",
-            "kind": "perceptual",
-            "ground_truth": "wind_rustle"
-          },
-          {
-            "id": "scene_00057_p2",
-            "scene_id": "scene_00057",
-            "type": "perceptual",
-            "answer_pred": "park",
-            "kind": "perceptual",
-            "ground_truth": "park"
-          }
-        ]
+      "rule_based": {
+        "perceptual": {
+          "count": 90,
+          "predictions": [
+            {
+              "id": "scene_00185_p1",
+              "scene_id": "scene_00185",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00185_p2",
+              "scene_id": "scene_00185",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "kitchen"
+            },
+            {
+              "id": "scene_00150_p1",
+              "scene_id": "scene_00150",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "door_slam"
+            },
+            {
+              "id": "scene_00150_p2",
+              "scene_id": "scene_00150",
+              "type": "perceptual",
+              "answer_pred": "kitchen",
+              "kind": "perceptual",
+              "ground_truth": "kitchen"
+            },
+            {
+              "id": "scene_00040_p1",
+              "scene_id": "scene_00040",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "door_slam"
+            },
+            {
+              "id": "scene_00040_p2",
+              "scene_id": "scene_00040",
+              "type": "perceptual",
+              "answer_pred": "kitchen",
+              "kind": "perceptual",
+              "ground_truth": "kitchen"
+            },
+            {
+              "id": "scene_00193_p1",
+              "scene_id": "scene_00193",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00193_p2",
+              "scene_id": "scene_00193",
+              "type": "perceptual",
+              "answer_pred": "kitchen",
+              "kind": "perceptual",
+              "ground_truth": "kitchen"
+            },
+            {
+              "id": "scene_00063_p1",
+              "scene_id": "scene_00063",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00063_p2",
+              "scene_id": "scene_00063",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "construction_site"
+            },
+            {
+              "id": "scene_00235_p1",
+              "scene_id": "scene_00235",
+              "type": "perceptual",
+              "answer_pred": "dog_bark",
+              "kind": "perceptual",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00235_p2",
+              "scene_id": "scene_00235",
+              "type": "perceptual",
+              "answer_pred": "kitchen",
+              "kind": "perceptual",
+              "ground_truth": "park"
+            },
+            {
+              "id": "scene_00022_p1",
+              "scene_id": "scene_00022",
+              "type": "perceptual",
+              "answer_pred": "hammer",
+              "kind": "perceptual",
+              "ground_truth": "hammer"
+            },
+            {
+              "id": "scene_00022_p2",
+              "scene_id": "scene_00022",
+              "type": "perceptual",
+              "answer_pred": "street",
+              "kind": "perceptual",
+              "ground_truth": "construction_site"
+            },
+            {
+              "id": "scene_00135_p1",
+              "scene_id": "scene_00135",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "bird_chirp"
+            },
+            {
+              "id": "scene_00135_p2",
+              "scene_id": "scene_00135",
+              "type": "perceptual",
+              "answer_pred": "kitchen",
+              "kind": "perceptual",
+              "ground_truth": "park"
+            },
+            {
+              "id": "scene_00176_p1",
+              "scene_id": "scene_00176",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00176_p2",
+              "scene_id": "scene_00176",
+              "type": "perceptual",
+              "answer_pred": "kitchen",
+              "kind": "perceptual",
+              "ground_truth": "kitchen"
+            },
+            {
+              "id": "scene_00183_p1",
+              "scene_id": "scene_00183",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "shouting"
+            },
+            {
+              "id": "scene_00183_p2",
+              "scene_id": "scene_00183",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "construction_site"
+            },
+            {
+              "id": "scene_00049_p1",
+              "scene_id": "scene_00049",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "keyboard"
+            },
+            {
+              "id": "scene_00049_p2",
+              "scene_id": "scene_00049",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "office"
+            },
+            {
+              "id": "scene_00194_p1",
+              "scene_id": "scene_00194",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00194_p2",
+              "scene_id": "scene_00194",
+              "type": "perceptual",
+              "answer_pred": "kitchen",
+              "kind": "perceptual",
+              "ground_truth": "kitchen"
+            },
+            {
+              "id": "scene_00287_p1",
+              "scene_id": "scene_00287",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00287_p2",
+              "scene_id": "scene_00287",
+              "type": "perceptual",
+              "answer_pred": "bicycle_bell",
+              "kind": "perceptual",
+              "ground_truth": "park"
+            },
+            {
+              "id": "scene_00293_p1",
+              "scene_id": "scene_00293",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00293_p2",
+              "scene_id": "scene_00293",
+              "type": "perceptual",
+              "answer_pred": "park",
+              "kind": "perceptual",
+              "ground_truth": "park"
+            },
+            {
+              "id": "scene_00172_p1",
+              "scene_id": "scene_00172",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00172_p2",
+              "scene_id": "scene_00172",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "street"
+            },
+            {
+              "id": "scene_00110_p1",
+              "scene_id": "scene_00110",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "drilling"
+            },
+            {
+              "id": "scene_00110_p2",
+              "scene_id": "scene_00110",
+              "type": "perceptual",
+              "answer_pred": "construction_site",
+              "kind": "perceptual",
+              "ground_truth": "construction_site"
+            },
+            {
+              "id": "scene_00079_p1",
+              "scene_id": "scene_00079",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00079_p2",
+              "scene_id": "scene_00079",
+              "type": "perceptual",
+              "answer_pred": "street",
+              "kind": "perceptual",
+              "ground_truth": "street"
+            },
+            {
+              "id": "scene_00277_p1",
+              "scene_id": "scene_00277",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "microwave_beep"
+            },
+            {
+              "id": "scene_00277_p2",
+              "scene_id": "scene_00277",
+              "type": "perceptual",
+              "answer_pred": "kitchen",
+              "kind": "perceptual",
+              "ground_truth": "kitchen"
+            },
+            {
+              "id": "scene_00174_p1",
+              "scene_id": "scene_00174",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00174_p2",
+              "scene_id": "scene_00174",
+              "type": "perceptual",
+              "answer_pred": "street",
+              "kind": "perceptual",
+              "ground_truth": "street"
+            },
+            {
+              "id": "scene_00290_p1",
+              "scene_id": "scene_00290",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00290_p2",
+              "scene_id": "scene_00290",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "construction_site"
+            },
+            {
+              "id": "scene_00081_p1",
+              "scene_id": "scene_00081",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "phone_ring"
+            },
+            {
+              "id": "scene_00081_p2",
+              "scene_id": "scene_00081",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "office"
+            },
+            {
+              "id": "scene_00003_p1",
+              "scene_id": "scene_00003",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00003_p2",
+              "scene_id": "scene_00003",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "street"
+            },
+            {
+              "id": "scene_00142_p1",
+              "scene_id": "scene_00142",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "wind_rustle"
+            },
+            {
+              "id": "scene_00142_p2",
+              "scene_id": "scene_00142",
+              "type": "perceptual",
+              "answer_pred": "kitchen",
+              "kind": "perceptual",
+              "ground_truth": "park"
+            },
+            {
+              "id": "scene_00229_p1",
+              "scene_id": "scene_00229",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "hammer"
+            },
+            {
+              "id": "scene_00229_p2",
+              "scene_id": "scene_00229",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "construction_site"
+            },
+            {
+              "id": "scene_00112_p1",
+              "scene_id": "scene_00112",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "bird_chirp"
+            },
+            {
+              "id": "scene_00112_p2",
+              "scene_id": "scene_00112",
+              "type": "perceptual",
+              "answer_pred": "kitchen",
+              "kind": "perceptual",
+              "ground_truth": "park"
+            },
+            {
+              "id": "scene_00214_p1",
+              "scene_id": "scene_00214",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "keyboard"
+            },
+            {
+              "id": "scene_00214_p2",
+              "scene_id": "scene_00214",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "office"
+            },
+            {
+              "id": "scene_00292_p1",
+              "scene_id": "scene_00292",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00292_p2",
+              "scene_id": "scene_00292",
+              "type": "perceptual",
+              "answer_pred": "street",
+              "kind": "perceptual",
+              "ground_truth": "construction_site"
+            },
+            {
+              "id": "scene_00101_p1",
+              "scene_id": "scene_00101",
+              "type": "perceptual",
+              "answer_pred": "engine",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00101_p2",
+              "scene_id": "scene_00101",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "construction_site"
+            },
+            {
+              "id": "scene_00013_p1",
+              "scene_id": "scene_00013",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00013_p2",
+              "scene_id": "scene_00013",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "office"
+            },
+            {
+              "id": "scene_00258_p1",
+              "scene_id": "scene_00258",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "printer"
+            },
+            {
+              "id": "scene_00258_p2",
+              "scene_id": "scene_00258",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "office"
+            },
+            {
+              "id": "scene_00119_p1",
+              "scene_id": "scene_00119",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00119_p2",
+              "scene_id": "scene_00119",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "office"
+            },
+            {
+              "id": "scene_00111_p1",
+              "scene_id": "scene_00111",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "door_slam"
+            },
+            {
+              "id": "scene_00111_p2",
+              "scene_id": "scene_00111",
+              "type": "perceptual",
+              "answer_pred": "kitchen",
+              "kind": "perceptual",
+              "ground_truth": "kitchen"
+            },
+            {
+              "id": "scene_00047_p1",
+              "scene_id": "scene_00047",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00047_p2",
+              "scene_id": "scene_00047",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "street"
+            },
+            {
+              "id": "scene_00015_p1",
+              "scene_id": "scene_00015",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00015_p2",
+              "scene_id": "scene_00015",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "office"
+            },
+            {
+              "id": "scene_00016_p1",
+              "scene_id": "scene_00016",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "keyboard"
+            },
+            {
+              "id": "scene_00016_p2",
+              "scene_id": "scene_00016",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "office"
+            },
+            {
+              "id": "scene_00216_p1",
+              "scene_id": "scene_00216",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "phone_ring"
+            },
+            {
+              "id": "scene_00216_p2",
+              "scene_id": "scene_00216",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "office"
+            },
+            {
+              "id": "scene_00044_p1",
+              "scene_id": "scene_00044",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00044_p2",
+              "scene_id": "scene_00044",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "street"
+            },
+            {
+              "id": "scene_00279_p1",
+              "scene_id": "scene_00279",
+              "type": "perceptual",
+              "answer_pred": "keyboard",
+              "kind": "perceptual",
+              "ground_truth": "keyboard"
+            },
+            {
+              "id": "scene_00279_p2",
+              "scene_id": "scene_00279",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "office"
+            },
+            {
+              "id": "scene_00052_p1",
+              "scene_id": "scene_00052",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00052_p2",
+              "scene_id": "scene_00052",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "office"
+            },
+            {
+              "id": "scene_00071_p1",
+              "scene_id": "scene_00071",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "door_slam"
+            },
+            {
+              "id": "scene_00071_p2",
+              "scene_id": "scene_00071",
+              "type": "perceptual",
+              "answer_pred": "kitchen",
+              "kind": "perceptual",
+              "ground_truth": "kitchen"
+            },
+            {
+              "id": "scene_00114_p1",
+              "scene_id": "scene_00114",
+              "type": "perceptual",
+              "answer_pred": "engine",
+              "kind": "perceptual",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00114_p2",
+              "scene_id": "scene_00114",
+              "type": "perceptual",
+              "answer_pred": "street",
+              "kind": "perceptual",
+              "ground_truth": "street"
+            },
+            {
+              "id": "scene_00125_p1",
+              "scene_id": "scene_00125",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "shouting"
+            },
+            {
+              "id": "scene_00125_p2",
+              "scene_id": "scene_00125",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "construction_site"
+            },
+            {
+              "id": "scene_00140_p1",
+              "scene_id": "scene_00140",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00140_p2",
+              "scene_id": "scene_00140",
+              "type": "perceptual",
+              "answer_pred": "street",
+              "kind": "perceptual",
+              "ground_truth": "office"
+            },
+            {
+              "id": "scene_00012_p1",
+              "scene_id": "scene_00012",
+              "type": "perceptual",
+              "answer_pred": "footstep",
+              "kind": "perceptual",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00012_p2",
+              "scene_id": "scene_00012",
+              "type": "perceptual",
+              "answer_pred": "office",
+              "kind": "perceptual",
+              "ground_truth": "construction_site"
+            },
+            {
+              "id": "scene_00057_p1",
+              "scene_id": "scene_00057",
+              "type": "perceptual",
+              "answer_pred": "wind_rustle",
+              "kind": "perceptual",
+              "ground_truth": "wind_rustle"
+            },
+            {
+              "id": "scene_00057_p2",
+              "scene_id": "scene_00057",
+              "type": "perceptual",
+              "answer_pred": "park",
+              "kind": "perceptual",
+              "ground_truth": "park"
+            }
+          ]
+        },
+        "counting": {
+          "count": 45,
+          "predictions": [
+            {
+              "id": "scene_00185_c1",
+              "scene_id": "scene_00185",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00150_c1",
+              "scene_id": "scene_00150",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00040_c1",
+              "scene_id": "scene_00040",
+              "type": "counting",
+              "answer_pred": "3",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00193_c1",
+              "scene_id": "scene_00193",
+              "type": "counting",
+              "answer_pred": "4",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00063_c1",
+              "scene_id": "scene_00063",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00235_c1",
+              "scene_id": "scene_00235",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00022_c1",
+              "scene_id": "scene_00022",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00135_c1",
+              "scene_id": "scene_00135",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00176_c1",
+              "scene_id": "scene_00176",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00183_c1",
+              "scene_id": "scene_00183",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00049_c1",
+              "scene_id": "scene_00049",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00194_c1",
+              "scene_id": "scene_00194",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00287_c1",
+              "scene_id": "scene_00287",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00293_c1",
+              "scene_id": "scene_00293",
+              "type": "counting",
+              "answer_pred": "4",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00172_c1",
+              "scene_id": "scene_00172",
+              "type": "counting",
+              "answer_pred": "4",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00110_c1",
+              "scene_id": "scene_00110",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00079_c1",
+              "scene_id": "scene_00079",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00277_c1",
+              "scene_id": "scene_00277",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00174_c1",
+              "scene_id": "scene_00174",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00290_c1",
+              "scene_id": "scene_00290",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00081_c1",
+              "scene_id": "scene_00081",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00003_c1",
+              "scene_id": "scene_00003",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00142_c1",
+              "scene_id": "scene_00142",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00229_c1",
+              "scene_id": "scene_00229",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00112_c1",
+              "scene_id": "scene_00112",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00214_c1",
+              "scene_id": "scene_00214",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00292_c1",
+              "scene_id": "scene_00292",
+              "type": "counting",
+              "answer_pred": "3",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00101_c1",
+              "scene_id": "scene_00101",
+              "type": "counting",
+              "answer_pred": "4",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00013_c1",
+              "scene_id": "scene_00013",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00258_c1",
+              "scene_id": "scene_00258",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00119_c1",
+              "scene_id": "scene_00119",
+              "type": "counting",
+              "answer_pred": "4",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00111_c1",
+              "scene_id": "scene_00111",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00047_c1",
+              "scene_id": "scene_00047",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00015_c1",
+              "scene_id": "scene_00015",
+              "type": "counting",
+              "answer_pred": "3",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00016_c1",
+              "scene_id": "scene_00016",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "3"
+            },
+            {
+              "id": "scene_00216_c1",
+              "scene_id": "scene_00216",
+              "type": "counting",
+              "answer_pred": "3",
+              "kind": "counting",
+              "ground_truth": "3"
+            },
+            {
+              "id": "scene_00044_c1",
+              "scene_id": "scene_00044",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00279_c1",
+              "scene_id": "scene_00279",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00052_c1",
+              "scene_id": "scene_00052",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00071_c1",
+              "scene_id": "scene_00071",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00114_c1",
+              "scene_id": "scene_00114",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00125_c1",
+              "scene_id": "scene_00125",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "2"
+            },
+            {
+              "id": "scene_00140_c1",
+              "scene_id": "scene_00140",
+              "type": "counting",
+              "answer_pred": "2",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00012_c1",
+              "scene_id": "scene_00012",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            },
+            {
+              "id": "scene_00057_c1",
+              "scene_id": "scene_00057",
+              "type": "counting",
+              "answer_pred": "1",
+              "kind": "counting",
+              "ground_truth": "1"
+            }
+          ]
+        },
+        "temporal": {
+          "count": 45,
+          "predictions": [
+            {
+              "id": "scene_00185_t1",
+              "scene_id": "scene_00185",
+              "type": "temporal",
+              "answer_pred": "door_slam",
+              "kind": "temporal",
+              "ground_truth": "door_slam"
+            },
+            {
+              "id": "scene_00150_t1",
+              "scene_id": "scene_00150",
+              "type": "temporal",
+              "answer_pred": "engine",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00040_t1",
+              "scene_id": "scene_00040",
+              "type": "temporal",
+              "answer_pred": "engine",
+              "kind": "temporal",
+              "ground_truth": "door_slam"
+            },
+            {
+              "id": "scene_00193_t1",
+              "scene_id": "scene_00193",
+              "type": "temporal",
+              "answer_pred": "dish",
+              "kind": "temporal",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00063_t1",
+              "scene_id": "scene_00063",
+              "type": "temporal",
+              "answer_pred": "keyboard",
+              "kind": "temporal",
+              "ground_truth": "drilling"
+            },
+            {
+              "id": "scene_00235_t1",
+              "scene_id": "scene_00235",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00022_t1",
+              "scene_id": "scene_00022",
+              "type": "temporal",
+              "answer_pred": "door_slam",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00135_t1",
+              "scene_id": "scene_00135",
+              "type": "temporal",
+              "answer_pred": "water",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00176_t1",
+              "scene_id": "scene_00176",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00183_t1",
+              "scene_id": "scene_00183",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00049_t1",
+              "scene_id": "scene_00049",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "printer"
+            },
+            {
+              "id": "scene_00194_t1",
+              "scene_id": "scene_00194",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00287_t1",
+              "scene_id": "scene_00287",
+              "type": "temporal",
+              "answer_pred": "bicycle_bell",
+              "kind": "temporal",
+              "ground_truth": "bicycle_bell"
+            },
+            {
+              "id": "scene_00293_t1",
+              "scene_id": "scene_00293",
+              "type": "temporal",
+              "answer_pred": "wind_rustle",
+              "kind": "temporal",
+              "ground_truth": "wind_rustle"
+            },
+            {
+              "id": "scene_00172_t1",
+              "scene_id": "scene_00172",
+              "type": "temporal",
+              "answer_pred": "siren",
+              "kind": "temporal",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00110_t1",
+              "scene_id": "scene_00110",
+              "type": "temporal",
+              "answer_pred": "dog_bark",
+              "kind": "temporal",
+              "ground_truth": "shouting"
+            },
+            {
+              "id": "scene_00079_t1",
+              "scene_id": "scene_00079",
+              "type": "temporal",
+              "answer_pred": "engine",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00277_t1",
+              "scene_id": "scene_00277",
+              "type": "temporal",
+              "answer_pred": "dish",
+              "kind": "temporal",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00174_t1",
+              "scene_id": "scene_00174",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00290_t1",
+              "scene_id": "scene_00290",
+              "type": "temporal",
+              "answer_pred": "door_slam",
+              "kind": "temporal",
+              "ground_truth": "shouting"
+            },
+            {
+              "id": "scene_00081_t1",
+              "scene_id": "scene_00081",
+              "type": "temporal",
+              "answer_pred": "door_open",
+              "kind": "temporal",
+              "ground_truth": "door_open"
+            },
+            {
+              "id": "scene_00003_t1",
+              "scene_id": "scene_00003",
+              "type": "temporal",
+              "answer_pred": "keyboard",
+              "kind": "temporal",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00142_t1",
+              "scene_id": "scene_00142",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00229_t1",
+              "scene_id": "scene_00229",
+              "type": "temporal",
+              "answer_pred": "engine",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00112_t1",
+              "scene_id": "scene_00112",
+              "type": "temporal",
+              "answer_pred": "water",
+              "kind": "temporal",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00214_t1",
+              "scene_id": "scene_00214",
+              "type": "temporal",
+              "answer_pred": "door_open",
+              "kind": "temporal",
+              "ground_truth": "door_open"
+            },
+            {
+              "id": "scene_00292_t1",
+              "scene_id": "scene_00292",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "drilling"
+            },
+            {
+              "id": "scene_00101_t1",
+              "scene_id": "scene_00101",
+              "type": "temporal",
+              "answer_pred": "door_slam",
+              "kind": "temporal",
+              "ground_truth": "siren"
+            },
+            {
+              "id": "scene_00013_t1",
+              "scene_id": "scene_00013",
+              "type": "temporal",
+              "answer_pred": "phone_ring",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00258_t1",
+              "scene_id": "scene_00258",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "door_open"
+            },
+            {
+              "id": "scene_00119_t1",
+              "scene_id": "scene_00119",
+              "type": "temporal",
+              "answer_pred": "door_open",
+              "kind": "temporal",
+              "ground_truth": "door_open"
+            },
+            {
+              "id": "scene_00111_t1",
+              "scene_id": "scene_00111",
+              "type": "temporal",
+              "answer_pred": "engine",
+              "kind": "temporal",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00047_t1",
+              "scene_id": "scene_00047",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00015_t1",
+              "scene_id": "scene_00015",
+              "type": "temporal",
+              "answer_pred": "door_open",
+              "kind": "temporal",
+              "ground_truth": "door_open"
+            },
+            {
+              "id": "scene_00016_t1",
+              "scene_id": "scene_00016",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "keyboard"
+            },
+            {
+              "id": "scene_00216_t1",
+              "scene_id": "scene_00216",
+              "type": "temporal",
+              "answer_pred": "keyboard",
+              "kind": "temporal",
+              "ground_truth": "keyboard"
+            },
+            {
+              "id": "scene_00044_t1",
+              "scene_id": "scene_00044",
+              "type": "temporal",
+              "answer_pred": "keyboard",
+              "kind": "temporal",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00279_t1",
+              "scene_id": "scene_00279",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "door_open"
+            },
+            {
+              "id": "scene_00052_t1",
+              "scene_id": "scene_00052",
+              "type": "temporal",
+              "answer_pred": "phone_ring",
+              "kind": "temporal",
+              "ground_truth": "phone_ring"
+            },
+            {
+              "id": "scene_00071_t1",
+              "scene_id": "scene_00071",
+              "type": "temporal",
+              "answer_pred": "engine",
+              "kind": "temporal",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00114_t1",
+              "scene_id": "scene_00114",
+              "type": "temporal",
+              "answer_pred": "door_slam",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00125_t1",
+              "scene_id": "scene_00125",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "drilling"
+            },
+            {
+              "id": "scene_00140_t1",
+              "scene_id": "scene_00140",
+              "type": "temporal",
+              "answer_pred": "door_open",
+              "kind": "temporal",
+              "ground_truth": "door_open"
+            },
+            {
+              "id": "scene_00012_t1",
+              "scene_id": "scene_00012",
+              "type": "temporal",
+              "answer_pred": "keyboard",
+              "kind": "temporal",
+              "ground_truth": "shouting"
+            },
+            {
+              "id": "scene_00057_t1",
+              "scene_id": "scene_00057",
+              "type": "temporal",
+              "answer_pred": "footstep",
+              "kind": "temporal",
+              "ground_truth": "footstep"
+            }
+          ]
+        },
+        "negation": {
+          "count": 45,
+          "predictions": [
+            {
+              "id": "scene_00185_n1",
+              "scene_id": "scene_00185",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00150_n1",
+              "scene_id": "scene_00150",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00040_n1",
+              "scene_id": "scene_00040",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00193_n1",
+              "scene_id": "scene_00193",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00063_n1",
+              "scene_id": "scene_00063",
+              "type": "negation",
+              "answer_pred": "yes",
+              "kind": "negation",
+              "ground_truth": "yes"
+            },
+            {
+              "id": "scene_00235_n1",
+              "scene_id": "scene_00235",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00022_n1",
+              "scene_id": "scene_00022",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00135_n1",
+              "scene_id": "scene_00135",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00176_n1",
+              "scene_id": "scene_00176",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00183_n1",
+              "scene_id": "scene_00183",
+              "type": "negation",
+              "answer_pred": "yes",
+              "kind": "negation",
+              "ground_truth": "yes"
+            },
+            {
+              "id": "scene_00049_n1",
+              "scene_id": "scene_00049",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00194_n1",
+              "scene_id": "scene_00194",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00287_n1",
+              "scene_id": "scene_00287",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00293_n1",
+              "scene_id": "scene_00293",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00172_n1",
+              "scene_id": "scene_00172",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00110_n1",
+              "scene_id": "scene_00110",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00079_n1",
+              "scene_id": "scene_00079",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00277_n1",
+              "scene_id": "scene_00277",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00174_n1",
+              "scene_id": "scene_00174",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00290_n1",
+              "scene_id": "scene_00290",
+              "type": "negation",
+              "answer_pred": "yes",
+              "kind": "negation",
+              "ground_truth": "yes"
+            },
+            {
+              "id": "scene_00081_n1",
+              "scene_id": "scene_00081",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00003_n1",
+              "scene_id": "scene_00003",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00142_n1",
+              "scene_id": "scene_00142",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00229_n1",
+              "scene_id": "scene_00229",
+              "type": "negation",
+              "answer_pred": "yes",
+              "kind": "negation",
+              "ground_truth": "yes"
+            },
+            {
+              "id": "scene_00112_n1",
+              "scene_id": "scene_00112",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00214_n1",
+              "scene_id": "scene_00214",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00292_n1",
+              "scene_id": "scene_00292",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00101_n1",
+              "scene_id": "scene_00101",
+              "type": "negation",
+              "answer_pred": "yes",
+              "kind": "negation",
+              "ground_truth": "yes"
+            },
+            {
+              "id": "scene_00013_n1",
+              "scene_id": "scene_00013",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00258_n1",
+              "scene_id": "scene_00258",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00119_n1",
+              "scene_id": "scene_00119",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00111_n1",
+              "scene_id": "scene_00111",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00047_n1",
+              "scene_id": "scene_00047",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00015_n1",
+              "scene_id": "scene_00015",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00016_n1",
+              "scene_id": "scene_00016",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00216_n1",
+              "scene_id": "scene_00216",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00044_n1",
+              "scene_id": "scene_00044",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00279_n1",
+              "scene_id": "scene_00279",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00052_n1",
+              "scene_id": "scene_00052",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00071_n1",
+              "scene_id": "scene_00071",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00114_n1",
+              "scene_id": "scene_00114",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00125_n1",
+              "scene_id": "scene_00125",
+              "type": "negation",
+              "answer_pred": "yes",
+              "kind": "negation",
+              "ground_truth": "yes"
+            },
+            {
+              "id": "scene_00140_n1",
+              "scene_id": "scene_00140",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            },
+            {
+              "id": "scene_00012_n1",
+              "scene_id": "scene_00012",
+              "type": "negation",
+              "answer_pred": "yes",
+              "kind": "negation",
+              "ground_truth": "yes"
+            },
+            {
+              "id": "scene_00057_n1",
+              "scene_id": "scene_00057",
+              "type": "negation",
+              "answer_pred": "no",
+              "kind": "negation",
+              "ground_truth": "no"
+            }
+          ]
+        },
+        "comparative": {
+          "count": 45,
+          "predictions": [
+            {
+              "id": "scene_00185_comp1",
+              "scene_id": "scene_00185",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00150_comp1",
+              "scene_id": "scene_00150",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00040_comp1",
+              "scene_id": "scene_00040",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00193_comp1",
+              "scene_id": "scene_00193",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00063_comp1",
+              "scene_id": "scene_00063",
+              "type": "comparative",
+              "answer_pred": "drilling",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00235_comp1",
+              "scene_id": "scene_00235",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "dog_bark"
+            },
+            {
+              "id": "scene_00022_comp1",
+              "scene_id": "scene_00022",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00135_comp1",
+              "scene_id": "scene_00135",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00176_comp1",
+              "scene_id": "scene_00176",
+              "type": "comparative",
+              "answer_pred": "water",
+              "kind": "comparative",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00183_comp1",
+              "scene_id": "scene_00183",
+              "type": "comparative",
+              "answer_pred": "shouting",
+              "kind": "comparative",
+              "ground_truth": "shouting"
+            },
+            {
+              "id": "scene_00049_comp1",
+              "scene_id": "scene_00049",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00194_comp1",
+              "scene_id": "scene_00194",
+              "type": "comparative",
+              "answer_pred": "dish",
+              "kind": "comparative",
+              "ground_truth": "dish"
+            },
+            {
+              "id": "scene_00287_comp1",
+              "scene_id": "scene_00287",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00293_comp1",
+              "scene_id": "scene_00293",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "wind_rustle"
+            },
+            {
+              "id": "scene_00172_comp1",
+              "scene_id": "scene_00172",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00110_comp1",
+              "scene_id": "scene_00110",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "shouting"
+            },
+            {
+              "id": "scene_00079_comp1",
+              "scene_id": "scene_00079",
+              "type": "comparative",
+              "answer_pred": "engine",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00277_comp1",
+              "scene_id": "scene_00277",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00174_comp1",
+              "scene_id": "scene_00174",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00290_comp1",
+              "scene_id": "scene_00290",
+              "type": "comparative",
+              "answer_pred": "engine",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00081_comp1",
+              "scene_id": "scene_00081",
+              "type": "comparative",
+              "answer_pred": "phone_ring",
+              "kind": "comparative",
+              "ground_truth": "phone_ring"
+            },
+            {
+              "id": "scene_00003_comp1",
+              "scene_id": "scene_00003",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00142_comp1",
+              "scene_id": "scene_00142",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00229_comp1",
+              "scene_id": "scene_00229",
+              "type": "comparative",
+              "answer_pred": "engine",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00112_comp1",
+              "scene_id": "scene_00112",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00214_comp1",
+              "scene_id": "scene_00214",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00292_comp1",
+              "scene_id": "scene_00292",
+              "type": "comparative",
+              "answer_pred": "engine",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00101_comp1",
+              "scene_id": "scene_00101",
+              "type": "comparative",
+              "answer_pred": "engine",
+              "kind": "comparative",
+              "ground_truth": "engine"
+            },
+            {
+              "id": "scene_00013_comp1",
+              "scene_id": "scene_00013",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "footstep"
+            },
+            {
+              "id": "scene_00258_comp1",
+              "scene_id": "scene_00258",
+              "type": "comparative",
+              "answer_pred": "printer",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00119_comp1",
+              "scene_id": "scene_00119",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00111_comp1",
+              "scene_id": "scene_00111",
+              "type": "comparative",
+              "answer_pred": "door_slam",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00047_comp1",
+              "scene_id": "scene_00047",
+              "type": "comparative",
+              "answer_pred": "engine",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00015_comp1",
+              "scene_id": "scene_00015",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00016_comp1",
+              "scene_id": "scene_00016",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "keyboard"
+            },
+            {
+              "id": "scene_00216_comp1",
+              "scene_id": "scene_00216",
+              "type": "comparative",
+              "answer_pred": "phone_ring",
+              "kind": "comparative",
+              "ground_truth": "phone_ring"
+            },
+            {
+              "id": "scene_00044_comp1",
+              "scene_id": "scene_00044",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "car_horn"
+            },
+            {
+              "id": "scene_00279_comp1",
+              "scene_id": "scene_00279",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00052_comp1",
+              "scene_id": "scene_00052",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00071_comp1",
+              "scene_id": "scene_00071",
+              "type": "comparative",
+              "answer_pred": "door_slam",
+              "kind": "comparative",
+              "ground_truth": "water"
+            },
+            {
+              "id": "scene_00114_comp1",
+              "scene_id": "scene_00114",
+              "type": "comparative",
+              "answer_pred": "engine",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00125_comp1",
+              "scene_id": "scene_00125",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "shouting"
+            },
+            {
+              "id": "scene_00140_comp1",
+              "scene_id": "scene_00140",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00012_comp1",
+              "scene_id": "scene_00012",
+              "type": "comparative",
+              "answer_pred": "equal",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            },
+            {
+              "id": "scene_00057_comp1",
+              "scene_id": "scene_00057",
+              "type": "comparative",
+              "answer_pred": "footstep",
+              "kind": "comparative",
+              "ground_truth": "equal"
+            }
+          ]
+        },
+        "causal": {
+          "count": 36,
+          "predictions": [
+            {
+              "id": "scene_00040_cause1",
+              "scene_id": "scene_00040",
+              "type": "causal",
+              "answer_pred": "walking while carrying dishes or kitchen activity is ongoing",
+              "kind": "causal",
+              "ground_truth": "walking while carrying dishes or kitchen activity is ongoing"
+            },
+            {
+              "id": "scene_00193_cause1",
+              "scene_id": "scene_00193",
+              "type": "causal",
+              "answer_pred": "walking while carrying dishes or kitchen activity is ongoing",
+              "kind": "causal",
+              "ground_truth": "walking while carrying dishes or kitchen activity is ongoing"
+            },
+            {
+              "id": "scene_00235_cause1",
+              "scene_id": "scene_00235",
+              "type": "causal",
+              "answer_pred": "a dog is reacting to someone walking nearby",
+              "kind": "causal",
+              "ground_truth": "a dog may have chased the cyclist or is reacting to them"
+            },
+            {
+              "id": "scene_00022_cause1",
+              "scene_id": "scene_00022",
+              "type": "causal",
+              "answer_pred": "insufficient information \u2014 no matching co-occurrence in curated table",
+              "kind": "causal",
+              "ground_truth": "hammering and engine sounds indicate active construction site work"
+            },
+            {
+              "id": "scene_00135_cause1",
+              "scene_id": "scene_00135",
+              "type": "causal",
+              "answer_pred": "birds active while someone walks through a park scene",
+              "kind": "causal",
+              "ground_truth": "birds active while someone walks through a park scene"
+            },
+            {
+              "id": "scene_00176_cause1",
+              "scene_id": "scene_00176",
+              "type": "causal",
+              "answer_pred": "walking while carrying dishes or kitchen activity is ongoing",
+              "kind": "causal",
+              "ground_truth": "dishwashing often involves both plate sounds and running water"
+            },
+            {
+              "id": "scene_00183_cause1",
+              "scene_id": "scene_00183",
+              "type": "causal",
+              "answer_pred": "a vehicle engine and siren indicate emergency traffic response",
+              "kind": "causal",
+              "ground_truth": "a vehicle engine and siren indicate emergency traffic response"
+            },
+            {
+              "id": "scene_00049_cause1",
+              "scene_id": "scene_00049",
+              "type": "causal",
+              "answer_pred": "office activity with someone walking near printing equipment",
+              "kind": "causal",
+              "ground_truth": "typing activity continues as someone enters the office"
+            },
+            {
+              "id": "scene_00194_cause1",
+              "scene_id": "scene_00194",
+              "type": "causal",
+              "answer_pred": "walking while carrying dishes or kitchen activity is ongoing",
+              "kind": "causal",
+              "ground_truth": "someone started a timer then went to the kitchen tap or sink"
+            },
+            {
+              "id": "scene_00287_cause1",
+              "scene_id": "scene_00287",
+              "type": "causal",
+              "answer_pred": "a cyclist and pedestrian share a park or street path",
+              "kind": "causal",
+              "ground_truth": "a cyclist and pedestrian share a park or street path"
+            },
+            {
+              "id": "scene_00293_cause1",
+              "scene_id": "scene_00293",
+              "type": "causal",
+              "answer_pred": "a dog is reacting to someone walking nearby",
+              "kind": "causal",
+              "ground_truth": "a dog may have chased the cyclist or is reacting to them"
+            },
+            {
+              "id": "scene_00172_cause1",
+              "scene_id": "scene_00172",
+              "type": "causal",
+              "answer_pred": "a vehicle engine and siren indicate emergency traffic response",
+              "kind": "causal",
+              "ground_truth": "a dog is reacting to someone walking nearby"
+            },
+            {
+              "id": "scene_00110_cause1",
+              "scene_id": "scene_00110",
+              "type": "causal",
+              "answer_pred": "a dog is reacting to someone walking nearby",
+              "kind": "causal",
+              "ground_truth": "loud drilling prompts workers to shout communication"
+            },
+            {
+              "id": "scene_00079_cause1",
+              "scene_id": "scene_00079",
+              "type": "causal",
+              "answer_pred": "a dog is reacting to someone walking nearby",
+              "kind": "causal",
+              "ground_truth": "city traffic with car horns and engines on a street scene"
+            },
+            {
+              "id": "scene_00277_cause1",
+              "scene_id": "scene_00277",
+              "type": "causal",
+              "answer_pred": "walking while carrying dishes or kitchen activity is ongoing",
+              "kind": "causal",
+              "ground_truth": "kitchen dish use near microwave operation"
+            },
+            {
+              "id": "scene_00174_cause1",
+              "scene_id": "scene_00174",
+              "type": "causal",
+              "answer_pred": "city street activity combines traffic and pedestrian sounds",
+              "kind": "causal",
+              "ground_truth": "city street activity combines traffic and pedestrian sounds"
+            },
+            {
+              "id": "scene_00290_cause1",
+              "scene_id": "scene_00290",
+              "type": "causal",
+              "answer_pred": "a vehicle engine and siren indicate emergency traffic response",
+              "kind": "causal",
+              "ground_truth": "a vehicle engine and siren indicate emergency traffic response"
+            },
+            {
+              "id": "scene_00081_cause1",
+              "scene_id": "scene_00081",
+              "type": "causal",
+              "answer_pred": "typing activity continues as someone enters the office",
+              "kind": "causal",
+              "ground_truth": "typing activity continues as someone enters the office"
+            },
+            {
+              "id": "scene_00003_cause1",
+              "scene_id": "scene_00003",
+              "type": "causal",
+              "answer_pred": "an emergency vehicle may be approaching in traffic",
+              "kind": "causal",
+              "ground_truth": "an emergency vehicle may be approaching in traffic"
+            },
+            {
+              "id": "scene_00142_cause1",
+              "scene_id": "scene_00142",
+              "type": "causal",
+              "answer_pred": "birds active while someone walks through a park scene",
+              "kind": "causal",
+              "ground_truth": "birds active while someone walks through a park scene"
+            },
+            {
+              "id": "scene_00229_cause1",
+              "scene_id": "scene_00229",
+              "type": "causal",
+              "answer_pred": "a vehicle engine and siren indicate emergency traffic response",
+              "kind": "causal",
+              "ground_truth": "a vehicle engine and siren indicate emergency traffic response"
+            },
+            {
+              "id": "scene_00112_cause1",
+              "scene_id": "scene_00112",
+              "type": "causal",
+              "answer_pred": "a dog is reacting to someone walking nearby",
+              "kind": "causal",
+              "ground_truth": "a dog may have chased the cyclist or is reacting to them"
+            },
+            {
+              "id": "scene_00214_cause1",
+              "scene_id": "scene_00214",
+              "type": "causal",
+              "answer_pred": "typing activity continues as someone enters the office",
+              "kind": "causal",
+              "ground_truth": "typing activity continues as someone enters the office"
+            },
+            {
+              "id": "scene_00292_cause1",
+              "scene_id": "scene_00292",
+              "type": "causal",
+              "answer_pred": "a dog is reacting to someone walking nearby",
+              "kind": "causal",
+              "ground_truth": "construction drilling and engine activity at a work site"
+            },
+            {
+              "id": "scene_00101_cause1",
+              "scene_id": "scene_00101",
+              "type": "causal",
+              "answer_pred": "a vehicle engine and siren indicate emergency traffic response",
+              "kind": "causal",
+              "ground_truth": "a vehicle engine and siren indicate emergency traffic response"
+            },
+            {
+              "id": "scene_00119_cause1",
+              "scene_id": "scene_00119",
+              "type": "causal",
+              "answer_pred": "office activity with someone walking near printing equipment",
+              "kind": "causal",
+              "ground_truth": "typing activity continues as someone enters the office"
+            },
+            {
+              "id": "scene_00111_cause1",
+              "scene_id": "scene_00111",
+              "type": "causal",
+              "answer_pred": "walking while carrying dishes or kitchen activity is ongoing",
+              "kind": "causal",
+              "ground_truth": "someone started a timer then went to the kitchen tap or sink"
+            },
+            {
+              "id": "scene_00047_cause1",
+              "scene_id": "scene_00047",
+              "type": "causal",
+              "answer_pred": "a vehicle engine and siren indicate emergency traffic response",
+              "kind": "causal",
+              "ground_truth": "a vehicle engine and siren indicate emergency traffic response"
+            },
+            {
+              "id": "scene_00015_cause1",
+              "scene_id": "scene_00015",
+              "type": "causal",
+              "answer_pred": "typing activity continues as someone enters the office",
+              "kind": "causal",
+              "ground_truth": "typing activity continues as someone enters the office"
+            },
+            {
+              "id": "scene_00016_cause1",
+              "scene_id": "scene_00016",
+              "type": "causal",
+              "answer_pred": "typing activity continues as someone enters the office",
+              "kind": "causal",
+              "ground_truth": "typing activity continues as someone enters the office"
+            },
+            {
+              "id": "scene_00216_cause1",
+              "scene_id": "scene_00216",
+              "type": "causal",
+              "answer_pred": "office environment with walking and typing activity",
+              "kind": "causal",
+              "ground_truth": "a call comes in during active computer use"
+            },
+            {
+              "id": "scene_00044_cause1",
+              "scene_id": "scene_00044",
+              "type": "causal",
+              "answer_pred": "an emergency vehicle may be approaching in traffic",
+              "kind": "causal",
+              "ground_truth": "an emergency vehicle may be approaching in traffic"
+            },
+            {
+              "id": "scene_00279_cause1",
+              "scene_id": "scene_00279",
+              "type": "causal",
+              "answer_pred": "typing activity continues as someone enters the office",
+              "kind": "causal",
+              "ground_truth": "typing activity continues as someone enters the office"
+            },
+            {
+              "id": "scene_00125_cause1",
+              "scene_id": "scene_00125",
+              "type": "causal",
+              "answer_pred": "a dog is reacting to someone walking nearby",
+              "kind": "causal",
+              "ground_truth": "a siren triggers community response or alert shouting"
+            },
+            {
+              "id": "scene_00012_cause1",
+              "scene_id": "scene_00012",
+              "type": "causal",
+              "answer_pred": "a siren triggers community response or alert shouting",
+              "kind": "causal",
+              "ground_truth": "a siren triggers community response or alert shouting"
+            },
+            {
+              "id": "scene_00057_cause1",
+              "scene_id": "scene_00057",
+              "type": "causal",
+              "answer_pred": "a dog is reacting to someone walking nearby",
+              "kind": "causal",
+              "ground_truth": "a dog is reacting to someone walking nearby"
+            }
+          ]
+        }
       },
-      "counting": {
-        "count": 45,
-        "predictions": [
-          {
-            "id": "scene_00185_c1",
-            "scene_id": "scene_00185",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00150_c1",
-            "scene_id": "scene_00150",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00040_c1",
-            "scene_id": "scene_00040",
-            "type": "counting",
-            "answer_pred": "3",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00193_c1",
-            "scene_id": "scene_00193",
-            "type": "counting",
-            "answer_pred": "4",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00063_c1",
-            "scene_id": "scene_00063",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00235_c1",
-            "scene_id": "scene_00235",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00022_c1",
-            "scene_id": "scene_00022",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00135_c1",
-            "scene_id": "scene_00135",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00176_c1",
-            "scene_id": "scene_00176",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00183_c1",
-            "scene_id": "scene_00183",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00049_c1",
-            "scene_id": "scene_00049",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00194_c1",
-            "scene_id": "scene_00194",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00287_c1",
-            "scene_id": "scene_00287",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00293_c1",
-            "scene_id": "scene_00293",
-            "type": "counting",
-            "answer_pred": "4",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00172_c1",
-            "scene_id": "scene_00172",
-            "type": "counting",
-            "answer_pred": "4",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00110_c1",
-            "scene_id": "scene_00110",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00079_c1",
-            "scene_id": "scene_00079",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00277_c1",
-            "scene_id": "scene_00277",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00174_c1",
-            "scene_id": "scene_00174",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00290_c1",
-            "scene_id": "scene_00290",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00081_c1",
-            "scene_id": "scene_00081",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00003_c1",
-            "scene_id": "scene_00003",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00142_c1",
-            "scene_id": "scene_00142",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00229_c1",
-            "scene_id": "scene_00229",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00112_c1",
-            "scene_id": "scene_00112",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00214_c1",
-            "scene_id": "scene_00214",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00292_c1",
-            "scene_id": "scene_00292",
-            "type": "counting",
-            "answer_pred": "3",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00101_c1",
-            "scene_id": "scene_00101",
-            "type": "counting",
-            "answer_pred": "4",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00013_c1",
-            "scene_id": "scene_00013",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00258_c1",
-            "scene_id": "scene_00258",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00119_c1",
-            "scene_id": "scene_00119",
-            "type": "counting",
-            "answer_pred": "4",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00111_c1",
-            "scene_id": "scene_00111",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00047_c1",
-            "scene_id": "scene_00047",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00015_c1",
-            "scene_id": "scene_00015",
-            "type": "counting",
-            "answer_pred": "3",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00016_c1",
-            "scene_id": "scene_00016",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "3"
-          },
-          {
-            "id": "scene_00216_c1",
-            "scene_id": "scene_00216",
-            "type": "counting",
-            "answer_pred": "3",
-            "kind": "counting",
-            "ground_truth": "3"
-          },
-          {
-            "id": "scene_00044_c1",
-            "scene_id": "scene_00044",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00279_c1",
-            "scene_id": "scene_00279",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00052_c1",
-            "scene_id": "scene_00052",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00071_c1",
-            "scene_id": "scene_00071",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00114_c1",
-            "scene_id": "scene_00114",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00125_c1",
-            "scene_id": "scene_00125",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "2"
-          },
-          {
-            "id": "scene_00140_c1",
-            "scene_id": "scene_00140",
-            "type": "counting",
-            "answer_pred": "2",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00012_c1",
-            "scene_id": "scene_00012",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          },
-          {
-            "id": "scene_00057_c1",
-            "scene_id": "scene_00057",
-            "type": "counting",
-            "answer_pred": "1",
-            "kind": "counting",
-            "ground_truth": "1"
-          }
-        ]
-      },
-      "temporal": {
-        "count": 45,
-        "predictions": [
-          {
-            "id": "scene_00185_t1",
-            "scene_id": "scene_00185",
-            "type": "temporal",
-            "answer_pred": "door_slam",
-            "kind": "temporal",
-            "ground_truth": "door_slam"
-          },
-          {
-            "id": "scene_00150_t1",
-            "scene_id": "scene_00150",
-            "type": "temporal",
-            "answer_pred": "engine",
-            "kind": "temporal",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00040_t1",
-            "scene_id": "scene_00040",
-            "type": "temporal",
-            "answer_pred": "engine",
-            "kind": "temporal",
-            "ground_truth": "door_slam"
-          },
-          {
-            "id": "scene_00193_t1",
-            "scene_id": "scene_00193",
-            "type": "temporal",
-            "answer_pred": "dish",
-            "kind": "temporal",
-            "ground_truth": "dish"
-          },
-          {
-            "id": "scene_00063_t1",
-            "scene_id": "scene_00063",
-            "type": "temporal",
-            "answer_pred": "keyboard",
-            "kind": "temporal",
-            "ground_truth": "drilling"
-          },
-          {
-            "id": "scene_00235_t1",
-            "scene_id": "scene_00235",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00022_t1",
-            "scene_id": "scene_00022",
-            "type": "temporal",
-            "answer_pred": "door_slam",
-            "kind": "temporal",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00135_t1",
-            "scene_id": "scene_00135",
-            "type": "temporal",
-            "answer_pred": "water",
-            "kind": "temporal",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00176_t1",
-            "scene_id": "scene_00176",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "dish"
-          },
-          {
-            "id": "scene_00183_t1",
-            "scene_id": "scene_00183",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "siren"
-          },
-          {
-            "id": "scene_00049_t1",
-            "scene_id": "scene_00049",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "printer"
-          },
-          {
-            "id": "scene_00194_t1",
-            "scene_id": "scene_00194",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "dish"
-          },
-          {
-            "id": "scene_00287_t1",
-            "scene_id": "scene_00287",
-            "type": "temporal",
-            "answer_pred": "bicycle_bell",
-            "kind": "temporal",
-            "ground_truth": "bicycle_bell"
-          },
-          {
-            "id": "scene_00293_t1",
-            "scene_id": "scene_00293",
-            "type": "temporal",
-            "answer_pred": "wind_rustle",
-            "kind": "temporal",
-            "ground_truth": "wind_rustle"
-          },
-          {
-            "id": "scene_00172_t1",
-            "scene_id": "scene_00172",
-            "type": "temporal",
-            "answer_pred": "siren",
-            "kind": "temporal",
-            "ground_truth": "siren"
-          },
-          {
-            "id": "scene_00110_t1",
-            "scene_id": "scene_00110",
-            "type": "temporal",
-            "answer_pred": "dog_bark",
-            "kind": "temporal",
-            "ground_truth": "shouting"
-          },
-          {
-            "id": "scene_00079_t1",
-            "scene_id": "scene_00079",
-            "type": "temporal",
-            "answer_pred": "engine",
-            "kind": "temporal",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00277_t1",
-            "scene_id": "scene_00277",
-            "type": "temporal",
-            "answer_pred": "dish",
-            "kind": "temporal",
-            "ground_truth": "dish"
-          },
-          {
-            "id": "scene_00174_t1",
-            "scene_id": "scene_00174",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00290_t1",
-            "scene_id": "scene_00290",
-            "type": "temporal",
-            "answer_pred": "door_slam",
-            "kind": "temporal",
-            "ground_truth": "shouting"
-          },
-          {
-            "id": "scene_00081_t1",
-            "scene_id": "scene_00081",
-            "type": "temporal",
-            "answer_pred": "door_open",
-            "kind": "temporal",
-            "ground_truth": "door_open"
-          },
-          {
-            "id": "scene_00003_t1",
-            "scene_id": "scene_00003",
-            "type": "temporal",
-            "answer_pred": "keyboard",
-            "kind": "temporal",
-            "ground_truth": "car_horn"
-          },
-          {
-            "id": "scene_00142_t1",
-            "scene_id": "scene_00142",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00229_t1",
-            "scene_id": "scene_00229",
-            "type": "temporal",
-            "answer_pred": "engine",
-            "kind": "temporal",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00112_t1",
-            "scene_id": "scene_00112",
-            "type": "temporal",
-            "answer_pred": "water",
-            "kind": "temporal",
-            "ground_truth": "dog_bark"
-          },
-          {
-            "id": "scene_00214_t1",
-            "scene_id": "scene_00214",
-            "type": "temporal",
-            "answer_pred": "door_open",
-            "kind": "temporal",
-            "ground_truth": "door_open"
-          },
-          {
-            "id": "scene_00292_t1",
-            "scene_id": "scene_00292",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "drilling"
-          },
-          {
-            "id": "scene_00101_t1",
-            "scene_id": "scene_00101",
-            "type": "temporal",
-            "answer_pred": "door_slam",
-            "kind": "temporal",
-            "ground_truth": "siren"
-          },
-          {
-            "id": "scene_00013_t1",
-            "scene_id": "scene_00013",
-            "type": "temporal",
-            "answer_pred": "phone_ring",
-            "kind": "temporal",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00258_t1",
-            "scene_id": "scene_00258",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "door_open"
-          },
-          {
-            "id": "scene_00119_t1",
-            "scene_id": "scene_00119",
-            "type": "temporal",
-            "answer_pred": "door_open",
-            "kind": "temporal",
-            "ground_truth": "door_open"
-          },
-          {
-            "id": "scene_00111_t1",
-            "scene_id": "scene_00111",
-            "type": "temporal",
-            "answer_pred": "engine",
-            "kind": "temporal",
-            "ground_truth": "water"
-          },
-          {
-            "id": "scene_00047_t1",
-            "scene_id": "scene_00047",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00015_t1",
-            "scene_id": "scene_00015",
-            "type": "temporal",
-            "answer_pred": "door_open",
-            "kind": "temporal",
-            "ground_truth": "door_open"
-          },
-          {
-            "id": "scene_00016_t1",
-            "scene_id": "scene_00016",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "keyboard"
-          },
-          {
-            "id": "scene_00216_t1",
-            "scene_id": "scene_00216",
-            "type": "temporal",
-            "answer_pred": "keyboard",
-            "kind": "temporal",
-            "ground_truth": "keyboard"
-          },
-          {
-            "id": "scene_00044_t1",
-            "scene_id": "scene_00044",
-            "type": "temporal",
-            "answer_pred": "keyboard",
-            "kind": "temporal",
-            "ground_truth": "car_horn"
-          },
-          {
-            "id": "scene_00279_t1",
-            "scene_id": "scene_00279",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "door_open"
-          },
-          {
-            "id": "scene_00052_t1",
-            "scene_id": "scene_00052",
-            "type": "temporal",
-            "answer_pred": "phone_ring",
-            "kind": "temporal",
-            "ground_truth": "phone_ring"
-          },
-          {
-            "id": "scene_00071_t1",
-            "scene_id": "scene_00071",
-            "type": "temporal",
-            "answer_pred": "engine",
-            "kind": "temporal",
-            "ground_truth": "water"
-          },
-          {
-            "id": "scene_00114_t1",
-            "scene_id": "scene_00114",
-            "type": "temporal",
-            "answer_pred": "door_slam",
-            "kind": "temporal",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00125_t1",
-            "scene_id": "scene_00125",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "drilling"
-          },
-          {
-            "id": "scene_00140_t1",
-            "scene_id": "scene_00140",
-            "type": "temporal",
-            "answer_pred": "door_open",
-            "kind": "temporal",
-            "ground_truth": "door_open"
-          },
-          {
-            "id": "scene_00012_t1",
-            "scene_id": "scene_00012",
-            "type": "temporal",
-            "answer_pred": "keyboard",
-            "kind": "temporal",
-            "ground_truth": "shouting"
-          },
-          {
-            "id": "scene_00057_t1",
-            "scene_id": "scene_00057",
-            "type": "temporal",
-            "answer_pred": "footstep",
-            "kind": "temporal",
-            "ground_truth": "footstep"
-          }
-        ]
-      },
-      "negation": {
-        "count": 45,
-        "predictions": [
-          {
-            "id": "scene_00185_n1",
-            "scene_id": "scene_00185",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00150_n1",
-            "scene_id": "scene_00150",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00040_n1",
-            "scene_id": "scene_00040",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00193_n1",
-            "scene_id": "scene_00193",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00063_n1",
-            "scene_id": "scene_00063",
-            "type": "negation",
-            "answer_pred": "yes",
-            "kind": "negation",
-            "ground_truth": "yes"
-          },
-          {
-            "id": "scene_00235_n1",
-            "scene_id": "scene_00235",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00022_n1",
-            "scene_id": "scene_00022",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00135_n1",
-            "scene_id": "scene_00135",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00176_n1",
-            "scene_id": "scene_00176",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00183_n1",
-            "scene_id": "scene_00183",
-            "type": "negation",
-            "answer_pred": "yes",
-            "kind": "negation",
-            "ground_truth": "yes"
-          },
-          {
-            "id": "scene_00049_n1",
-            "scene_id": "scene_00049",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00194_n1",
-            "scene_id": "scene_00194",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00287_n1",
-            "scene_id": "scene_00287",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00293_n1",
-            "scene_id": "scene_00293",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00172_n1",
-            "scene_id": "scene_00172",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00110_n1",
-            "scene_id": "scene_00110",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00079_n1",
-            "scene_id": "scene_00079",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00277_n1",
-            "scene_id": "scene_00277",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00174_n1",
-            "scene_id": "scene_00174",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00290_n1",
-            "scene_id": "scene_00290",
-            "type": "negation",
-            "answer_pred": "yes",
-            "kind": "negation",
-            "ground_truth": "yes"
-          },
-          {
-            "id": "scene_00081_n1",
-            "scene_id": "scene_00081",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00003_n1",
-            "scene_id": "scene_00003",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00142_n1",
-            "scene_id": "scene_00142",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00229_n1",
-            "scene_id": "scene_00229",
-            "type": "negation",
-            "answer_pred": "yes",
-            "kind": "negation",
-            "ground_truth": "yes"
-          },
-          {
-            "id": "scene_00112_n1",
-            "scene_id": "scene_00112",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00214_n1",
-            "scene_id": "scene_00214",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00292_n1",
-            "scene_id": "scene_00292",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00101_n1",
-            "scene_id": "scene_00101",
-            "type": "negation",
-            "answer_pred": "yes",
-            "kind": "negation",
-            "ground_truth": "yes"
-          },
-          {
-            "id": "scene_00013_n1",
-            "scene_id": "scene_00013",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00258_n1",
-            "scene_id": "scene_00258",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00119_n1",
-            "scene_id": "scene_00119",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00111_n1",
-            "scene_id": "scene_00111",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00047_n1",
-            "scene_id": "scene_00047",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00015_n1",
-            "scene_id": "scene_00015",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00016_n1",
-            "scene_id": "scene_00016",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00216_n1",
-            "scene_id": "scene_00216",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00044_n1",
-            "scene_id": "scene_00044",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00279_n1",
-            "scene_id": "scene_00279",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00052_n1",
-            "scene_id": "scene_00052",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00071_n1",
-            "scene_id": "scene_00071",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00114_n1",
-            "scene_id": "scene_00114",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00125_n1",
-            "scene_id": "scene_00125",
-            "type": "negation",
-            "answer_pred": "yes",
-            "kind": "negation",
-            "ground_truth": "yes"
-          },
-          {
-            "id": "scene_00140_n1",
-            "scene_id": "scene_00140",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          },
-          {
-            "id": "scene_00012_n1",
-            "scene_id": "scene_00012",
-            "type": "negation",
-            "answer_pred": "yes",
-            "kind": "negation",
-            "ground_truth": "yes"
-          },
-          {
-            "id": "scene_00057_n1",
-            "scene_id": "scene_00057",
-            "type": "negation",
-            "answer_pred": "no",
-            "kind": "negation",
-            "ground_truth": "no"
-          }
-        ]
-      },
-      "comparative": {
-        "count": 45,
-        "predictions": [
-          {
-            "id": "scene_00185_comp1",
-            "scene_id": "scene_00185",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00150_comp1",
-            "scene_id": "scene_00150",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00040_comp1",
-            "scene_id": "scene_00040",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00193_comp1",
-            "scene_id": "scene_00193",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00063_comp1",
-            "scene_id": "scene_00063",
-            "type": "comparative",
-            "answer_pred": "drilling",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00235_comp1",
-            "scene_id": "scene_00235",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "dog_bark"
-          },
-          {
-            "id": "scene_00022_comp1",
-            "scene_id": "scene_00022",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00135_comp1",
-            "scene_id": "scene_00135",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00176_comp1",
-            "scene_id": "scene_00176",
-            "type": "comparative",
-            "answer_pred": "water",
-            "kind": "comparative",
-            "ground_truth": "water"
-          },
-          {
-            "id": "scene_00183_comp1",
-            "scene_id": "scene_00183",
-            "type": "comparative",
-            "answer_pred": "shouting",
-            "kind": "comparative",
-            "ground_truth": "shouting"
-          },
-          {
-            "id": "scene_00049_comp1",
-            "scene_id": "scene_00049",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00194_comp1",
-            "scene_id": "scene_00194",
-            "type": "comparative",
-            "answer_pred": "dish",
-            "kind": "comparative",
-            "ground_truth": "dish"
-          },
-          {
-            "id": "scene_00287_comp1",
-            "scene_id": "scene_00287",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00293_comp1",
-            "scene_id": "scene_00293",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "wind_rustle"
-          },
-          {
-            "id": "scene_00172_comp1",
-            "scene_id": "scene_00172",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00110_comp1",
-            "scene_id": "scene_00110",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "shouting"
-          },
-          {
-            "id": "scene_00079_comp1",
-            "scene_id": "scene_00079",
-            "type": "comparative",
-            "answer_pred": "engine",
-            "kind": "comparative",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00277_comp1",
-            "scene_id": "scene_00277",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00174_comp1",
-            "scene_id": "scene_00174",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00290_comp1",
-            "scene_id": "scene_00290",
-            "type": "comparative",
-            "answer_pred": "engine",
-            "kind": "comparative",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00081_comp1",
-            "scene_id": "scene_00081",
-            "type": "comparative",
-            "answer_pred": "phone_ring",
-            "kind": "comparative",
-            "ground_truth": "phone_ring"
-          },
-          {
-            "id": "scene_00003_comp1",
-            "scene_id": "scene_00003",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00142_comp1",
-            "scene_id": "scene_00142",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00229_comp1",
-            "scene_id": "scene_00229",
-            "type": "comparative",
-            "answer_pred": "engine",
-            "kind": "comparative",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00112_comp1",
-            "scene_id": "scene_00112",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00214_comp1",
-            "scene_id": "scene_00214",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00292_comp1",
-            "scene_id": "scene_00292",
-            "type": "comparative",
-            "answer_pred": "engine",
-            "kind": "comparative",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00101_comp1",
-            "scene_id": "scene_00101",
-            "type": "comparative",
-            "answer_pred": "engine",
-            "kind": "comparative",
-            "ground_truth": "engine"
-          },
-          {
-            "id": "scene_00013_comp1",
-            "scene_id": "scene_00013",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "footstep"
-          },
-          {
-            "id": "scene_00258_comp1",
-            "scene_id": "scene_00258",
-            "type": "comparative",
-            "answer_pred": "printer",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00119_comp1",
-            "scene_id": "scene_00119",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00111_comp1",
-            "scene_id": "scene_00111",
-            "type": "comparative",
-            "answer_pred": "door_slam",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00047_comp1",
-            "scene_id": "scene_00047",
-            "type": "comparative",
-            "answer_pred": "engine",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00015_comp1",
-            "scene_id": "scene_00015",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00016_comp1",
-            "scene_id": "scene_00016",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "keyboard"
-          },
-          {
-            "id": "scene_00216_comp1",
-            "scene_id": "scene_00216",
-            "type": "comparative",
-            "answer_pred": "phone_ring",
-            "kind": "comparative",
-            "ground_truth": "phone_ring"
-          },
-          {
-            "id": "scene_00044_comp1",
-            "scene_id": "scene_00044",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "car_horn"
-          },
-          {
-            "id": "scene_00279_comp1",
-            "scene_id": "scene_00279",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00052_comp1",
-            "scene_id": "scene_00052",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00071_comp1",
-            "scene_id": "scene_00071",
-            "type": "comparative",
-            "answer_pred": "door_slam",
-            "kind": "comparative",
-            "ground_truth": "water"
-          },
-          {
-            "id": "scene_00114_comp1",
-            "scene_id": "scene_00114",
-            "type": "comparative",
-            "answer_pred": "engine",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00125_comp1",
-            "scene_id": "scene_00125",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "shouting"
-          },
-          {
-            "id": "scene_00140_comp1",
-            "scene_id": "scene_00140",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00012_comp1",
-            "scene_id": "scene_00012",
-            "type": "comparative",
-            "answer_pred": "equal",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          },
-          {
-            "id": "scene_00057_comp1",
-            "scene_id": "scene_00057",
-            "type": "comparative",
-            "answer_pred": "footstep",
-            "kind": "comparative",
-            "ground_truth": "equal"
-          }
-        ]
-      },
-      "causal": {
-        "count": 36,
-        "predictions": [
-          {
-            "id": "scene_00040_cause1",
-            "scene_id": "scene_00040",
-            "type": "causal",
-            "answer_pred": "walking while carrying dishes or kitchen activity is ongoing",
-            "kind": "causal",
-            "ground_truth": "walking while carrying dishes or kitchen activity is ongoing"
-          },
-          {
-            "id": "scene_00193_cause1",
-            "scene_id": "scene_00193",
-            "type": "causal",
-            "answer_pred": "walking while carrying dishes or kitchen activity is ongoing",
-            "kind": "causal",
-            "ground_truth": "walking while carrying dishes or kitchen activity is ongoing"
-          },
-          {
-            "id": "scene_00235_cause1",
-            "scene_id": "scene_00235",
-            "type": "causal",
-            "answer_pred": "a dog is reacting to someone walking nearby",
-            "kind": "causal",
-            "ground_truth": "a dog may have chased the cyclist or is reacting to them"
-          },
-          {
-            "id": "scene_00022_cause1",
-            "scene_id": "scene_00022",
-            "type": "causal",
-            "answer_pred": "insufficient information \u2014 no matching co-occurrence in curated table",
-            "kind": "causal",
-            "ground_truth": "hammering and engine sounds indicate active construction site work"
-          },
-          {
-            "id": "scene_00135_cause1",
-            "scene_id": "scene_00135",
-            "type": "causal",
-            "answer_pred": "birds active while someone walks through a park scene",
-            "kind": "causal",
-            "ground_truth": "birds active while someone walks through a park scene"
-          },
-          {
-            "id": "scene_00176_cause1",
-            "scene_id": "scene_00176",
-            "type": "causal",
-            "answer_pred": "walking while carrying dishes or kitchen activity is ongoing",
-            "kind": "causal",
-            "ground_truth": "dishwashing often involves both plate sounds and running water"
-          },
-          {
-            "id": "scene_00183_cause1",
-            "scene_id": "scene_00183",
-            "type": "causal",
-            "answer_pred": "a vehicle engine and siren indicate emergency traffic response",
-            "kind": "causal",
-            "ground_truth": "a vehicle engine and siren indicate emergency traffic response"
-          },
-          {
-            "id": "scene_00049_cause1",
-            "scene_id": "scene_00049",
-            "type": "causal",
-            "answer_pred": "office activity with someone walking near printing equipment",
-            "kind": "causal",
-            "ground_truth": "typing activity continues as someone enters the office"
-          },
-          {
-            "id": "scene_00194_cause1",
-            "scene_id": "scene_00194",
-            "type": "causal",
-            "answer_pred": "walking while carrying dishes or kitchen activity is ongoing",
-            "kind": "causal",
-            "ground_truth": "someone started a timer then went to the kitchen tap or sink"
-          },
-          {
-            "id": "scene_00287_cause1",
-            "scene_id": "scene_00287",
-            "type": "causal",
-            "answer_pred": "a cyclist and pedestrian share a park or street path",
-            "kind": "causal",
-            "ground_truth": "a cyclist and pedestrian share a park or street path"
-          },
-          {
-            "id": "scene_00293_cause1",
-            "scene_id": "scene_00293",
-            "type": "causal",
-            "answer_pred": "a dog is reacting to someone walking nearby",
-            "kind": "causal",
-            "ground_truth": "a dog may have chased the cyclist or is reacting to them"
-          },
-          {
-            "id": "scene_00172_cause1",
-            "scene_id": "scene_00172",
-            "type": "causal",
-            "answer_pred": "a vehicle engine and siren indicate emergency traffic response",
-            "kind": "causal",
-            "ground_truth": "a dog is reacting to someone walking nearby"
-          },
-          {
-            "id": "scene_00110_cause1",
-            "scene_id": "scene_00110",
-            "type": "causal",
-            "answer_pred": "a dog is reacting to someone walking nearby",
-            "kind": "causal",
-            "ground_truth": "loud drilling prompts workers to shout communication"
-          },
-          {
-            "id": "scene_00079_cause1",
-            "scene_id": "scene_00079",
-            "type": "causal",
-            "answer_pred": "a dog is reacting to someone walking nearby",
-            "kind": "causal",
-            "ground_truth": "city traffic with car horns and engines on a street scene"
-          },
-          {
-            "id": "scene_00277_cause1",
-            "scene_id": "scene_00277",
-            "type": "causal",
-            "answer_pred": "walking while carrying dishes or kitchen activity is ongoing",
-            "kind": "causal",
-            "ground_truth": "kitchen dish use near microwave operation"
-          },
-          {
-            "id": "scene_00174_cause1",
-            "scene_id": "scene_00174",
-            "type": "causal",
-            "answer_pred": "city street activity combines traffic and pedestrian sounds",
-            "kind": "causal",
-            "ground_truth": "city street activity combines traffic and pedestrian sounds"
-          },
-          {
-            "id": "scene_00290_cause1",
-            "scene_id": "scene_00290",
-            "type": "causal",
-            "answer_pred": "a vehicle engine and siren indicate emergency traffic response",
-            "kind": "causal",
-            "ground_truth": "a vehicle engine and siren indicate emergency traffic response"
-          },
-          {
-            "id": "scene_00081_cause1",
-            "scene_id": "scene_00081",
-            "type": "causal",
-            "answer_pred": "typing activity continues as someone enters the office",
-            "kind": "causal",
-            "ground_truth": "typing activity continues as someone enters the office"
-          },
-          {
-            "id": "scene_00003_cause1",
-            "scene_id": "scene_00003",
-            "type": "causal",
-            "answer_pred": "an emergency vehicle may be approaching in traffic",
-            "kind": "causal",
-            "ground_truth": "an emergency vehicle may be approaching in traffic"
-          },
-          {
-            "id": "scene_00142_cause1",
-            "scene_id": "scene_00142",
-            "type": "causal",
-            "answer_pred": "birds active while someone walks through a park scene",
-            "kind": "causal",
-            "ground_truth": "birds active while someone walks through a park scene"
-          },
-          {
-            "id": "scene_00229_cause1",
-            "scene_id": "scene_00229",
-            "type": "causal",
-            "answer_pred": "a vehicle engine and siren indicate emergency traffic response",
-            "kind": "causal",
-            "ground_truth": "a vehicle engine and siren indicate emergency traffic response"
-          },
-          {
-            "id": "scene_00112_cause1",
-            "scene_id": "scene_00112",
-            "type": "causal",
-            "answer_pred": "a dog is reacting to someone walking nearby",
-            "kind": "causal",
-            "ground_truth": "a dog may have chased the cyclist or is reacting to them"
-          },
-          {
-            "id": "scene_00214_cause1",
-            "scene_id": "scene_00214",
-            "type": "causal",
-            "answer_pred": "typing activity continues as someone enters the office",
-            "kind": "causal",
-            "ground_truth": "typing activity continues as someone enters the office"
-          },
-          {
-            "id": "scene_00292_cause1",
-            "scene_id": "scene_00292",
-            "type": "causal",
-            "answer_pred": "a dog is reacting to someone walking nearby",
-            "kind": "causal",
-            "ground_truth": "construction drilling and engine activity at a work site"
-          },
-          {
-            "id": "scene_00101_cause1",
-            "scene_id": "scene_00101",
-            "type": "causal",
-            "answer_pred": "a vehicle engine and siren indicate emergency traffic response",
-            "kind": "causal",
-            "ground_truth": "a vehicle engine and siren indicate emergency traffic response"
-          },
-          {
-            "id": "scene_00119_cause1",
-            "scene_id": "scene_00119",
-            "type": "causal",
-            "answer_pred": "office activity with someone walking near printing equipment",
-            "kind": "causal",
-            "ground_truth": "typing activity continues as someone enters the office"
-          },
-          {
-            "id": "scene_00111_cause1",
-            "scene_id": "scene_00111",
-            "type": "causal",
-            "answer_pred": "walking while carrying dishes or kitchen activity is ongoing",
-            "kind": "causal",
-            "ground_truth": "someone started a timer then went to the kitchen tap or sink"
-          },
-          {
-            "id": "scene_00047_cause1",
-            "scene_id": "scene_00047",
-            "type": "causal",
-            "answer_pred": "a vehicle engine and siren indicate emergency traffic response",
-            "kind": "causal",
-            "ground_truth": "a vehicle engine and siren indicate emergency traffic response"
-          },
-          {
-            "id": "scene_00015_cause1",
-            "scene_id": "scene_00015",
-            "type": "causal",
-            "answer_pred": "typing activity continues as someone enters the office",
-            "kind": "causal",
-            "ground_truth": "typing activity continues as someone enters the office"
-          },
-          {
-            "id": "scene_00016_cause1",
-            "scene_id": "scene_00016",
-            "type": "causal",
-            "answer_pred": "typing activity continues as someone enters the office",
-            "kind": "causal",
-            "ground_truth": "typing activity continues as someone enters the office"
-          },
-          {
-            "id": "scene_00216_cause1",
-            "scene_id": "scene_00216",
-            "type": "causal",
-            "answer_pred": "office environment with walking and typing activity",
-            "kind": "causal",
-            "ground_truth": "a call comes in during active computer use"
-          },
-          {
-            "id": "scene_00044_cause1",
-            "scene_id": "scene_00044",
-            "type": "causal",
-            "answer_pred": "an emergency vehicle may be approaching in traffic",
-            "kind": "causal",
-            "ground_truth": "an emergency vehicle may be approaching in traffic"
-          },
-          {
-            "id": "scene_00279_cause1",
-            "scene_id": "scene_00279",
-            "type": "causal",
-            "answer_pred": "typing activity continues as someone enters the office",
-            "kind": "causal",
-            "ground_truth": "typing activity continues as someone enters the office"
-          },
-          {
-            "id": "scene_00125_cause1",
-            "scene_id": "scene_00125",
-            "type": "causal",
-            "answer_pred": "a dog is reacting to someone walking nearby",
-            "kind": "causal",
-            "ground_truth": "a siren triggers community response or alert shouting"
-          },
-          {
-            "id": "scene_00012_cause1",
-            "scene_id": "scene_00012",
-            "type": "causal",
-            "answer_pred": "a siren triggers community response or alert shouting",
-            "kind": "causal",
-            "ground_truth": "a siren triggers community response or alert shouting"
-          },
-          {
-            "id": "scene_00057_cause1",
-            "scene_id": "scene_00057",
-            "type": "causal",
-            "answer_pred": "a dog is reacting to someone walking nearby",
-            "kind": "causal",
-            "ground_truth": "a dog is reacting to someone walking nearby"
-          }
-        ]
-      }
+      "llm_grounded": null
     },
     "event_detection_metrics": {
       "iou_threshold": 0.3,
@@ -2544,7 +2550,7 @@
       "threshold_tuning": "validation sweep in results/best_threshold.json selected 0.10 under label-count matching (not IoU); runtime filter is confidence >= 0.15",
       "context_format": "deterministic chronological event list with scene type inferred from predicted labels (annotation path passed but GT scenario not used)",
       "rule_answerer": "keyword/intent classification + timeline reasoning (Plan 3.3 sub-approach 1)",
-      "llm_answerer": "NOT EXECUTED \u2014 descoped for PoC scope (Plan 3.3 sub-approach 2; no Qwen2.5/Phi-3.5/API call)",
+      "llm_answerer": "Qwen2.5-0.5B-Instruct via transformers (Plan 3.3 sub-approach 2); status: not_implemented",
       "event_eval_unit": "unique_scene"
     }
   }

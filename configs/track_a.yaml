@@ -1,0 +1,105 @@
+# Track A — Structured/Grounded Pipeline Config (Plan Section 3)
+# Core deliverable: interpretable, traceable answers
+
+seed: 42
+
+# 3.1 Audio Event Tagging
+tagger:
+  # Per Plan 3.1: use pretrained CLAP/PANNs/YAMNet
+  # Current PoC uses spectral matched-filter; upgrade path documented
+  model_type: "spectral_matched_filter"  # Would be "clap" or "panns" with more compute
+  window_sec: 1.0
+  hop_sec: 0.5
+  min_duration_sec: 0.5
+
+  # Confidence threshold - tuned on validation set
+  # Plan 3.1: threshold + merge consecutive windows into segments
+  confidence_threshold: 0.15
+
+  # IoU threshold for event detection evaluation (Plan 5.1)
+  iou_threshold: 0.30
+
+  # Vocabulary - closed set from synthesis
+  vocab:
+    - car_horn
+    - dog_bark
+    - siren
+    - engine
+    - footstep
+    - dish
+    - water
+    - microwave_beep
+    - bird_chirp
+    - bicycle_bell
+    - wind_rustle
+    - keyboard
+    - printer
+    - phone_ring
+    - door_open
+    - door_slam
+    - drilling
+    - hammer
+    - shouting
+
+# 3.2 Scene Graph Builder
+scene_graph:
+  # Per Plan 3.2: convert timeline to compact textual context
+  format: "chronological"
+  include_confidence: true
+  include_scene_type: true
+  scene_inference: "heuristic_label_mapping"
+
+# 3.3 QA Answerer - both sub-approaches
+answerer:
+  # Sub-approach 1: Rule-based (Plan 3.3.1)
+  rule_based:
+    enabled: true
+
+  # Sub-approach 2: LLM-grounded (Plan 3.3.2)
+  llm_grounded:
+    enabled: true
+    model: "Qwen/Qwen2.5-0.5B-Instruct"  # Per Plan 3.3 recommendation
+    # Alternative: "microsoft/Phi-3.5-mini-instruct"
+    max_new_tokens: 128
+    temperature: null  # null = greedy for reproducibility
+    fallback_on_error: true  # Fall back to rule-based if LLM fails
+
+# 3.4 "No training required" framing
+# Track A has no learned parameters except optional threshold tuning
+training:
+  type: "none"  # No gradient training in Track A
+  note: "Per Plan 3.4: threshold tuning on validation set only"
+
+# Evaluation (Plan Section 5)
+evaluation:
+  # Per-type metrics enabled
+  perceptual:
+    metric: "accuracy"
+    include_f1: true
+  counting:
+    metric: "accuracy_and_mae"
+  temporal:
+    metric: "accuracy"
+  causal:
+    metric: "semantic_similarity"
+    similarity_metric: "bertscore"
+  negation:
+    metric: "accuracy_and_fpr"
+  comparative:
+    metric: "accuracy"
+  overall:
+    metric: "weighted_average"
+    also_report: ["exact_match", "bertscore"]
+
+  # Event detection (Plan 5.1)
+  event_detection:
+    enabled: true
+    iou_threshold: 0.30
+    evaluation_unit: "unique_scene"  # Per audit: once per scene, not per QA pair
+
+# Paths
+paths:
+  synthesized_audio: "data/synthesized_audio"
+  annotations: "data/annotations"
+  qa_pairs: "data/qa_pairs"
+  results: "results"

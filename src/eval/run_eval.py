@@ -88,17 +88,39 @@ def evaluate():
         tag_result = get_or_tag(tag_cache, sid, wav_path)
         context = build_context(tag_result, annotation_path=scene_path)
         rb_ans, rb_kind = answer(item.get("question", ""), context, tag_result.get("timeline"))
-        # LLM-grounded: NOT IMPLEMENTED / DESCOPED (Plan 3.3 sub-approach 2)
         predictions["rule_based"].append({
             "id": item.get("id"), "scene_id": sid, "type": item.get("question_type"),
             "answer_pred": rb_ans, "kind": rb_kind,
             "ground_truth": item.get("answer")
         })
+
+        # LLM-grounded: Per Plan 3.3 sub-approach 2, use LLM with structured context
+        # Only attempt if ENABLE_LLM_EVAL=1 environment variable is set
+        llm_ans, llm_kind = "not_implemented", "not_implemented"
+        llm_note = "LLM-grounded answerer not enabled; set ENABLE_LLM_EVAL=1 to run (requires model download)"
+        enable_llm = os.environ.get("ENABLE_LLM_EVAL", "").lower() in ("1", "true", "yes")
+        if enable_llm:
+            try:
+                from llm_answerer import LLMGroundedAnswerer
+                llm_answerer = LLMGroundedAnswerer()
+                if llm_answerer.pipe is not None:
+                    scene_type = item.get("scene_type", None)
+                    llm_ans, llm_kind = llm_answerer.answer(
+                        item.get("question", ""),
+                        tag_result,
+                        scene_type
+                    )
+                    llm_note = f"LLM-grounded via {llm_answerer.model_name}"
+                else:
+                    llm_note = "LLM model failed to load; check transformers installation and model availability"
+            except Exception as e:
+                llm_note = f"LLM answerer error: {str(e)[:80]}"
+
         predictions["llm_grounded"].append({
             "id": item.get("id"), "scene_id": sid, "type": item.get("question_type"),
-            "answer_pred": "not_implemented", "kind": "not_implemented",
+            "answer_pred": llm_ans, "kind": llm_kind,
             "ground_truth": item.get("answer"),
-            "note": "LLM-grounded answerer descoped; real Qwen2.5/Phi-3.5/API call requires downloaded weights/API (Plan 3.3, 3.4)"
+            "note": llm_note
         })
 
     for kind in ["rule_based", "llm_grounded"]:
@@ -192,16 +214,46 @@ def evaluate():
     ed["recall"] = round(rec, 4)
     ed["f1"] = round(2 * prec * rec / (prec + rec), 4) if (prec + rec) > 0 else 0.0
 
+    # Check if LLM answerer actually ran (has real predictions, not "not_implemented")
+    llm_ran = any(p["answer_pred"] != "not_implemented" for p in predictions["llm_grounded"])
+    llm_status = "executed" if llm_ran else "not_implemented"
+    llm_evaluated = llm_ran
+
+    # Aggregate LLM metrics if it ran
+    llm_agg = None
+    llm_breakdown = None
+    if llm_ran:
+        llm_agg = {}
+        lg = predictions["llm_grounded"]
+        for t in ["perceptual", "counting", "temporal", "causal", "negation", "comparative"]:
+            preds = [p for p in lg if p["type"] == t]
+            gt = [p["ground_truth"] for p in preds]
+            pred = [p["answer_pred"] for p in preds]
+            correct = sum(1 for g, p in zip(gt, pred) if _normalize(g) == _normalize(p))
+            acc = correct / len(preds) if preds else 0
+            llm_agg[t] = {"count": len(preds), "correct": correct, "accuracy": round(acc, 4)}
+        # Overall
+        total_lg = len(lg)
+        correct_lg = sum(1 for p in lg if _normalize(p["ground_truth"]) == _normalize(p["answer_pred"]))
+        llm_agg["overall"] = {"count": total_lg, "correct": correct_lg, "accuracy": round(correct_lg/total_lg, 4) if total_lg else 0}
+        llm_breakdown = {k: v for k, v in breakdown["llm_grounded"].items()}
+
     result = {
         "track_a_evaluation": {
             "test_samples_total": total_samples,
             "failed_or_skipped": failed,
-            "note": "Aggregate QA metrics computed from actual test predictions. LLM-grounded sub-approach: not_implemented / descoped (Plan 3.3, 3.4). Event detection metrics computed once per unique test scene (not per QA pair) with temporal IoU >= 0.30 from cached tagger timelines vs ground-truth annotations.",
+            "note": "Aggregate QA metrics computed from actual test predictions. Both sub-approaches from Plan 3.3 evaluated when LLM is available. Event detection metrics computed once per unique test scene (not per QA pair) with temporal IoU >= 0.30 from cached tagger timelines vs ground-truth annotations.",
             "rule_based_evaluated": True,
-            "llm_grounded_evaluated": False,
-            "llm_grounded_status": "not_implemented",
-            "aggregate_metrics": agg,
-            "per_type_breakdown": breakdown["rule_based"],
+            "llm_grounded_evaluated": llm_evaluated,
+            "llm_grounded_status": llm_status,
+            "aggregate_metrics": {
+                "rule_based": agg,
+                "llm_grounded": llm_agg
+            },
+            "per_type_breakdown": {
+                "rule_based": breakdown["rule_based"],
+                "llm_grounded": llm_breakdown
+            },
             "event_detection_metrics": ed,
             "source_config": {
                 "tagger": "Spectral matched-filter (deliberate PoC deviation from plan-required CLAP/PANNs; synthetic audio only; no pretrained audio-model weights claimed)",
@@ -209,7 +261,7 @@ def evaluate():
                 "threshold_tuning": f"validation sweep in results/best_threshold.json selected 0.10 under label-count matching (not IoU); runtime filter is confidence >= {CONFIDENCE_THRESHOLD}",
                 "context_format": "deterministic chronological event list with scene type inferred from predicted labels (annotation path passed but GT scenario not used)",
                 "rule_answerer": "keyword/intent classification + timeline reasoning (Plan 3.3 sub-approach 1)",
-                "llm_answerer": "NOT EXECUTED — descoped for PoC scope (Plan 3.3 sub-approach 2; no Qwen2.5/Phi-3.5/API call)",
+                "llm_answerer": f"Qwen2.5-0.5B-Instruct via transformers (Plan 3.3 sub-approach 2); status: {llm_status}",
                 "event_eval_unit": "unique_scene"
             }
         }
@@ -223,9 +275,12 @@ def evaluate():
         f.write("## Method Note\n")
         f.write("- Tagger: spectral matched-filter (deliberate synthetic-PoC deviation from plan-required CLAP/PANNs)\n")
         f.write(f"- Runtime confidence threshold: {CONFIDENCE_THRESHOLD} (not the val-sweep 0.10 label-count snapshot)\n")
-        f.write("- LLM-grounded: NOT IMPLEMENTED / DESCOPED\n")
+        f.write(f"- Rule-based: keyword/intent classification + timeline reasoning\n")
+        f.write(f"- LLM-grounded: {llm_status} (Qwen2.5-0.5B-Instruct when available)\n")
         f.write(f"- Test samples processed: {total_samples}; failed/skipped: {failed}\n")
         f.write(f"- Event detection unit: unique scene ({ed['scenes_evaluated']} scenes); tag_audio cached per scene\n\n")
+
+        # Rule-based metrics
         f.write("## Aggregate QA Metrics (Rule-Based)\n\n")
         f.write("| Type | Count | Correct | Accuracy | Notes |\n")
         f.write("|---|---|---|---|---|\n")
@@ -240,6 +295,17 @@ def evaluate():
                 notes = f"avg_overlap={a.get('semantic_similarity_avg_overlap')}; exact={a.get('exact_match')}"
             f.write(f"| {t} | {a.get('count','?')} | {a.get('correct','?')} | {a.get('accuracy','?')} | {notes} |\n")
         f.write(f"\n**Overall:** {agg['overall']['correct']}/{agg['overall']['count']} = {agg['overall']['accuracy']}\n\n")
+
+        # LLM-grounded metrics if available
+        if llm_ran and llm_agg:
+            f.write("## Aggregate QA Metrics (LLM-Grounded)\n\n")
+            f.write("| Type | Count | Correct | Accuracy |\n")
+            f.write("|---|---|---|---|\n")
+            for t in ["perceptual", "counting", "temporal", "causal", "negation", "comparative", "overall"]:
+                a = llm_agg.get(t, {})
+                f.write(f"| {t} | {a.get('count','?')} | {a.get('correct','?')} | {a.get('accuracy','?')} |\n")
+            f.write(f"\n**Overall:** {llm_agg['overall']['correct']}/{llm_agg['overall']['count']} = {llm_agg['overall']['accuracy']}\n\n")
+
         f.write("## Event Detection Metrics (Temporal IoU >= 0.30, unique scenes)\n\n")
         f.write("| Metric | Value |\n")
         f.write("|---|---|\n")
@@ -252,10 +318,14 @@ def evaluate():
         f.write(f"| Recall | {ed['recall']} |\n")
         f.write(f"| F1 | {ed['f1']} |\n")
         f.write(f"| IoU threshold | {ed['iou_threshold']} |\n\n")
-        f.write("## Per-Type Counts (Rule-Based Predictions)\n\n")
+        f.write("## Per-Type Counts\n\n")
+        f.write("### Rule-Based\n")
         for t_key, v in breakdown.get("rule_based", {}).items():
             f.write(f"- {t_key}: {v['count']} predictions\n")
-        f.write("\n**Note:** No fabricated metrics. LLM-grounded column explicitly marked not_implemented.\n")
+        if llm_ran and breakdown.get("llm_grounded"):
+            f.write("\n### LLM-Grounded\n")
+            for t_key, v in breakdown.get("llm_grounded", {}).items():
+                f.write(f"- {t_key}: {v['count']} predictions\n")
 
     print(f"Evaluation complete. Test samples: {total_samples}; failed: {failed}")
     print(f"Overall accuracy: {agg['overall']['accuracy']} ({agg['overall']['correct']}/{agg['overall']['count']})")
