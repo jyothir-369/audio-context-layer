@@ -2,7 +2,7 @@
   "track_a_evaluation": {
     "test_samples_total": 306,
     "failed_or_skipped": 0,
-    "note": "Aggregate QA metrics computed from actual test predictions. LLM-grounded sub-approach: not_implemented / descoped (Plan 3.3, 3.4). Event detection metrics computed with temporal IoU >= 0.30 from predicted timelines vs ground-truth annotations.",
+    "note": "Aggregate QA metrics computed from actual test predictions. LLM-grounded sub-approach: not_implemented / descoped (Plan 3.3, 3.4). Event detection metrics computed once per unique test scene (not per QA pair) with temporal IoU >= 0.30 from cached tagger timelines vs ground-truth annotations.",
     "rule_based_evaluated": true,
     "llm_grounded_evaluated": false,
     "llm_grounded_status": "not_implemented",
@@ -2529,19 +2529,23 @@
     },
     "event_detection_metrics": {
       "iou_threshold": 0.3,
-      "tp": 721,
-      "fp": 1703,
-      "fn": 365,
-      "precision": 0.2974,
-      "recall": 0.6639,
-      "f1": 0.4108
+      "evaluation_unit": "unique_scene",
+      "scenes_evaluated": 45,
+      "tp": 105,
+      "fp": 249,
+      "fn": 54,
+      "precision": 0.2966,
+      "recall": 0.6604,
+      "f1": 0.4094
     },
     "source_config": {
       "tagger": "Spectral matched-filter (deliberate PoC deviation from plan-required CLAP/PANNs; synthetic audio only; no pretrained audio-model weights claimed)",
-      "threshold_tuning": "validation-based (Plan 3.1, 3.4); best=0.10 F1=0.590",
-      "context_format": "deterministic chronological event list with scenario metadata when annotation available",
+      "runtime_confidence_threshold": 0.15,
+      "threshold_tuning": "validation sweep in results/best_threshold.json selected 0.10 under label-count matching (not IoU); runtime filter is confidence >= 0.15",
+      "context_format": "deterministic chronological event list with scene type inferred from predicted labels (annotation path passed but GT scenario not used)",
       "rule_answerer": "keyword/intent classification + timeline reasoning (Plan 3.3 sub-approach 1)",
-      "llm_answerer": "NOT EXECUTED \u2014 descoped for PoC scope (Plan 3.3 sub-approach 2; no Qwen2.5/Phi-3.5/API call)"
+      "llm_answerer": "NOT EXECUTED \u2014 descoped for PoC scope (Plan 3.3 sub-approach 2; no Qwen2.5/Phi-3.5/API call)",
+      "event_eval_unit": "unique_scene"
     }
   }
 }

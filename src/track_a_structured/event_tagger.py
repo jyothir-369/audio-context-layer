@@ -10,7 +10,13 @@ import numpy as np, json, os
 
 VOCAB = ["car_horn","dog_bark","siren","engine","footstep","dish","water",
          "microwave_beep","bird_chirp","bicycle_bell","wind_rustle","keyboard",
-         "printer","phone_ring","door_open","drilling","hammer","shouting"]
+         "printer","phone_ring","door_open","door_slam","drilling","hammer","shouting"]
+
+# Runtime detection filter. A validation sweep in results/best_threshold.json
+# selected 0.10 under label-count matching; that value is NOT used here.
+# The tagger actually keeps segments with confidence >= 0.15 (and duration >= 0.5s).
+CONFIDENCE_THRESHOLD = 0.15
+MIN_DURATION_SEC = 0.5
 
 EVENT_ACOUSTICS = {
     "car_horn": {"fundamental": 220, "harmonics": (2.0, 3.0), "modulation": "steady", "amplitude": 0.24},
@@ -141,11 +147,11 @@ def tag_audio(wav_path, window_sec=1.0, hop_sec=0.5):
         "confidence": round(avg_conf, 2),
     })
 
-    # Filter very short segments (< 0.5s) and low confidence
+    # Filter very short segments and low confidence (runtime threshold = 0.15)
     filtered = []
     for seg in timeline:
         duration = seg["end"] - seg["start"]
-        if duration >= 0.5 and seg["confidence"] >= 0.15:
+        if duration >= MIN_DURATION_SEC and seg["confidence"] >= CONFIDENCE_THRESHOLD:
             filtered.append(seg)
 
     if not filtered:

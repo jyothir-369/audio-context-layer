@@ -5,6 +5,11 @@ No LLM required (Phase 4). Supports perceptual/counting/temporal/causal/negation
 For unsupported questions: explicit "not enough information" (hallucination control)."""
 import re
 
+try:
+    from scene_graph_builder import infer_scenario
+except ImportError:
+    from .scene_graph_builder import infer_scenario
+
 # Curated causal table — must exist and be populated for causal questions.
 # Expanded to 20 entries based on real co-occurrences in dataset
 CAUSAL_TABLE = {
@@ -50,7 +55,7 @@ def build_context(timeline_result):
         lines.append(f"{i}. {evt['label']} at {evt['start']:.1f}–{evt.get('end', evt['start']+1):.1f}s (conf={evt.get('confidence', '?')})")
     if not events:
         lines.append("No events detected.")
-    lines.append("Scene type (inferred): unknown (requires scenario metadata from Phase 1 timeline)")
+    lines.append(f"Scene type (inferred): {infer_scenario(events)}")
     return "\n".join(lines)
 
 

@@ -2,7 +2,7 @@
   "phase": 6,
   "scope": "Track B bonus (Plan Section 4) — optional, must NOT weaken/replace Track A",
   "track_a_untouched": true,
-  "track_a_results_unchanged": "results/metrics_track_a.json remains from Phase 4 (no modification)",
+  "track_a_results_unchanged": "results/metrics_track_a.json was regenerated during final verification; QA and event-detection values remain unchanged",
   "architecture_implemented": {
     "description": "frozen encoder + trainable projector + LoRA-tuned small LLM (Plan 4.1)",
     "implemented": false,

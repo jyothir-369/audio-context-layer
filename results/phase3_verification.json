@@ -1,17 +1,18 @@
 {
   "phase": "3",
-  "scope": "Track A core only (no LLM-grounded, no Track B, no full eval, no error analysis, no final report)",
+  "scope": "Track A core (rule-based); LLM-grounded and Track B descoped",
   "components": [
-    "event_tagger (zero-shot placeholder)",
-    "scene_graph_builder (deterministic context)",
+    "event_tagger (spectral matched-filter against EVENT_ACOUSTICS)",
+    "scene_graph_builder (deterministic context; scene type inferred from predicted labels)",
     "qa_answerer (rule-based keyword/intention)"
   ],
-  "tagger_type": "CLAP-style zero-shot (restricted vocabulary); placeholder used because source audio/downloaded model weights not present; NO training from scratch",
-  "threshold_tuning": "may use validation set (Plan 3.1) but NO gradient-based training",
-  "structured_context": "deterministic text from timeline",
+  "tagger_type": "spectral matched-filter, 1.0s window / 0.5s hop; deliberate PoC deviation from plan-required CLAP/PANNs; NO pretrained audio-model weights",
+  "runtime_confidence_threshold": 0.15,
+  "threshold_tuning": "validation label-count sweep in results/best_threshold.json selected 0.10; that value is a snapshot, not the runtime filter (0.15)",
+  "structured_context": "deterministic text from predicted timeline; scene type inferred from detected labels (GT scenario not leaked)",
   "rule_based_qa": "keyword/intent classification + direct timeline computation (counting, temporal, causal from CAUSAL_TABLE, negation, comparative, perceptual)",
   "unsupported_questions": "return explicit insufficient-info (no hallucination)",
-  "tests": "structural pipeline verified; accuracy claims NOT made (no real tagger running on real clips)",
+  "tests": "end-to-end tagging on real 16kHz WAV scenes; metrics produced by src/eval/run_eval.py",
   "run_runnable": "audio_path -> timeline -> context -> answer runs end-to-end",
-  "limitations": "requires downloaded ESC-50/UrbanSound8K source clips and CLAP/PANNs model weights for real tagging; synthetic placeholder scenes only for structural verification; threshold tuning on validation uses synthetic predictions"
+  "limitations": "ESC-50/UrbanSound8K not downloaded; CLAP/PANNs not used; LLM-grounded answerer not implemented"
 }

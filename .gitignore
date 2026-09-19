@@ -1,2 +1,13 @@
-# Ignore all Markdown files
+# Ignore Markdown files by default
 *.md
+
+# Keep required documentation available in git
+!README.md
+!data/README.md
+!docs/technical_report.md
+!docs/*.md
+!results/metrics_track_a.md
+!results/error_analysis.md
+!FINAL_AUDIT_REPORT.md
+!Audio_Context_Layer_Implementation_Plan.md
+!results/phase6_status.md

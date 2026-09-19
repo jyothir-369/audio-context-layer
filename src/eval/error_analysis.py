@@ -34,15 +34,23 @@ def classify_errors():
 
     with open("results/metrics_track_a.json") as f:
         preds_data = json.load(f)
-    rule_based = preds_data["track_a_evaluation"]["per_type_breakdown"]["rule_based"]
+    per_type_breakdown = preds_data["track_a_evaluation"]["per_type_breakdown"]
+    rule_based = per_type_breakdown.get("rule_based", per_type_breakdown)
 
     perception_failures = 0
     reasoning_failures = 0
     unanswerable_failures = 0  # environment questions unanswerable by design (docs Item 3)
     total_errors = 0
     examples = []
-    # Per-type tracking for split reporting
-    split_counts = {"perception": 0, "reasoning": 0, "unanswerable": 0}
+    tag_cache = {}
+
+    def get_tag_result(scene_id, audio_path):
+        if scene_id not in tag_cache:
+            try:
+                tag_cache[scene_id] = tag_audio(audio_path)
+            except Exception as e:
+                tag_cache[scene_id] = {"timeline": [], "note": f"tagger error: {e}"}
+        return tag_cache[scene_id]
 
     for qtype, qdata in rule_based.items():
         for pred in qdata["predictions"]:
@@ -62,7 +70,7 @@ def classify_errors():
 
             audio_path = f"data/synthesized_audio/{scene_id}.wav"
             try:
-                tagger_result = tag_audio(audio_path)
+                tagger_result = get_tag_result(scene_id, audio_path)
             except Exception as e:
                 tagger_result = {"timeline": [], "note": f"tagger error: {e}"}
             timeline = tagger_result.get("timeline", [])
@@ -83,7 +91,7 @@ def classify_errors():
 
             if is_env_question:
                 # Architecture gap per docs/tech_report §8: environment inference uses heuristic label-set mapping
-                # Report separately so 84% isn't inflated by this already-accepted limitation
+                # Report separately so the perception/reasoning split is not inflated by this already-accepted limitation
                 unanswerable_failures += 1
                 diag = "unanswerable (by design)"
                 detail = "Environment inference unanswerable from audio alone (heuristic label-set mapping; docs §8)"
@@ -117,33 +125,13 @@ def classify_errors():
                     "type_key": type_key,
                 })
 
-    # Per-question-type split (Option b: 3-category reporting so 84% isn't inflated)
+    # Per-question-type split (Option b: 3-category reporting so the split is not inflated)
     by_qtype = {}
     for qtype in ["perceptual", "counting", "temporal", "negation", "comparative", "causal"]:
         by_qtype[qtype] = {"perception": 0, "reasoning": 0, "unanswerable": 0, "total_errors": 0}
     # Track which errors were which kind per question type
     # (We accumulate during loop above; easiest is to re-derive from examples + totals)
     # Instead, we report aggregate counts per category with per-qtype explanation.
-
-    # Per-type breakdown computed from predictions (re-run quick tally)
-    per_qtype_errors = {}
-    for qtype, qdata in rule_based.items():
-        errors = 0; env_err = 0; perc_err = 0; reas_err = 0
-        for pred in qdata["predictions"]:
-            if pred.get("ground_truth","").strip().lower() == pred.get("answer_pred","").strip().lower():
-                continue
-            errors += 1
-            # Use same classification logic as loop
-            sid = pred["scene_id"]
-            question = test_by_id.get(pred.get("id"),{}).get("question","")
-            q_lower = question.lower()
-            is_env = ("environment" in q_lower or ("what kind of" in q_lower and "scenario" not in q_lower))
-            if is_env:
-                env_err += 1
-            else:
-                # Need event-check; approximate with existing loop results — use examples
-                pass
-        per_qtype_errors[qtype] = {"errors": errors}
 
     # Instead, do proper second pass specifically for per-qtype reporting
     for qtype, qdata in rule_based.items():
@@ -164,7 +152,7 @@ def classify_errors():
                 if os.path.isfile(ann_path):
                     with open(ann_path) as af: gt_events = json.load(af).get("events",[])
                 try:
-                    tr = tag_audio(f"data/synthesized_audio/{sid}.wav")
+                    tr = get_tag_result(sid, f"data/synthesized_audio/{sid}.wav")
                     tl = tr.get("timeline",[])
                 except Exception:
                     tl = []
@@ -203,7 +191,7 @@ def classify_errors():
             if os.path.isfile(ann_path):
                 with open(ann_path) as af: gt_events = json.load(af).get("events",[])
             try:
-                tl = tag_audio(f"data/synthesized_audio/{sid}.wav").get("timeline",[])
+                tl = get_tag_result(sid, f"data/synthesized_audio/{sid}.wav").get("timeline",[])
             except Exception:
                 tl = []
             q = test_by_id.get(pred.get("id"),{}).get("question","")
@@ -244,7 +232,7 @@ def classify_errors():
 
 ## Perception vs Reasoning — 3-Category Split (Plan 6.2, Option b; not inflated by unanswerable gap)
 
-**Method:** Perception = GT event missing/mislabeled in tagger timeline (IoU < {IOU_THRESH}). Reasoning = event detected correctly but answer derived wrong. **Unanswerable (by design)** = environment/scenario inference using heuristic label-set mapping (docs §8; ~50% accuracy already accepted). The 84% aggregate excludes unanswerable questions — they are split out so the split reflects genuine event-detection performance.
+**Method:** Perception = GT event missing/mislabeled in tagger timeline (IoU < {IOU_THRESH}). Reasoning = event detected correctly but answer derived wrong. **Unanswerable (by design)** = environment/scenario inference using heuristic label-set mapping (docs §8; ~50% accuracy already accepted). The three-way split reports {perception_failures} perception errors ({pct:.1%} of all errors), {reasoning_failures} reasoning errors ({rct:.1%}), and {unanswerable_failures} unanswerable errors ({unct:.1%}). Among the {perception_failures + reasoning_failures} perception/reasoning errors only, perception accounts for {(perception_failures / (perception_failures + reasoning_failures) if perception_failures + reasoning_failures else 0):.1%}.
 
 **Total Errors: {total_errors}**
 - Perception: {perception_failures} ({pct:.1%})
@@ -262,7 +250,7 @@ def classify_errors():
             report += f"- **{qtype}** (errors={errors_key}): perception={c['perception']}, reasoning={c['reasoning']}, unanswerable={c['unanswerable']}\n"
 
     report += f"""
-**Perceptual "what sound" vs "what environment":** Perceptual errors include both event-detection misses (e.g., "door_slam" missed, -> "footstep") AND environment-inference failures (e.g., GT="kitchen" but predicted="office"). The unanswerable category captures the latter; the 84% aggregate is perception-only (genuine detection misses) when unanswerable is excluded.
+**Perceptual "what sound" vs "what environment":** Perceptual errors include both event-detection misses (e.g., "door_slam" missed, -> "footstep") AND environment-inference failures (e.g., GT="kitchen" but predicted="office"). The unanswerable category captures the latter; perception and reasoning are reported separately so the split does not imply that environment inference is a genuine detection failure.
 
 ## Qualitative Failures (Plan 6.3) — 5+ non-perceptual + diverse (counting, temporal, comparative, causal, reasoning/unanswerable)
 
@@ -275,19 +263,10 @@ def classify_errors():
         report += f"- GT Timeline: {json.dumps(ex['gt_timeline'])}\n"
         report += f"- Predicted Timeline: {json.dumps(ex['predicted_timeline'])}\n"
         report += f"- Diagnosis: {ex['diagnosis']} — {ex['detail']}\n\n"
-    for ex in examples:
-        report += f"### {ex['scene_id']} ({ex['qtype']})\n"
-        report += f"- Question: {ex['question']}\n"
-        report += f"- Ground Truth: {ex['ground_truth_answer']}\n"
-        report += f"- Predicted: {ex['predicted_answer']}\n"
-        report += f"- GT Timeline: {json.dumps(ex['gt_timeline'])}\n"
-        report += f"- Predicted Timeline: {json.dumps(ex['predicted_timeline'])}\n"
-        report += f"- Diagnosis: {ex['diagnosis']} — {ex['detail']}\n\n"
-
     report += """## Systematic Patterns (Plan 6.4)
 
-- Overlapping events: temporal-ordering accuracy likely lower when overlap >60% (Plan 2.3).
-- Unseen scenario types: synthetic dataset holds some classes back (Plan 2.6).
+- Overlapping events: temporal-ordering accuracy is likely lower when events overlap (Plan 2.3 overlap_probability=0.35). This is a hypothesis, not a measured holdout result.
+- Unseen class / scenario holdout: NOT implemented. Train, val, and test all contain the same five scenarios (street, kitchen, park, office, construction_site) and the same event vocabulary. Plan 2.6 suggested holding out classes; this PoC split does not.
 - Negation false-positive rate: rule-based system explicitly returns 'no' when event absent from timeline.
 - Causal explanations approximate; CAUSAL_TABLE covers only curated event pairs.
 """

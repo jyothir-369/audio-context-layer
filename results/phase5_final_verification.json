@@ -1,11 +1,11 @@
 {
   "phase": "5",
-  "scope": "Track A final documentation + error analysis + technical report + README (Plan Sections 6, 8); NO Track B; NO gradient training; metrics from Phase 4 verified",
+  "scope": "Track A final documentation + error analysis + technical report + README (Plan Sections 6, 8); Track B skeleton only; NO gradient training",
   "checks": {
     "Phase 1 scenes": 300,
-    "Phase 2 test QA": 222,
-    "Phase 2 val QA": 225,
-    "Phase 2 train QA": 1048,
+    "Phase 2 test QA": 306,
+    "Phase 2 val QA": 300,
+    "Phase 2 train QA": 1404,
     "Phase 3 tagger": true,
     "Phase 3 scene_graph": true,
     "Phase 3 qa_answerer": true,
@@ -15,8 +15,11 @@
     "Phase 5 error script": true,
     "Phase 5 docs": true,
     "Phase 5 README": true,
-    "No Track B": true,
+    "Track B trained": false,
     "No fabricated metrics": true
   },
-  "limitations": "Source audio download required; synthetic placeholder audio only; real CLAP weights needed for genuine tagging; causal approx; synthetic scale limits"
+  "tagger": "spectral matched-filter (not CLAP); runtime confidence threshold 0.15",
+  "audio": "valid 16kHz mono PCM_16 WAVs (300 files, 25.0s, 800044 bytes/file) — not placeholder markers",
+  "holdout": "NOT implemented — no unseen class or scenario held out of train",
+  "limitations": "ESC-50/UrbanSound8K not downloaded; CLAP/PANNs descoped; LLM-grounded descoped; Track B untrained; causal metric is word-overlap not BERTScore"
 }

@@ -1,39 +1,41 @@
 {
   "train": {
-    "count": 1048,
+    "count": 1404,
     "types": {
-      "perceptual": 210,
+      "perceptual": 420,
       "counting": 210,
       "temporal": 210,
       "negation": 210,
-      "comparative": 203,
-      "causal": 5
+      "comparative": 194,
+      "causal": 160
     },
     "scenes": 210
   },
   "val": {
-    "count": 225,
+    "count": 300,
     "types": {
-      "perceptual": 45,
+      "perceptual": 90,
       "counting": 45,
       "temporal": 45,
       "negation": 45,
-      "comparative": 44,
-      "causal": 1
+      "comparative": 42,
+      "causal": 33
     },
     "scenes": 45
   },
   "test": {
-    "count": 222,
+    "count": 306,
     "types": {
-      "perceptual": 45,
+      "perceptual": 90,
       "counting": 45,
       "temporal": 45,
       "negation": 45,
-      "comparative": 42
+      "comparative": 45,
+      "causal": 36
     },
     "scenes": 45
   },
   "leakage_check": "no scene overlap between splits (verified by disjoint scene_ids)",
-  "source_dataset": "ESC-50 / UrbanSound8K / FSD50K (internet per plan Section 2.2; downloaded when available)"
+  "holdout": "NOT implemented — all five scenarios and the full event vocabulary appear in train, val, and test",
+  "source_dataset": "synthetic class-specific tones mixed in scene_composer.py; ESC-50 / UrbanSound8K / FSD50K not downloaded (descoped)"
 }
