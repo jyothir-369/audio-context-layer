@@ -9,7 +9,7 @@ This repository implements a structured/grounded audio-QA pipeline (Plan Section
 - Phase 3: Track A core — **spectral matched-filter** tagger (deliberate PoC deviation from plan-required CLAP/PANNs) + scene graph + **rule-based** QA
 - Phase 4: evaluation harness (rule-based metrics + per-unique-scene event IoU). LLM-grounded sub-approach is **descoped** (`not_implemented`)
 - Phase 5: error analysis + technical report
-- Phase 6: Track B is a **skeleton only** (not trained, not evaluated)
+- Phase 6: Track B: skeleton + real projector (model/train/infer); smoke test + real loss curve pass; full dataset train NOT executed (honest)
 
 No gradient-based training is performed for Track A (Plan Section 3.4).
 

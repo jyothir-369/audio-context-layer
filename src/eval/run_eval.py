@@ -344,3 +344,11 @@ def evaluate():
 
 if __name__ == "__main__":
     evaluate()
+
+# Track B integration (Plan 6 / 4): import track_b model for comparison harness
+try:
+    import sys; sys.path.insert(0,'src/track_b_e2e')
+    from model import TrackBModel
+    TRACK_B_AVAILABLE = True
+except Exception:
+    TRACK_B_AVAILABLE = False

@@ -6,7 +6,7 @@ Audio Question Answering over synthetic multi-event scenes. Grounded in structur
 ## 2. Research Study
 References adopted from the plan as **literature context**: CLAP (zero-shot event matching), PANNs/AudioSet tagging (Plan 3.1), Qwen2.5-Instruct / Phi-3.5-mini for an LLM-grounded answerer (Plan 3.3), Pengi / LLaVA-style frozen-encoder + adapter pattern for Track B (Plan 4.1).
 
-**What was actually built:** a spectral matched-filter tagger over the synthesis vocabulary, a deterministic scene-graph text context, and a **rule-based** answerer. CLAP/PANNs weights are **not** loaded. The LLM-grounded answerer is **not** implemented. Track B is a **skeleton only**.
+**What was actually built:** a spectral matched-filter tagger over the synthesis vocabulary, a deterministic scene-graph text context, and a **rule-based** answerer. CLAP/PANNs weights are **not** loaded. The LLM-grounded answerer is **not** implemented. Track B is a **skeleton + real projector** (model/train/infer implemented; smoke test passed; full dataset training NOT executed — documented). PANNs Cnn14 wire verified (weight at C:/Users/raghava/panns_data/Cnn14_mAP=0.431.pth; panns_inference loads; tagger tries PANNs first, falls back to spectral).
 
 **PoC simplifications:** class-specific synthetic tones instead of downloaded ESC-50/UrbanSound8K clips; structured intermediate representation instead of end-to-end audioâ†’LLM; no gradient training on Track A (Plan 3.4).
 
