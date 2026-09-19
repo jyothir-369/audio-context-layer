@@ -78,6 +78,22 @@ def evaluate():
     failed = 0
     tag_cache = {}
 
+    # Initialize LLM answerer once outside the loop (if enabled)
+    enable_llm = os.environ.get("ENABLE_LLM_EVAL", "").lower() in ("1", "true", "yes")
+    llm_answerer = None
+    if enable_llm:
+        try:
+            from llm_answerer import LLMGroundedAnswerer
+            print("Loading LLM model (one-time load)...")
+            llm_answerer = LLMGroundedAnswerer()
+            if llm_answerer.pipe is not None:
+                print(f"LLM loaded: {llm_answerer.model_name}")
+            else:
+                print("LLM model failed to load")
+        except Exception as e:
+            print(f"LLM initialization error: {e}")
+            llm_answerer = None
+
     for item in rows:
         sid = item.get("scene_id", "unknown")
         scene_path = f"data/annotations/{sid}.json"
@@ -95,26 +111,20 @@ def evaluate():
         })
 
         # LLM-grounded: Per Plan 3.3 sub-approach 2, use LLM with structured context
-        # Only attempt if ENABLE_LLM_EVAL=1 environment variable is set
+        # Uses pre-initialized llm_answerer (loaded once before loop)
         llm_ans, llm_kind = "not_implemented", "not_implemented"
-        llm_note = "LLM-grounded answerer not enabled; set ENABLE_LLM_EVAL=1 to run (requires model download)"
-        enable_llm = os.environ.get("ENABLE_LLM_EVAL", "").lower() in ("1", "true", "yes")
-        if enable_llm:
+        llm_note = "LLM-grounded answerer not enabled; set ENABLE_LLM_EVAL=1 to run"
+        if llm_answerer is not None and llm_answerer.pipe is not None:
             try:
-                from llm_answerer import LLMGroundedAnswerer
-                llm_answerer = LLMGroundedAnswerer()
-                if llm_answerer.pipe is not None:
-                    scene_type = item.get("scene_type", None)
-                    llm_ans, llm_kind = llm_answerer.answer(
-                        item.get("question", ""),
-                        tag_result,
-                        scene_type
-                    )
-                    llm_note = f"LLM-grounded via {llm_answerer.model_name}"
-                else:
-                    llm_note = "LLM model failed to load; check transformers installation and model availability"
+                scene_type = item.get("scene_type", None)
+                llm_ans, llm_kind = llm_answerer.answer(
+                    item.get("question", ""),
+                    tag_result,
+                    scene_type
+                )
+                llm_note = f"LLM-grounded via {llm_answerer.model_name}"
             except Exception as e:
-                llm_note = f"LLM answerer error: {str(e)[:80]}"
+                llm_note = f"LLM answer error: {str(e)[:50]}"
 
         predictions["llm_grounded"].append({
             "id": item.get("id"), "scene_id": sid, "type": item.get("question_type"),
