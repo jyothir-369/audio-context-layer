@@ -1,1 +1,20 @@
-{"scene_id": "scene_00045", "audio_path": "synthesized_audio/scene_00045.wav", "duration_sec": 25.0, "scenario": "street", "events": [{"label": "engine", "start": 1.49, "end": 4.6}, {"label": "engine", "start": 7.48, "end": 9.73}, {"label": "water", "start": 12.07, "end": 14.5}, {"label": "car_horn", "start": 15.55, "end": 17.09}], "background": "traffic_ambience_low"}
+{
+  "scene_id": "scene_00045",
+  "audio_path": "synthesized_audio/scene_00045.wav",
+  "duration_sec": 25.0,
+  "scenario": "park",
+  "events": [
+    {
+      "label": "footstep",
+      "start": 1.55,
+      "end": 2.384
+    },
+    {
+      "label": "bicycle_bell",
+      "start": 5.286,
+      "end": 6.371
+    }
+  ],
+  "background": "wind_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

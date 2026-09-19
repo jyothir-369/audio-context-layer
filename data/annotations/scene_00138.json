@@ -1,1 +1,30 @@
-{"scene_id": "scene_00138", "audio_path": "synthesized_audio/scene_00138.wav", "duration_sec": 25.0, "scenario": "office", "events": [{"label": "water", "start": 3.16, "end": 4.32}, {"label": "engine", "start": 6.61, "end": 7.51}, {"label": "water", "start": 8.52, "end": 9.86}, {"label": "siren", "start": 10.46, "end": 12.65}, {"label": "footstep", "start": 15.62, "end": 17.7}], "background": "room_tone"}
+{
+  "scene_id": "scene_00138",
+  "audio_path": "synthesized_audio/scene_00138.wav",
+  "duration_sec": 25.0,
+  "scenario": "office",
+  "events": [
+    {
+      "label": "keyboard",
+      "start": 2.185,
+      "end": 3.979
+    },
+    {
+      "label": "door_open",
+      "start": 6.471,
+      "end": 8.847
+    },
+    {
+      "label": "keyboard",
+      "start": 10.011,
+      "end": 12.422
+    },
+    {
+      "label": "footstep",
+      "start": 14.726,
+      "end": 17.086
+    }
+  ],
+  "background": "hvac_hum",
+  "audio_type": "synthetic_class_specific_tones"
+}

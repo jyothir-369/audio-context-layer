@@ -1,1 +1,35 @@
-{"scene_id": "scene_00055", "audio_path": "synthesized_audio/scene_00055.wav", "duration_sec": 25.0, "scenario": "street", "events": [{"label": "dish", "start": 2.85, "end": 4.67}, {"label": "water", "start": 5.24, "end": 6.92}, {"label": "siren", "start": 8.64, "end": 11.59}, {"label": "footstep", "start": 12.95, "end": 15.64}, {"label": "dog_bark", "start": 16.83, "end": 19.02}], "background": "traffic_ambience_low"}
+{
+  "scene_id": "scene_00055",
+  "audio_path": "synthesized_audio/scene_00055.wav",
+  "duration_sec": 25.0,
+  "scenario": "construction_site",
+  "events": [
+    {
+      "label": "siren",
+      "start": 1.971,
+      "end": 3.574
+    },
+    {
+      "label": "siren",
+      "start": 5.627,
+      "end": 7.251
+    },
+    {
+      "label": "shouting",
+      "start": 7.999,
+      "end": 11.392
+    },
+    {
+      "label": "hammer",
+      "start": 12.553,
+      "end": 15.042
+    },
+    {
+      "label": "drilling",
+      "start": 15.977,
+      "end": 17.201
+    }
+  ],
+  "background": "construction_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

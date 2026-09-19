@@ -1,1 +1,30 @@
-{"scene_id": "scene_00268", "audio_path": "synthesized_audio/scene_00268.wav", "duration_sec": 25.0, "scenario": "office", "events": [{"label": "water", "start": 3.15, "end": 5.42}, {"label": "engine", "start": 5.97, "end": 8.88}, {"label": "footstep", "start": 10.28, "end": 13.19}], "background": "room_tone"}
+{
+  "scene_id": "scene_00268",
+  "audio_path": "synthesized_audio/scene_00268.wav",
+  "duration_sec": 25.0,
+  "scenario": "office",
+  "events": [
+    {
+      "label": "keyboard",
+      "start": 0.937,
+      "end": 2.006
+    },
+    {
+      "label": "keyboard",
+      "start": 1.336,
+      "end": 4.437
+    },
+    {
+      "label": "phone_ring",
+      "start": 4.301,
+      "end": 6.252
+    },
+    {
+      "label": "keyboard",
+      "start": 6.183,
+      "end": 7.009
+    }
+  ],
+  "background": "hvac_hum",
+  "audio_type": "synthetic_class_specific_tones"
+}

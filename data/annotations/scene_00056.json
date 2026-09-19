@@ -1,1 +1,25 @@
-{"scene_id": "scene_00056", "audio_path": "synthesized_audio/scene_00056.wav", "duration_sec": 25.0, "scenario": "kitchen", "events": [{"label": "engine", "start": 3.6, "end": 5.9}, {"label": "engine", "start": 7.0, "end": 9.54}, {"label": "water", "start": 11.27, "end": 12.12}], "background": "room_tone"}
+{
+  "scene_id": "scene_00056",
+  "audio_path": "synthesized_audio/scene_00056.wav",
+  "duration_sec": 25.0,
+  "scenario": "street",
+  "events": [
+    {
+      "label": "engine",
+      "start": 1.675,
+      "end": 4.336
+    },
+    {
+      "label": "car_horn",
+      "start": 3.732,
+      "end": 5.157
+    },
+    {
+      "label": "engine",
+      "start": 5.018,
+      "end": 6.01
+    }
+  ],
+  "background": "traffic_ambience_low",
+  "audio_type": "synthetic_class_specific_tones"
+}

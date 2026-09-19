@@ -1,1 +1,25 @@
-{"scene_id": "scene_00195", "audio_path": "synthesized_audio/scene_00195.wav", "duration_sec": 25.0, "scenario": "street", "events": [{"label": "engine", "start": 1.85, "end": 2.78}, {"label": "dish", "start": 5.44, "end": 6.63}, {"label": "footstep", "start": 7.78, "end": 10.15}], "background": "traffic_ambience_low"}
+{
+  "scene_id": "scene_00195",
+  "audio_path": "synthesized_audio/scene_00195.wav",
+  "duration_sec": 25.0,
+  "scenario": "office",
+  "events": [
+    {
+      "label": "printer",
+      "start": 2.514,
+      "end": 5.51
+    },
+    {
+      "label": "footstep",
+      "start": 6.713,
+      "end": 8.46
+    },
+    {
+      "label": "footstep",
+      "start": 11.408,
+      "end": 12.662
+    }
+  ],
+  "background": "hvac_hum",
+  "audio_type": "synthetic_class_specific_tones"
+}

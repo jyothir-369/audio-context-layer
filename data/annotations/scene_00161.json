@@ -1,1 +1,25 @@
-{"scene_id": "scene_00161", "audio_path": "synthesized_audio/scene_00161.wav", "duration_sec": 25.0, "scenario": "kitchen", "events": [{"label": "dish", "start": 1.84, "end": 2.94}, {"label": "siren", "start": 4.48, "end": 7.43}], "background": "room_tone"}
+{
+  "scene_id": "scene_00161",
+  "audio_path": "synthesized_audio/scene_00161.wav",
+  "duration_sec": 25.0,
+  "scenario": "office",
+  "events": [
+    {
+      "label": "phone_ring",
+      "start": 2.117,
+      "end": 3.466
+    },
+    {
+      "label": "door_open",
+      "start": 4.197,
+      "end": 7.284
+    },
+    {
+      "label": "printer",
+      "start": 8.727,
+      "end": 9.666
+    }
+  ],
+  "background": "hvac_hum",
+  "audio_type": "synthetic_class_specific_tones"
+}

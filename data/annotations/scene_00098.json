@@ -1,1 +1,35 @@
-{"scene_id": "scene_00098", "audio_path": "synthesized_audio/scene_00098.wav", "duration_sec": 25.0, "scenario": "office", "events": [{"label": "siren", "start": 0.66, "end": 3.59}, {"label": "siren", "start": 4.69, "end": 5.53}], "background": "room_tone"}
+{
+  "scene_id": "scene_00098",
+  "audio_path": "synthesized_audio/scene_00098.wav",
+  "duration_sec": 25.0,
+  "scenario": "construction_site",
+  "events": [
+    {
+      "label": "siren",
+      "start": 1.513,
+      "end": 3.094
+    },
+    {
+      "label": "engine",
+      "start": 5.963,
+      "end": 7.227
+    },
+    {
+      "label": "siren",
+      "start": 10.027,
+      "end": 13.073
+    },
+    {
+      "label": "drilling",
+      "start": 13.838,
+      "end": 15.817
+    },
+    {
+      "label": "siren",
+      "start": 17.627,
+      "end": 20.017
+    }
+  ],
+  "background": "construction_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

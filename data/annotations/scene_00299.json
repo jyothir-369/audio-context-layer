@@ -1,1 +1,25 @@
-{"scene_id": "scene_00299", "audio_path": "synthesized_audio/scene_00299.wav", "duration_sec": 25.0, "scenario": "construction_site", "events": [{"label": "engine", "start": 4.26, "end": 5.74}, {"label": "dish", "start": 7.41, "end": 9.61}, {"label": "footstep", "start": 11.67, "end": 12.75}, {"label": "dish", "start": 14.52, "end": 17.93}, {"label": "footstep", "start": 20.53, "end": 23.08}], "background": "room_tone"}
+{
+  "scene_id": "scene_00299",
+  "audio_path": "synthesized_audio/scene_00299.wav",
+  "duration_sec": 25.0,
+  "scenario": "construction_site",
+  "events": [
+    {
+      "label": "hammer",
+      "start": 1.132,
+      "end": 3.597
+    },
+    {
+      "label": "drilling",
+      "start": 2.979,
+      "end": 4.268
+    },
+    {
+      "label": "drilling",
+      "start": 2.535,
+      "end": 5.634
+    }
+  ],
+  "background": "construction_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

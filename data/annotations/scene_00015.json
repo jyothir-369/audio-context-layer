@@ -1,1 +1,25 @@
-{"scene_id": "scene_00015", "audio_path": "synthesized_audio/scene_00015.wav", "duration_sec": 25.0, "scenario": "street", "events": [{"label": "dog_bark", "start": 4.3, "end": 6.49}, {"label": "engine", "start": 7.68, "end": 9.06}], "background": "traffic_ambience_low"}
+{
+  "scene_id": "scene_00015",
+  "audio_path": "synthesized_audio/scene_00015.wav",
+  "duration_sec": 25.0,
+  "scenario": "office",
+  "events": [
+    {
+      "label": "footstep",
+      "start": 1.107,
+      "end": 3.463
+    },
+    {
+      "label": "door_open",
+      "start": 4.439,
+      "end": 7.42
+    },
+    {
+      "label": "keyboard",
+      "start": 8.805,
+      "end": 11.385
+    }
+  ],
+  "background": "hvac_hum",
+  "audio_type": "synthetic_class_specific_tones"
+}

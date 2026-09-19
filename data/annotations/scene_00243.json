@@ -1,1 +1,25 @@
-{"scene_id": "scene_00243", "audio_path": "synthesized_audio/scene_00243.wav", "duration_sec": 25.0, "scenario": "office", "events": [{"label": "dish", "start": 4.24, "end": 7.4}, {"label": "footstep", "start": 8.42, "end": 10.59}], "background": "room_tone"}
+{
+  "scene_id": "scene_00243",
+  "audio_path": "synthesized_audio/scene_00243.wav",
+  "duration_sec": 25.0,
+  "scenario": "kitchen",
+  "events": [
+    {
+      "label": "water",
+      "start": 0.696,
+      "end": 1.611
+    },
+    {
+      "label": "footstep",
+      "start": 4.168,
+      "end": 5.513
+    },
+    {
+      "label": "water",
+      "start": 6.657,
+      "end": 9.71
+    }
+  ],
+  "background": "room_tone",
+  "audio_type": "synthetic_class_specific_tones"
+}

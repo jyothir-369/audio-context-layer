@@ -1,1 +1,25 @@
-{"scene_id": "scene_00254", "audio_path": "synthesized_audio/scene_00254.wav", "duration_sec": 25.0, "scenario": "construction_site", "events": [{"label": "car_horn", "start": 4.6, "end": 7.92}, {"label": "footstep", "start": 10.56, "end": 13.53}, {"label": "dish", "start": 15.81, "end": 17.74}, {"label": "engine", "start": 19.05, "end": 22.32}, {"label": "water", "start": 23.62, "end": 24.0}], "background": "room_tone"}
+{
+  "scene_id": "scene_00254",
+  "audio_path": "synthesized_audio/scene_00254.wav",
+  "duration_sec": 25.0,
+  "scenario": "park",
+  "events": [
+    {
+      "label": "dog_bark",
+      "start": 2.514,
+      "end": 5.743
+    },
+    {
+      "label": "wind_rustle",
+      "start": 5.38,
+      "end": 7.271
+    },
+    {
+      "label": "dog_bark",
+      "start": 6.191,
+      "end": 8.938
+    }
+  ],
+  "background": "wind_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

@@ -1,1 +1,20 @@
-{"scene_id": "scene_00019", "audio_path": "synthesized_audio/scene_00019.wav", "duration_sec": 25.0, "scenario": "construction_site", "events": [{"label": "water", "start": 4.63, "end": 6.07}, {"label": "engine", "start": 7.59, "end": 8.96}], "background": "room_tone"}
+{
+  "scene_id": "scene_00019",
+  "audio_path": "synthesized_audio/scene_00019.wav",
+  "duration_sec": 25.0,
+  "scenario": "construction_site",
+  "events": [
+    {
+      "label": "drilling",
+      "start": 1.692,
+      "end": 2.627
+    },
+    {
+      "label": "shouting",
+      "start": 5.529,
+      "end": 6.754
+    }
+  ],
+  "background": "construction_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

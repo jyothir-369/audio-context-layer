@@ -1,1 +1,20 @@
-{"scene_id": "scene_00162", "audio_path": "synthesized_audio/scene_00162.wav", "duration_sec": 25.0, "scenario": "park", "events": [{"label": "siren", "start": 2.98, "end": 6.4}, {"label": "water", "start": 8.85, "end": 11.21}], "background": "room_tone"}
+{
+  "scene_id": "scene_00162",
+  "audio_path": "synthesized_audio/scene_00162.wav",
+  "duration_sec": 25.0,
+  "scenario": "construction_site",
+  "events": [
+    {
+      "label": "hammer",
+      "start": 1.969,
+      "end": 4.942
+    },
+    {
+      "label": "shouting",
+      "start": 5.964,
+      "end": 7.35
+    }
+  ],
+  "background": "construction_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

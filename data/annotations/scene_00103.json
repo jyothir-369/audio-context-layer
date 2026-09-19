@@ -1,1 +1,20 @@
-{"scene_id": "scene_00103", "audio_path": "synthesized_audio/scene_00103.wav", "duration_sec": 25.0, "scenario": "office", "events": [{"label": "engine", "start": 4.14, "end": 6.06}, {"label": "engine", "start": 6.8, "end": 8.44}, {"label": "car_horn", "start": 9.58, "end": 12.23}, {"label": "dog_bark", "start": 13.92, "end": 16.96}], "background": "room_tone"}
+{
+  "scene_id": "scene_00103",
+  "audio_path": "synthesized_audio/scene_00103.wav",
+  "duration_sec": 25.0,
+  "scenario": "kitchen",
+  "events": [
+    {
+      "label": "microwave_beep",
+      "start": 0.711,
+      "end": 4.163
+    },
+    {
+      "label": "water",
+      "start": 6.432,
+      "end": 7.338
+    }
+  ],
+  "background": "room_tone",
+  "audio_type": "synthetic_class_specific_tones"
+}

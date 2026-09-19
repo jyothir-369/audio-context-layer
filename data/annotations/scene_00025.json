@@ -1,1 +1,20 @@
-{"scene_id": "scene_00025", "audio_path": "synthesized_audio/scene_00025.wav", "duration_sec": 25.0, "scenario": "street", "events": [{"label": "car_horn", "start": 0.37, "end": 2.53}, {"label": "siren", "start": 3.36, "end": 6.54}], "background": "traffic_ambience_low"}
+{
+  "scene_id": "scene_00025",
+  "audio_path": "synthesized_audio/scene_00025.wav",
+  "duration_sec": 25.0,
+  "scenario": "park",
+  "events": [
+    {
+      "label": "dog_bark",
+      "start": 1.155,
+      "end": 3.675
+    },
+    {
+      "label": "bicycle_bell",
+      "start": 3.088,
+      "end": 5.377
+    }
+  ],
+  "background": "wind_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

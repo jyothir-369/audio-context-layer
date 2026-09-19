@@ -16,6 +16,7 @@ TEMPLATES = {
     "causal": [
         "Why might the {label_a} occur with the {label_b}?",
         "Why does this sound like a {scenario} scene?",
+        "Why are {label_a} and {label_b} present together?",
     ],
     "negation": [
         "Is there a {absent_label} in this audio?",

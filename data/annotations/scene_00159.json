@@ -1,1 +1,25 @@
-{"scene_id": "scene_00159", "audio_path": "synthesized_audio/scene_00159.wav", "duration_sec": 25.0, "scenario": "construction_site", "events": [{"label": "siren", "start": 3.97, "end": 6.28}, {"label": "car_horn", "start": 7.69, "end": 9.03}, {"label": "footstep", "start": 10.8, "end": 11.71}, {"label": "dish", "start": 12.31, "end": 14.01}], "background": "room_tone"}
+{
+  "scene_id": "scene_00159",
+  "audio_path": "synthesized_audio/scene_00159.wav",
+  "duration_sec": 25.0,
+  "scenario": "construction_site",
+  "events": [
+    {
+      "label": "engine",
+      "start": 2.871,
+      "end": 3.836
+    },
+    {
+      "label": "hammer",
+      "start": 5.404,
+      "end": 7.894
+    },
+    {
+      "label": "siren",
+      "start": 9.255,
+      "end": 10.182
+    }
+  ],
+  "background": "construction_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

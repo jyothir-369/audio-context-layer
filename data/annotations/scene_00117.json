@@ -1,1 +1,35 @@
-{"scene_id": "scene_00117", "audio_path": "synthesized_audio/scene_00117.wav", "duration_sec": 25.0, "scenario": "park", "events": [{"label": "dog_bark", "start": 1.76, "end": 3.4}, {"label": "dog_bark", "start": 5.03, "end": 6.82}], "background": "room_tone"}
+{
+  "scene_id": "scene_00117",
+  "audio_path": "synthesized_audio/scene_00117.wav",
+  "duration_sec": 25.0,
+  "scenario": "office",
+  "events": [
+    {
+      "label": "printer",
+      "start": 2.44,
+      "end": 3.411
+    },
+    {
+      "label": "door_open",
+      "start": 4.415,
+      "end": 5.315
+    },
+    {
+      "label": "printer",
+      "start": 6.604,
+      "end": 9.795
+    },
+    {
+      "label": "phone_ring",
+      "start": 12.768,
+      "end": 14.96
+    },
+    {
+      "label": "footstep",
+      "start": 15.551,
+      "end": 17.629
+    }
+  ],
+  "background": "hvac_hum",
+  "audio_type": "synthetic_class_specific_tones"
+}

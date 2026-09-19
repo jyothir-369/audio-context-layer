@@ -1,1 +1,30 @@
-{"scene_id": "scene_00030", "audio_path": "synthesized_audio/scene_00030.wav", "duration_sec": 25.0, "scenario": "street", "events": [{"label": "car_horn", "start": 1.05, "end": 3.65}, {"label": "footstep", "start": 5.04, "end": 8.22}, {"label": "footstep", "start": 9.74, "end": 12.56}, {"label": "car_horn", "start": 15.38, "end": 18.51}], "background": "traffic_ambience_low"}
+{
+  "scene_id": "scene_00030",
+  "audio_path": "synthesized_audio/scene_00030.wav",
+  "duration_sec": 25.0,
+  "scenario": "construction_site",
+  "events": [
+    {
+      "label": "drilling",
+      "start": 1.153,
+      "end": 4.321
+    },
+    {
+      "label": "shouting",
+      "start": 5.485,
+      "end": 8.884
+    },
+    {
+      "label": "drilling",
+      "start": 10.248,
+      "end": 12.659
+    },
+    {
+      "label": "engine",
+      "start": 15.619,
+      "end": 17.597
+    }
+  ],
+  "background": "construction_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

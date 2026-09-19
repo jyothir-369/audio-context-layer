@@ -1,1 +1,20 @@
-{"scene_id": "scene_00135", "audio_path": "synthesized_audio/scene_00135.wav", "duration_sec": 25.0, "scenario": "street", "events": [{"label": "engine", "start": 1.95, "end": 2.87}, {"label": "siren", "start": 4.34, "end": 5.82}], "background": "traffic_ambience_low"}
+{
+  "scene_id": "scene_00135",
+  "audio_path": "synthesized_audio/scene_00135.wav",
+  "duration_sec": 25.0,
+  "scenario": "park",
+  "events": [
+    {
+      "label": "bird_chirp",
+      "start": 2.487,
+      "end": 4.351
+    },
+    {
+      "label": "footstep",
+      "start": 3.845,
+      "end": 6.151
+    }
+  ],
+  "background": "wind_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

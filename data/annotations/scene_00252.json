@@ -1,1 +1,35 @@
-{"scene_id": "scene_00252", "audio_path": "synthesized_audio/scene_00252.wav", "duration_sec": 25.0, "scenario": "park", "events": [{"label": "footstep", "start": 2.5, "end": 3.75}, {"label": "water", "start": 4.64, "end": 5.72}], "background": "room_tone"}
+{
+  "scene_id": "scene_00252",
+  "audio_path": "synthesized_audio/scene_00252.wav",
+  "duration_sec": 25.0,
+  "scenario": "park",
+  "events": [
+    {
+      "label": "bird_chirp",
+      "start": 0.831,
+      "end": 2.911
+    },
+    {
+      "label": "dog_bark",
+      "start": 3.432,
+      "end": 5.855
+    },
+    {
+      "label": "footstep",
+      "start": 8.713,
+      "end": 11.155
+    },
+    {
+      "label": "footstep",
+      "start": 12.596,
+      "end": 14.541
+    },
+    {
+      "label": "footstep",
+      "start": 15.586,
+      "end": 17.625
+    }
+  ],
+  "background": "wind_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

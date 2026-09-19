@@ -1,1 +1,25 @@
-{"scene_id": "scene_00006", "audio_path": "synthesized_audio/scene_00006.wav", "duration_sec": 25.0, "scenario": "kitchen", "events": [{"label": "water", "start": 4.21, "end": 5.17}, {"label": "water", "start": 7.72, "end": 9.37}, {"label": "car_horn", "start": 10.54, "end": 13.81}, {"label": "dish", "start": 15.72, "end": 17.37}], "background": "room_tone"}
+{
+  "scene_id": "scene_00006",
+  "audio_path": "synthesized_audio/scene_00006.wav",
+  "duration_sec": 25.0,
+  "scenario": "kitchen",
+  "events": [
+    {
+      "label": "microwave_beep",
+      "start": 2.1,
+      "end": 5.572
+    },
+    {
+      "label": "door_slam",
+      "start": 6.882,
+      "end": 8.275
+    },
+    {
+      "label": "dish",
+      "start": 8.856,
+      "end": 10.274
+    }
+  ],
+  "background": "room_tone",
+  "audio_type": "synthetic_class_specific_tones"
+}

@@ -1,1 +1,25 @@
-{"scene_id": "scene_00051", "audio_path": "synthesized_audio/scene_00051.wav", "duration_sec": 25.0, "scenario": "kitchen", "events": [{"label": "car_horn", "start": 3.89, "end": 7.29}, {"label": "dog_bark", "start": 8.06, "end": 11.37}], "background": "room_tone"}
+{
+  "scene_id": "scene_00051",
+  "audio_path": "synthesized_audio/scene_00051.wav",
+  "duration_sec": 25.0,
+  "scenario": "park",
+  "events": [
+    {
+      "label": "footstep",
+      "start": 1.835,
+      "end": 2.674
+    },
+    {
+      "label": "footstep",
+      "start": 3.31,
+      "end": 4.233
+    },
+    {
+      "label": "footstep",
+      "start": 5.048,
+      "end": 7.731
+    }
+  ],
+  "background": "wind_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

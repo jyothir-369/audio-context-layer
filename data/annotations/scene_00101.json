@@ -1,1 +1,30 @@
-{"scene_id": "scene_00101", "audio_path": "synthesized_audio/scene_00101.wav", "duration_sec": 25.0, "scenario": "kitchen", "events": [{"label": "engine", "start": 4.24, "end": 6.89}, {"label": "engine", "start": 8.61, "end": 9.61}, {"label": "footstep", "start": 10.32, "end": 11.52}, {"label": "footstep", "start": 12.33, "end": 14.84}, {"label": "siren", "start": 16.71, "end": 18.54}], "background": "room_tone"}
+{
+  "scene_id": "scene_00101",
+  "audio_path": "synthesized_audio/scene_00101.wav",
+  "duration_sec": 25.0,
+  "scenario": "construction_site",
+  "events": [
+    {
+      "label": "engine",
+      "start": 0.671,
+      "end": 1.878
+    },
+    {
+      "label": "siren",
+      "start": 4.369,
+      "end": 6.874
+    },
+    {
+      "label": "shouting",
+      "start": 8.642,
+      "end": 9.594
+    },
+    {
+      "label": "engine",
+      "start": 10.188,
+      "end": 12.235
+    }
+  ],
+  "background": "construction_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

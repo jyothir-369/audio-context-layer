@@ -1,1 +1,25 @@
-{"scene_id": "scene_00214", "audio_path": "synthesized_audio/scene_00214.wav", "duration_sec": 25.0, "scenario": "construction_site", "events": [{"label": "water", "start": 4.84, "end": 6.29}, {"label": "water", "start": 7.73, "end": 10.66}, {"label": "footstep", "start": 12.07, "end": 13.41}, {"label": "car_horn", "start": 16.4, "end": 19.04}, {"label": "dish", "start": 20.92, "end": 22.96}], "background": "room_tone"}
+{
+  "scene_id": "scene_00214",
+  "audio_path": "synthesized_audio/scene_00214.wav",
+  "duration_sec": 25.0,
+  "scenario": "office",
+  "events": [
+    {
+      "label": "keyboard",
+      "start": 2.785,
+      "end": 5.078
+    },
+    {
+      "label": "door_open",
+      "start": 4.868,
+      "end": 6.274
+    },
+    {
+      "label": "phone_ring",
+      "start": 6.203,
+      "end": 7.735
+    }
+  ],
+  "background": "hvac_hum",
+  "audio_type": "synthetic_class_specific_tones"
+}

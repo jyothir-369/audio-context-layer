@@ -1,1 +1,25 @@
-{"scene_id": "scene_00233", "audio_path": "synthesized_audio/scene_00233.wav", "duration_sec": 25.0, "scenario": "office", "events": [{"label": "dish", "start": 1.25, "end": 2.92}, {"label": "water", "start": 4.04, "end": 6.66}, {"label": "footstep", "start": 8.39, "end": 10.89}], "background": "room_tone"}
+{
+  "scene_id": "scene_00233",
+  "audio_path": "synthesized_audio/scene_00233.wav",
+  "duration_sec": 25.0,
+  "scenario": "construction_site",
+  "events": [
+    {
+      "label": "engine",
+      "start": 2.322,
+      "end": 3.466
+    },
+    {
+      "label": "shouting",
+      "start": 6.452,
+      "end": 8.309
+    },
+    {
+      "label": "shouting",
+      "start": 10.315,
+      "end": 11.202
+    }
+  ],
+  "background": "construction_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

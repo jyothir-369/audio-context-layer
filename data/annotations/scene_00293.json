@@ -1,1 +1,35 @@
-{"scene_id": "scene_00293", "audio_path": "synthesized_audio/scene_00293.wav", "duration_sec": 25.0, "scenario": "office", "events": [{"label": "siren", "start": 3.87, "end": 5.4}, {"label": "dish", "start": 6.94, "end": 7.98}, {"label": "water", "start": 9.58, "end": 11.48}, {"label": "footstep", "start": 13.2, "end": 16.34}, {"label": "footstep", "start": 18.89, "end": 21.83}], "background": "room_tone"}
+{
+  "scene_id": "scene_00293",
+  "audio_path": "synthesized_audio/scene_00293.wav",
+  "duration_sec": 25.0,
+  "scenario": "park",
+  "events": [
+    {
+      "label": "footstep",
+      "start": 0.981,
+      "end": 4.207
+    },
+    {
+      "label": "wind_rustle",
+      "start": 4.947,
+      "end": 5.969
+    },
+    {
+      "label": "wind_rustle",
+      "start": 8.036,
+      "end": 10.276
+    },
+    {
+      "label": "dog_bark",
+      "start": 12.71,
+      "end": 15.32
+    },
+    {
+      "label": "bicycle_bell",
+      "start": 16.334,
+      "end": 19.39
+    }
+  ],
+  "background": "wind_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

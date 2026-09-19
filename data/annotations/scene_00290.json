@@ -1,1 +1,30 @@
-{"scene_id": "scene_00290", "audio_path": "synthesized_audio/scene_00290.wav", "duration_sec": 25.0, "scenario": "street", "events": [{"label": "footstep", "start": 4.62, "end": 7.53}, {"label": "water", "start": 9.99, "end": 12.24}], "background": "traffic_ambience_low"}
+{
+  "scene_id": "scene_00290",
+  "audio_path": "synthesized_audio/scene_00290.wav",
+  "duration_sec": 25.0,
+  "scenario": "construction_site",
+  "events": [
+    {
+      "label": "engine",
+      "start": 2.892,
+      "end": 5.111
+    },
+    {
+      "label": "shouting",
+      "start": 4.813,
+      "end": 5.797
+    },
+    {
+      "label": "siren",
+      "start": 5.248,
+      "end": 7.515
+    },
+    {
+      "label": "engine",
+      "start": 7.336,
+      "end": 8.733
+    }
+  ],
+  "background": "construction_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

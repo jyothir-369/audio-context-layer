@@ -1,1 +1,35 @@
-{"scene_id": "scene_00036", "audio_path": "synthesized_audio/scene_00036.wav", "duration_sec": 25.0, "scenario": "kitchen", "events": [{"label": "dog_bark", "start": 1.82, "end": 5.18}, {"label": "footstep", "start": 7.98, "end": 9.63}, {"label": "dish", "start": 12.25, "end": 15.48}], "background": "room_tone"}
+{
+  "scene_id": "scene_00036",
+  "audio_path": "synthesized_audio/scene_00036.wav",
+  "duration_sec": 25.0,
+  "scenario": "street",
+  "events": [
+    {
+      "label": "engine",
+      "start": 2.97,
+      "end": 5.572
+    },
+    {
+      "label": "footstep",
+      "start": 4.821,
+      "end": 6.478
+    },
+    {
+      "label": "engine",
+      "start": 5.419,
+      "end": 7.873
+    },
+    {
+      "label": "footstep",
+      "start": 6.811,
+      "end": 8.763
+    },
+    {
+      "label": "engine",
+      "start": 7.325,
+      "end": 10.548
+    }
+  ],
+  "background": "traffic_ambience_low",
+  "audio_type": "synthetic_class_specific_tones"
+}

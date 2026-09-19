@@ -1,1 +1,30 @@
-{"scene_id": "scene_00284", "audio_path": "synthesized_audio/scene_00284.wav", "duration_sec": 25.0, "scenario": "construction_site", "events": [{"label": "dog_bark", "start": 0.93, "end": 2.44}, {"label": "car_horn", "start": 4.11, "end": 7.17}, {"label": "car_horn", "start": 9.08, "end": 11.91}, {"label": "dog_bark", "start": 14.08, "end": 16.68}], "background": "room_tone"}
+{
+  "scene_id": "scene_00284",
+  "audio_path": "synthesized_audio/scene_00284.wav",
+  "duration_sec": 25.0,
+  "scenario": "construction_site",
+  "events": [
+    {
+      "label": "siren",
+      "start": 1.807,
+      "end": 4.789
+    },
+    {
+      "label": "drilling",
+      "start": 5.422,
+      "end": 7.25
+    },
+    {
+      "label": "drilling",
+      "start": 9.626,
+      "end": 10.965
+    },
+    {
+      "label": "hammer",
+      "start": 13.174,
+      "end": 16.629
+    }
+  ],
+  "background": "construction_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}

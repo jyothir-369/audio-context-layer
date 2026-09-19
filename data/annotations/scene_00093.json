@@ -1,1 +1,25 @@
-{"scene_id": "scene_00093", "audio_path": "synthesized_audio/scene_00093.wav", "duration_sec": 25.0, "scenario": "office", "events": [{"label": "engine", "start": 1.52, "end": 2.64}, {"label": "footstep", "start": 3.72, "end": 4.89}], "background": "room_tone"}
+{
+  "scene_id": "scene_00093",
+  "audio_path": "synthesized_audio/scene_00093.wav",
+  "duration_sec": 25.0,
+  "scenario": "kitchen",
+  "events": [
+    {
+      "label": "footstep",
+      "start": 2.352,
+      "end": 3.34
+    },
+    {
+      "label": "dish",
+      "start": 5.167,
+      "end": 6.214
+    },
+    {
+      "label": "footstep",
+      "start": 7.566,
+      "end": 9.5
+    }
+  ],
+  "background": "room_tone",
+  "audio_type": "synthetic_class_specific_tones"
+}

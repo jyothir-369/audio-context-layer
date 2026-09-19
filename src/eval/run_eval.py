@@ -38,7 +38,12 @@ def evaluate():
             failed += 1
             continue
         # Tag (placeholder if audio not real)
-        wav_path = item.get("audio_path", f"data/synthesized_audio/{sid}.wav")
+        # Fix: annotation audio_path is relative without 'data/' prefix, prepend it
+        audio_path_from_item = item.get("audio_path", "")
+        if audio_path_from_item and not audio_path_from_item.startswith("data/"):
+            wav_path = f"data/{audio_path_from_item}"
+        else:
+            wav_path = audio_path_from_item or f"data/synthesized_audio/{sid}.wav"
         try:
             tag_result = tag_audio(wav_path, window_sec=1.0, hop_sec=0.5)
         except Exception as e:

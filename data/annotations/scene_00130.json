@@ -1,1 +1,25 @@
-{"scene_id": "scene_00130", "audio_path": "synthesized_audio/scene_00130.wav", "duration_sec": 25.0, "scenario": "street", "events": [{"label": "siren", "start": 4.08, "end": 7.4}, {"label": "engine", "start": 8.93, "end": 11.09}, {"label": "dog_bark", "start": 12.18, "end": 13.99}], "background": "traffic_ambience_low"}
+{
+  "scene_id": "scene_00130",
+  "audio_path": "synthesized_audio/scene_00130.wav",
+  "duration_sec": 25.0,
+  "scenario": "street",
+  "events": [
+    {
+      "label": "engine",
+      "start": 1.35,
+      "end": 3.404
+    },
+    {
+      "label": "dog_bark",
+      "start": 5.7,
+      "end": 7.344
+    },
+    {
+      "label": "siren",
+      "start": 8.171,
+      "end": 11.605
+    }
+  ],
+  "background": "traffic_ambience_low",
+  "audio_type": "synthetic_class_specific_tones"
+}

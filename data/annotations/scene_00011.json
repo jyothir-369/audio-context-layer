@@ -1,1 +1,20 @@
-{"scene_id": "scene_00011", "audio_path": "synthesized_audio/scene_00011.wav", "duration_sec": 25.0, "scenario": "kitchen", "events": [{"label": "engine", "start": 2.99, "end": 3.85}, {"label": "water", "start": 6.67, "end": 9.65}], "background": "room_tone"}
+{
+  "scene_id": "scene_00011",
+  "audio_path": "synthesized_audio/scene_00011.wav",
+  "duration_sec": 25.0,
+  "scenario": "construction_site",
+  "events": [
+    {
+      "label": "siren",
+      "start": 2.823,
+      "end": 3.675
+    },
+    {
+      "label": "engine",
+      "start": 4.778,
+      "end": 6.224
+    }
+  ],
+  "background": "construction_ambience",
+  "audio_type": "synthetic_class_specific_tones"
+}
