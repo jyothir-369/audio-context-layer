@@ -107,95 +107,22 @@ def _classify_segment(audio_segment, sample_rate=16000):
     return (best_label, confidence)
 
 
-def tag_audio(wav_path, window_sec=1.0, hop_sec=0.5):
-    # Try PANNs if available; fall back to spectral tagger
-    if PANNs_AVAILABLE and PANNs_MODEL is not None:
-        try:
-            return _tag_with_panns(wav_path, window_sec, hop_sec)
-        except Exception as e:
-            print("PANNs tagging failed, falling back to spectral:", str(e)[:100])
+
+def tag_audio(wav_path, window_sec=1.0, hop_sec=0.5, force_panns=True):
+    """Tag audio using PANNs CNN14 as the explicit Track A tagger.
+    Spectral matched-filter is preserved in event_tagger_spectral_fallback.py as baseline.
+    No silent spectral fallback during PANNs evaluation.
+    If PANNs fails, the exception is raised so metrics reflect real failure.
     """
-    Tag audio with event labels using spectral matched-filter classification.
-    Returns {"timeline": [{"label": str, "start": float, "end": float, "confidence": float}], "note": str}
-    """
-    if not os.path.isfile(wav_path):
-        raise FileNotFoundError(f"Audio file not found: {wav_path}")
+    if force_panns:
+        if not PANNs_AVAILABLE or PANNs_MODEL is None:
+            raise RuntimeError("PANNs Cnn14 tagger not available; spectral baseline preserved separately at event_tagger_spectral_fallback.py - never silently falling back.")
+        return _tag_with_panns(wav_path, window_sec, hop_sec)
+    # Only non-PANNs path is through explicit separate baseline import
+    raise RuntimeError("Explicit spectral baseline preserved as separate file; call that file directly for spectral evaluation. Silent fallback disabled.")
 
-    import soundfile as sf
-    data, sr = sf.read(wav_path, dtype=np.float32, always_2d=False)
 
-    # Convert to mono if stereo
-    if data.ndim > 1:
-        data = np.mean(data, axis=1)
 
-    sample_rate = sr if sr == 16000 else 16000
-    if sample_rate != 16000:
-        return {"timeline": [], "note": f"audio sample rate {sample_rate} Hz != 16kHz; cannot classify"}
-
-    total_samples = len(data)
-    window_samples = int(window_sec * sample_rate)
-    hop_samples = int(hop_sec * sample_rate)
-
-    # Step 1: Classify each hop
-    hop_results = []
-    pos = 0
-    while pos <= total_samples - window_samples:
-        segment = data[pos:pos + window_samples]
-        label, confidence = _classify_segment(segment, sample_rate)
-        hop_results.append({
-            "label": label,
-            "start": pos / sample_rate,
-            "end": (pos + window_samples) / sample_rate,
-            "confidence": confidence,
-        })
-        pos += hop_samples
-
-    if not hop_results:
-        return {"timeline": [], "note": "no hops processed; tagger fell through"}
-
-    # Step 2: Merge consecutive hops with same label into continuous segments
-    timeline = []
-    current_label = hop_results[0]["label"]
-    current_start = hop_results[0]["start"]
-    current_confidences = [hop_results[0]["confidence"]]
-
-    for i in range(1, len(hop_results)):
-        h = hop_results[i]
-        if h["label"] == current_label:
-            current_confidences.append(h["confidence"])
-        else:
-            # Finalize previous segment
-            avg_conf = sum(current_confidences) / len(current_confidences)
-            timeline.append({
-                "label": current_label,
-                "start": round(current_start, 3),
-                "end": round(hop_results[i - 1]["end"], 3),
-                "confidence": round(avg_conf, 2),
-            })
-            current_label = h["label"]
-            current_start = h["start"]
-            current_confidences = [h["confidence"]]
-
-    # Finalize last segment
-    avg_conf = sum(current_confidences) / len(current_confidences)
-    timeline.append({
-        "label": current_label,
-        "start": round(current_start, 3),
-        "end": round(hop_results[-1]["end"], 3),
-        "confidence": round(avg_conf, 2),
-    })
-
-    # Filter very short segments and low confidence (runtime threshold = 0.15)
-    filtered = []
-    for seg in timeline:
-        duration = seg["end"] - seg["start"]
-        if duration >= MIN_DURATION_SEC and seg["confidence"] >= CONFIDENCE_THRESHOLD:
-            filtered.append(seg)
-
-    if not filtered:
-        return {"timeline": [], "note": "no events detected above threshold after merging hops"}
-
-    return {"timeline": filtered, "note": "spectral matched-filter classification against EVENT_ACOUSTICS (real, not placeholder)"}
 
 
 
@@ -211,7 +138,7 @@ def _tag_with_panns(wav_path, window_sec=1.0, hop_sec=0.5):
         data = librosa.resample(data, orig_sr=sr, target_sr=32000)
         sr = 32000
     # Sliding window inference
-    results = PANNs_MODEL.inference(wav_path, check_input=False)  # returns predictions
+    results = PANNs_MODEL.inference(data)  # returns predictions
     # For this PoC, translate prediction matrix to timeline format
     timeline = []
     # Simplified extraction: find highest-probability events per window

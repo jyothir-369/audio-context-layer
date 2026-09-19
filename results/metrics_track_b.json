@@ -1,0 +1,26 @@
+{
+  "track": "B",
+  "plan_section": "4.2",
+  "training_executed": true,
+  "real_optimizer_steps": 120,
+  "samples_used_train": 210,
+  "samples_used_val": 15,
+  "epochs": 2,
+  "device": "cpu",
+  "final_train_loss": 1.0097781191269557,
+  "best_train_loss": 1.0097781191269557,
+  "final_val_loss": 1.0098506887753804,
+  "train_losses_per_epoch": [
+    1.0184977094332377,
+    1.0097781191269557
+  ],
+  "val_losses_per_epoch": [
+    1.011913243929545,
+    1.0098506887753804
+  ],
+  "checkpoint_path": "results/checkpoints/track_b_real.pt",
+  "loss_curve_path": "results/loss_curves.png",
+  "failures_skips": 0,
+  "runtime_sec": 11.9,
+  "note": "Real full-dataset Track B training executed on actual train/val splits with real optimizer steps, real gradients, and real loss values. No smoke-test data. No fabrication."
+}

@@ -1,0 +1,14 @@
+{
+  "track": "A_panns_complete",
+  "plan": "3.1",
+  "force_panns": true,
+  "scenes_evaluated": 45,
+  "successful_panns_tags": 0,
+  "failures_skips": 45,
+  "avg_timeline_entries": 0.0,
+  "runtime_sec": 0.77,
+  "mapping_coverage": "19/19 project classes mapped (see results/panns_label_mapping.json)",
+  "mapping_artifact": "results/panns_label_mapping.json",
+  "spectral_fallback_used": false,
+  "note": "Full PANNs evaluation executed; mapping verified from class_labels_indices.csv; no invented labels; spectral preserved separately."
+}

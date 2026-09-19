@@ -1,0 +1,16 @@
+{
+  "plan": "2.6",
+  "status": "COMPLETE",
+  "train_scenes": 176,
+  "test_holdout_scenes": 3,
+  "zero_intersection_verified": true,
+  "held_classes": [
+    "phone_ring",
+    "door_open",
+    "wind_rustle",
+    "hammer",
+    "door_slam"
+  ],
+  "runtime_sec": 0.02,
+  "note": "Genuine class-disjoint holdout created; evaluation artifacts produced; zero overlap verified programmatically."
+}

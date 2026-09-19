@@ -1,0 +1,1 @@
+{"held_out_classes": ["phone_ring", "door_open", "wind_rustle", "hammer", "door_slam"], "zero_intersection_verified": true, "intersection_set": [], "train_scenes": 176, "test_scenes": 3}

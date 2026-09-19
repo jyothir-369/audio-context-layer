@@ -11,3 +11,9 @@
 !FINAL_AUDIT_REPORT.md
 !Audio_Context_Layer_Implementation_Plan.md
 !results/phase6_status.md
+
+*.md
+__pycache__/
+*.pyc
+results/checkpoints/
+data/raw_sources/
